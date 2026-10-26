@@ -1,0 +1,2 @@
+DTC
+Demonstrates usage of the DTC unit by transfering an ADC result into an array when triggered

@@ -1,0 +1,13 @@
+
+// This is the isymexport steering file.
+// It controls which symbols that are included in the isymexport output file.
+// It can also rename some of the symbols if that is desired.
+
+show _lib_*
+show __checksum*
+
+// If you want to reserve ranges in RAM (or ROM) for exported library symbols, 
+// even if they are not used by the application, add the isymexport command
+// line options: --reserve_ranges=PREFIX --ram_reserve_ranges
+// and specify "show PREFIX*" in this steering file.
+// (Please see IAR C/C++ Development Guide).

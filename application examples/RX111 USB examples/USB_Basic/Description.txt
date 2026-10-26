@@ -1,0 +1,61 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only
+* intended for use with Renesas products. No other uses are authorized. This
+* software is owned by Renesas Electronics Corporation and is protected under
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+* AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software
+* and to discontinue the availability of this software. By using this software,
+* you agree to the additional terms and conditions found by accessing the
+* following link:
+* http://www.renesas.com/disclaimer
+*
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+* Copyright (C) 2013 Renesas Electronics Corporation. All rights reserved.    */
+/***********************************************************************************************************************
+* Project      : USB_Basic
+* Version      :
+* Device(s)    : R5F51115AxFM
+* Tool-Chain   : CCRX
+* H/W Platform : RSKRX111
+*
+* Description  : This sample provides the application framework code for the RX111
+*                USB Basic Firmware mini.  The sample is default configured for a HOST
+*                build, which builds the firmware mini stack for USB host operation.
+*                The PERI build configuration may be used to build the firmware mini stack
+*                for USB peripheral operation.  Both configurations control the build
+*                using the preprocessor directive USB_FUNCSEL_PP, which is set to USB_HOST_PP
+*                for host operation and USB_PERI_PP for peripheral operation.  The USB_FUNCSEL_PP
+*                directive is set in both cases in the project settings under
+*                C/C++ Build->Settings->Compiler->Source->Defines.
+*
+* Operation    : Peripheral:
+                 Ensure the RSK is configured as a self-powered USB Device.
+*                Short pins 2-3 of J12 and 2-3 of J9, and power the RSK from a +5V
+*                centre positive PSU via the PWR connector or from the E1.
+*                Host:
+*                Ensure the RSK is configured as a self-powered USB Host.
+*                Short pins 1-2 of J12 and 2-3 of J9, and power the RSK from a +5V
+*                centre positive PSU via the PWR connector.
+*
+* Instructions :
+*             1. Compile the sample code and download to the RSK. Click the 'Restart'
+*                button to start program execution.
+*
+*             2. Refer to the Application note 'Renesas USB Basic Firmware mini' for full
+*                technical details.
+*
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+* History      : 21.06.2013 Ver. 1.00 First Release
+***********************************************************************************************************************/

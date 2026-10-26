@@ -1,0 +1,2 @@
+Timer Compare
+Demonstrates usage of the compare match timer unit by toggling LEDs every time a compare match occurs

@@ -1,0 +1,2 @@
+CAN_API_Demo_RX62G_RSK
+This sample demonstrates two boards talking to each other over CAN Bus.

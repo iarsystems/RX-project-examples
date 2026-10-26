@@ -1,0 +1,66 @@
+%!: /header.html
+<h1> Renesas RX62N is running uIP stack</h1>
+<center>
+  <p><IMG SRC="RX62N.jpg">
+  </p>
+  <table width="90%"  border="0" cellpadding="3">
+    <tr align="left" valign="top">
+      <td width="39%"><img src="RX62N_fbd.jpg" width="315" height="462"></td>
+      <td width="61%"><p align="left"><strong>RX62N Features:</strong></p>
+        <div align="left">
+          <ul>
+            <li><strong>RX CPU Core &ndash; 100MHz (2.7 &ndash; 3.6V) </strong>
+                <ul>
+                  <li> Enhanced Harvard Architecture</li>
+                  <li> 165 DMIPS at 100MHz</li>
+                  <li> Floating Point Unit (FPU)</li>
+                  <li> Multiply Accumulate (MAC)</li>
+                </ul>
+            </li>
+            <li><strong> Low Power Consumption </strong>
+                <ul>
+                  <li> 500 uA per MHz, all peripherals active</li>
+                  <li> 19 uA Deep Standby with RTC running</li>
+                </ul>
+            </li>
+            <li><strong> Flash Memory </strong>
+                <ul>
+                  <li> 100 MHz, zero wait-state access</li>
+                </ul>
+            </li>
+            <li> <strong>Analog</strong>
+                <ul>
+                  <li> 8 channels 12-bit ADC, 1 ms conversion time</li>
+                  <li> 2 channels 10-bit DAC</li>
+                </ul>
+            </li>
+            <li> <strong>Timers</strong>
+                <ul>
+                  <li> Specialized for motor control, plus standard timers</li>
+                </ul>
+            </li>
+            <li><strong> USB Full Speed Host or Device</strong>
+                <ul>
+                  <li> 2 channels (BGA176), either can be host or device</li>
+                  <li> PHY included for both USB channels</li>
+                  <li> OTG operation with external Vbus switch</li>
+                </ul>
+            </li>
+            <li><strong> Ethernet MAC, 10/100 full/half Duplex </strong>
+                <ul>
+                  <li> Supports Xmit and Rcv IEEE-802.3 frames</li>
+                  <li> 2KB SRAM buffers for xmit &amp; recv w/DMA support</li>
+                  <li> Supports MII and RMII to external PHY</li>
+                </ul>
+            </li>
+            <li><strong> CAN Interface with 32 Mailboxes</strong></li>
+            <li><strong> Control colour TFT-LCD up to WQVGA resolution</strong></li>
+            <li><strong> Package as small as 13 x 13 mm</strong></li>
+          </ul>
+      </div></td>
+    </tr>
+  </table>
+  <ul>
+</ul>
+</center>
+%!: /footer.html

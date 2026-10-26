@@ -1,0 +1,2 @@
+Synchronous Serial
+The application demonstrates usage of the SCI unit in synchronous mode, by performing a loop-back communication test.

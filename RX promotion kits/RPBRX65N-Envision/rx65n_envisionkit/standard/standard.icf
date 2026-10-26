@@ -1,0 +1,55 @@
+//-----------------------------------------------------------------------------
+// Linker configuration file for the Renesas RX65N Envision Kit
+// standard program
+//-----------------------------------------------------------------------------
+// Compatibility check
+define exported symbol __link_file_version_4 = 1;
+
+define memory mem with size = 4G;
+
+define region RAM_region2  = mem:[from 0x00840000 to 0x0085FFFF];
+
+define region ROM_region32 = mem:[from 0xFFF00000 to 0xFFFF0000];
+
+define region DATA_FLASH   = mem:[from 0x00100000 to 0x00107FFF];
+
+initialize manually { ro section FRAM, ro section FRAM2, rw section .textrw };
+initialize by copy { rw, ro section D, ro section D_1, ro section D_2 };
+do not initialize  { section .*.noinit };
+
+define block HEAP     with alignment = 4, size = _HEAP_SIZE { };
+define block ISTACK   with alignment = 4, size = _ISTACK_SIZE { };
+
+define block PFRAM   { ro section FRAM_init };
+define block RPFRAM  { rw section FRAM };
+define block PFRAM2  { ro section FRAM2_init };
+define block RPFRAM2 { rw section FRAM2 };
+
+place at address mem:0xFE7F5D00      { ro section .option_mem };
+
+// Uncomment if this program should be debugged
+//place at address mem:0xFFFFFF80      { ro section .exceptvect };
+//place at address mem:0xFFFFFFFC      { ro section .resetvect };
+
+// Uncomment if this program should be built for use with secure boot
+// program
+place at address mem:0xFFFEFF80      { ro section .exceptvect };
+place at address mem:0xFFFEFFFC      { ro section .resetvect };
+
+"ROM32":place in ROM_region32        { ro section C_1,
+                                       ro section C_2,
+                                       block PFRAM,
+                                       block PFRAM2,
+                                       ro };
+
+"RAM32":place in RAM_region2        { rw,
+                                      block HEAP,
+                                      block RPFRAM,
+                                      block RPFRAM2};                                   
+
+"STACKS":place at start of RAM_region2 { block ISTACK };
+
+"DATAFLASH":place in DATA_FLASH      { ro section .dataflash* };
+                                     
+                                     
+

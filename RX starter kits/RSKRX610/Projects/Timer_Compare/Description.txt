@@ -1,0 +1,2 @@
+Timer Compare
+The timer unit is configured to in CMT mode, and flashes the user LEDs.

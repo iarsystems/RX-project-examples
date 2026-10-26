@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\DirectLCD\DirectLCD.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\DirectLCD\DirectLCD with Resource loading to Serial Flash.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\r_Packages\r_packages.ewp</path>
+  </project>
+</workspace>
+
+

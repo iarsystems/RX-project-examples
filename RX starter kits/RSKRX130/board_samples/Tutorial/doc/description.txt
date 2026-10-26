@@ -1,0 +1,72 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only intended for use with Renesas products.
+* No other uses are authorized. This software is owned by Renesas Electronics Corporation and is protected under all
+* applicable laws, including copyright laws. 
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIESREGARDING THIS SOFTWARE, WHETHER EXPRESS, IMPLIED
+* OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+* NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY
+* LAW, NEITHER RENESAS ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE FOR ANY DIRECT,
+* INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR
+* ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software and to discontinue the availability 
+* of this software. By using this software, you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2015 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* Project      : Tutorial
+*
+* History      : DD.MM.YYYY Version      Description
+*              : 29.12.2015 Ver. 1.00    First Release
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* File Name    : description.txt
+*
+* System Requirements:
+* Device(s)               : R5F51305AxFN
+* Tool-Chain              : CC-RX V2.04.01
+* Development environment : Renesas e2 studio
+* Version                 : Code Generator for RX130 V1.00.00.02 [30 Oct 2015]
+* H/W Platform            : RSKRX130
+*
+* Description  : Tutorial sample, use in conjunction with the Code Generator Tutorial Manual
+*                (r20ut3450eg0100_rskrx130_codegentutorialmanual.pdf) and Tutorial Manual
+*                (r20ut3448eg0100_rskrx130_tutorialmanual.pdf).
+*
+* Note         : Code Generator is used to generate code for this sample program.
+*                The Code Generator details and version number are given in the file
+*                header for each relevant module.
+*
+* Operating Procedure:
+*                For details of Building and Downloading the sample code refer to the RSK Tutorial Manual.
+*
+*             1. Connect the RSK's RL78G1C-USB port to a PC using a USB Type A to mini B cable.
+*                The first time this port is connected to the PC an 'Installing Device Driver Software'
+*                pop-up will appear and the driver will be automatically installed. In Device Manager, the virtual
+*                COM port will appear under 'Port (COM & LPT)' as 'RSK USB Serial Port (COMx)', where x is a number.
+*
+*             2. Open a terminal program (e.g HyperTerminal) on the virtual COMx port created in step 1.
+*                Ensure the terminal program connection settings are as follows:
+*
+*                Baud Rate.............19200
+*                Data Bits.................8
+*                Parity.................None
+*                Stop Bits.................1
+*                Flow Control...........None
+*
+*             3. Compile and download the sample code. Click the 'Resume' button to start program execution.
+*                Click 'Resume' again if the program stops at main().
+*                The LCD display will show 'RSKRX130 Tutorial Press Any Switch' on the first 3 lines of the LCD.
+*
+*             4. Press any switch or the character 'C' in the terminal window. An A/D conversion will be performed.
+*                The result will be displayed in the center of the LCD.  The result and count will also be
+*                displayed in the terminal program.
+*
+*             5. Adjust the potentiometer RV1 and repeat step 4.
+*
+***********************************************************************************************************************/

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\RXv1_DSP_Sample_CCRX\RXv1_DSP_Sample_CCRX.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\RXv2_DSP_Sample_CCRX\RXv2_DSP_Sample_CCRX.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\RXv3_DSP_Sample_CCRX\RXv3_DSP_Sample_CCRX.ewp</path>
+    </project>
+    <batchBuild />
+</workspace>

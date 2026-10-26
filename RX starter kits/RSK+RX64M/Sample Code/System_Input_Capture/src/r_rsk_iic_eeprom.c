@@ -1,0 +1,160 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only 
+* intended for use with Renesas products. No other uses are authorized. This 
+* software is owned by Renesas Electronics Corporation and is protected under 
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+* AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software 
+* and to discontinue the availability of this software.  By using this software, 
+* you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2013 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* File Name    : r_rsk_iic_eeprom.c
+* Version      : 1.0
+* Device(s)    : R5F564MLCxFC
+* Tool-Chain   : IAR Embedded Workbench
+* Description  : This file contains functions for accessing eeprom via iic.
+* Creation Date: 08/10/2013
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+Includes <System Includes> , Project Includes
+***********************************************************************************************************************/
+
+/* For memcpy() */
+#include <string.h>
+
+/* Contains string functions used in this file */
+#include "r_cg_macrodriver.h"
+#include "r_cg_userdefine.h"
+
+#include "r_cg_riic.h"
+#include "r_rsk_iic_eeprom.h"
+
+/***********************************************************************************************************************
+Local data declarations
+***********************************************************************************************************************/
+#define EEPROM_DEVICE_ADDRESS (0xa0u)
+#define MAX_WRITE_BYTES       (17)
+
+/* API Functions */
+/******************************************************************************
+* Function Name : R_IIC_EepromRead
+* Description   : Read data from the IIC EEPROM
+* Arguments     : uint16_t addr    : address of eeprom data (0-based)
+*                 uint8_t * data   : destination buffer to place retrieved data
+*                 uint16_t no_bytes: number of bytes to read
+* Return value  : TRUE if READ ok, otherwise FALSE
+******************************************************************************/
+uint8_t R_IIC_EepromRead (const uint16_t addr, uint8_t * const data, const uint16_t no_bytes)
+{
+    MD_STATUS     ret;
+
+    /* R1EX24016 addressing is achieved with a10-a8 in bits 3-1 of the device address */
+    /* the first byte is then address bits a7-a0*/
+    const uint16_t device_addr = (uint16_t)((EEPROM_DEVICE_ADDRESS | (uint8_t)((addr & 0x0f00u) >> 7u)) >> 1);
+    uint8_t       low_addr = (uint8_t)(addr & 0x00ffu);
+
+    /* Send write to configure memory to be read  */
+    ret = R_RIIC2_Master_Send(device_addr,
+                              &low_addr,
+                              (uint16_t)sizeof(uint8_t));
+
+    if (MD_OK != ret)
+    {
+        return FALSE;
+    }
+
+    /* Wait for transmission to complete with a timeout*/
+    if (FALSE == R_IIC2_MasterWaitTxComplete())
+    {
+        return FALSE;
+    }
+
+    ret = R_RIIC2_Master_Receive(device_addr, data, no_bytes);
+
+    if (MD_OK != ret)
+    {
+        return FALSE;
+    }
+
+    /* Wait for reception to complete with a timeout*/
+    if (FALSE == R_IIC2_MasterWaitRxComplete())
+    {
+        return FALSE;
+    }
+
+    return TRUE;
+}
+
+/******************************************************************************
+* End of function R_IIC_EepromRead
+******************************************************************************/
+
+/******************************************************************************
+* Function Name : R_IIC_EepromWrite
+* Description   : Write data to the eeprom.
+* Arguments     : uint16_t addr    : address of eeprom data (0-based)
+*                 uint8_t * data   : buffer containing data to write
+*                 uint16_t no_bytes: number of bytes to write
+* Return value  : TRUE if write ok, otherwise FALSE
+******************************************************************************/
+uint8_t R_IIC_EepromWrite (const uint16_t addr, uint8_t * const data, const uint16_t no_bytes)
+{
+    /* requires buffer in static memory as write is done in interrupts */
+    static uint8_t iic_write_buf[MAX_WRITE_BYTES];
+    MD_STATUS      ret;
+
+    /* R1EX24016 addressing is achieved with a10-a8 in bits 3-1 of the device address */
+    /* the first byte is then address bits a7-a0*/
+    const uint16_t  device_addr = (uint16_t)((EEPROM_DEVICE_ADDRESS | (uint8_t)((addr & 0x0f00u) >> 7u)) >> 1);
+
+    /* form static write buffer than contains address and data */
+    
+    if (no_bytes > (MAX_WRITE_BYTES - sizeof(uint8_t)))
+    {
+        return FALSE;
+    }
+
+    iic_write_buf[0] = (uint8_t)(addr & 0x00ff);
+    memcpy(&iic_write_buf[1], data, (uint32_t)no_bytes);
+
+    /* Send write of address and data  */
+    ret = R_RIIC2_Master_Send(device_addr,
+                              iic_write_buf,
+                              (uint16_t)(no_bytes + sizeof(uint8_t)));
+
+    if (MD_OK != ret)
+    {
+        return FALSE;
+    }
+
+    /* Wait for transmission to complete with a 1 s timeout*/
+    if (FALSE == R_IIC2_MasterWaitTxComplete())
+    {
+        return FALSE;
+    }
+
+    return TRUE;
+}
+
+/******************************************************************************
+* End of function R_IIC_EepromWrite
+******************************************************************************/
+
+
+

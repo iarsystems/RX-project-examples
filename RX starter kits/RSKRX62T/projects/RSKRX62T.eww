@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\ADC10 Oneshot\ADC10 Oneshot.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\ADC10 Repeat\ADC10 Repeat.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\ADC12 Oneshot\ADC12 Oneshot.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\ADC12 Repeat\ADC12 Repeat.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Async Serial\Async Serial.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\CAN\CAN.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\CRC\CRC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\DTC\DTC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash Data\Flash Data.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\LVD\LVD.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Power Down\Power Down.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\PWM\PWM.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Capture\Timer Capture.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Event\Timer Event.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Mode\Timer Mode.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Compare\Timer_Compare.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\WDT\WDT.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+

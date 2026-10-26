@@ -1,0 +1,114 @@
+/* Adapted for use with IAR Embedded Workbench */
+/*******************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only 
+* intended for use with Renesas products. No other uses are authorized. This 
+* software is owned by Renesas Electronics Corporation and is protected under
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+* AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software
+* and to discontinue the availability of this software. By using this software,
+* you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer *
+* Copyright (C) 2011 Renesas Electronics Corporation. All rights reserved.    
+*******************************************************************************/
+/*******************************************************************************
+* File Name     : lcd.c
+* Version       : 1.0
+* Device(s)     : R5F563N8
+* Tool-Chain    : Renesas RX Standard Toolchain 1.0.0
+* OS            : None
+* H/W Platform  : YRDKRX63N
+* Description   : LCD Module utility functions.
+*                 Written for RDK Okaya graphic LCD
+*******************************************************************************/
+/*******************************************************************************
+* History : DD.MM.YYYY     Version     Description
+*         : 06.09.2011     1.00        First release
+*           19.01.2012                 CS revisions
+*******************************************************************************/
+
+/*******************************************************************************
+Includes   <System Includes> , "Project Includes"
+*******************************************************************************/
+/* Standard string manipulation & formatting functions */
+#include <stdio.h>
+#include <string.h>
+/* Defines standard variable types used in this function */
+#include <stdint.h>
+
+/* Following header file provides function prototypes for LCD controlling
+   functions & macro defines */
+#include "lcd.h"
+/* Graphics library support */
+#include "glyph_api.h"
+
+
+/*******************************************************************************
+Private global variables and functions
+*******************************************************************************/
+T_glyphHandle g_lcd_handle;
+
+/*******************************************************************************
+* Function name : lcd_initialize
+* Description   : Initializes the LCD display. 
+* Arguments     : none
+* Return Value  : none
+*******************************************************************************/
+void lcd_initialize(void)
+{
+  if (GlyphOpen(&g_lcd_handle, 0) == GLYPH_ERROR_NONE)
+  {
+    /* use Glyph full access direct functions */
+    GlyphNormalScreen(g_lcd_handle);
+    GlyphSetFont     (g_lcd_handle, GLYPH_FONT_8_BY_8);
+    GlyphClearScreen (g_lcd_handle);
+  }
+} /* End of function lcd_initialize() */
+
+
+/*******************************************************************************
+* Function name : lcd_clear
+* Description   : Clears the LCD
+* Arguments     : none
+* Return Value  : none
+*******************************************************************************/
+void lcd_clear(void)
+{
+  GlyphClearScreen(g_lcd_handle);
+} /* End of function lcd_clear() */
+
+
+/*******************************************************************************
+* Function name : lcd_display
+* Description   : This function controls the LCD writes.
+*                 The display supports 8 lines with up to 12 characters per line
+*                 Use the defines LCD_LINE1 to LCD_LINE8 to specfify the starting
+*                 position.
+*                 For example, to start at the 4th position on line 1:
+*                     lcd_display(LCD_LINE1 + 4, "Hello")
+* Arguments     : uint8_t position - line number of display
+*                 const unit8_t * string - pointer to null terminated string
+* Return Value  : none
+*******************************************************************************/
+void lcd_display(uint8_t position, const uint8_t * string)
+{
+  uint8_t y = position - (position % 8);
+  uint8_t xOffset = (position % 8) << 3;
+  
+  /* Draw text lines, 8 pixels high, 96 pixels wide */
+  /* Clear the rectangle of this line */
+  GlyphEraseBlock(g_lcd_handle, xOffset, y, (95 - xOffset), y + 7);
+  GlyphSetXY     (g_lcd_handle, xOffset, y);
+  GlyphString    (g_lcd_handle, (uint8_t *)string, strlen((void *)string));
+} /* End of function lcd_display() */
+

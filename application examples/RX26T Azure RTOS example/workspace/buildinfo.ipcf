@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- IAR Project Connection File -->
+<iarProjectConnection version="1.6" name="Renesas_AP" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="IarProjectConnection_1.8.xsd">
+<device>
+    <name>R5F526TF</name>
+</device>
+<includePath>
+    <path>$PROJ_DIR$\src\smc_gen\general</path>
+    <path>$PROJ_DIR$\src\smc_gen\r_bsp</path>
+    <path>$PROJ_DIR$\src\smc_gen\r_cmt_rx</path>
+    <path>$PROJ_DIR$\src\smc_gen\r_config</path>
+    <path>$PROJ_DIR$\src\smc_gen\r_pincfg</path>
+    <path>$PROJ_DIR$\libs\threadx\ports\rxv3\iar\inc</path>
+    <path>$PROJ_DIR$\libs\threadx</path>
+    <path>$PROJ_DIR$\libs\threadx\common\inc</path>
+    <path>$PROJ_DIR$\libs\threadx\utility\low_power</path>
+    <path>$PROJ_DIR$\src\rtos_config</path>
+    <path>$PROJ_DIR$\src\smc_gen\r_cmt_rx\src</path>
+</includePath>
+<defines>
+    <define>TX_INCLUDE_USER_DEFINE_FILE</define>
+</defines>
+<asmDefines>
+    <define>TX_LOW_POWER=0</define>
+    <define>TX_ENABLE_WAIT=0</define>
+</asmDefines>
+<files>
+    <group name ="src">
+        <group name ="smc_gen">
+            <group name ="general">
+                <path>.\src\smc_gen\general\r_cg_hardware_setup.c</path>
+                <path>.\src\smc_gen\general\r_cg_macrodriver.h</path>
+                <path>.\src\smc_gen\general\r_cg_userdefine.h</path>
+                <path>.\src\smc_gen\general\r_smc_cgc.c</path>
+                <path>.\src\smc_gen\general\r_smc_cgc.h</path>
+                <path>.\src\smc_gen\general\r_smc_cgc_user.c</path>
+                <path>.\src\smc_gen\general\r_smc_entry.h</path>
+                <path>.\src\smc_gen\general\r_smc_interrupt.c</path>
+                <path>.\src\smc_gen\general\r_smc_interrupt.h</path>
+            </group>
+        </group>
+    </group>
+    <group name ="src">
+        <group name ="smc_gen">
+            <group name ="r_bsp">
+                <group name ="board">
+                    <group name ="generic_rx26t">
+                        <path>.\src\smc_gen\r_bsp\board\generic_rx26t\hwsetup.c</path>
+                        <path>.\src\smc_gen\r_bsp\board\generic_rx26t\hwsetup.h</path>
+                        <path>.\src\smc_gen\r_bsp\board\generic_rx26t\r_bsp.h</path>
+                        <path>.\src\smc_gen\r_bsp\board\generic_rx26t\r_bsp_config_reference.h</path>
+                        <path>.\src\smc_gen\r_bsp\board\generic_rx26t\r_bsp_interrupt_config_reference.h</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="src">
+        <group name ="smc_gen">
+            <group name ="r_bsp">
+                <group name ="board">
+                    <group name ="user">
+                        <path>.\src\smc_gen\r_bsp\board\user\r_bsp.h</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="src">
+        <group name ="smc_gen">
+            <group name ="r_bsp">
+                <group name ="doc">
+                    <group name ="en">
+                        <path>.\src\smc_gen\r_bsp\doc\en\r01an1685ej0741-rx-bsp.pdf</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="src">
+        <group name ="smc_gen">
+            <group name ="r_bsp">
+                <group name ="doc">
+                    <group name ="ja">
+                        <path>.\src\smc_gen\r_bsp\doc\ja\r01an1685jj0741-rx-bsp.pdf</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="src">
+        <group name ="smc_gen">
+            <group name ="r_bsp">
+                <group name ="mcu">
+                    <group name ="all">
+                        <path>.\src\smc_gen\r_bsp\mcu\all\fsp_common_api.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\iar_call_inits.s</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\lowlvl.c</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\lowlvl.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\lowsrc.c</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\lowsrc.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\mcu_locks.c</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\resetprg.c</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\r_bsp_common.c</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\r_bsp_common.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\r_bsp_cpu.c</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\r_bsp_interrupts.c</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\r_bsp_interrupts.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\r_bsp_locking.c</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\r_bsp_mcu_startup.c</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\r_bsp_mcu_startup.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\r_bsp_software_interrupt.c</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\r_bsp_software_interrupt.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\r_fsp_error.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\r_rtos.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\r_rx_compiler.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\r_rx_intrinsic_functions.c</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\r_rx_intrinsic_functions.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\all\r_typedefs.h</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="src">
+        <group name ="smc_gen">
+            <group name ="r_bsp">
+                <group name ="mcu">
+                    <group name ="rx26t">
+                        <group name ="register_access">
+                            <group name ="iccrx">
+                                <path>.\src\smc_gen\r_bsp\mcu\rx26t\register_access\iccrx\iodefine.h</path>
+                            </group>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="src">
+        <group name ="smc_gen">
+            <group name ="r_bsp">
+                <group name ="mcu">
+                    <group name ="rx26t">
+                        <path>.\src\smc_gen\r_bsp\mcu\rx26t\mcu_clocks.c</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\rx26t\mcu_clocks.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\rx26t\mcu_info.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\rx26t\mcu_init.c</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\rx26t\mcu_init.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\rx26t\mcu_interrupts.c</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\rx26t\mcu_interrupts.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\rx26t\mcu_locks.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\rx26t\mcu_mapped_interrupts.c</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\rx26t\mcu_mapped_interrupts.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\rx26t\mcu_mapped_interrupts_private.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\rx26t\r_bsp_cpu.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\rx26t\r_bsp_locking.h</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\rx26t\vecttbl.c</path>
+                        <path>.\src\smc_gen\r_bsp\mcu\rx26t\vecttbl.h</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="src">
+        <group name ="smc_gen">
+            <group name ="r_bsp">
+                <path>.\src\smc_gen\r_bsp\platform.h</path>
+                <path>.\src\smc_gen\r_bsp\readme.txt</path>
+            </group>
+        </group>
+    </group>
+    <group name ="src">
+        <group name ="smc_gen">
+            <group name ="r_cmt_rx">
+                <group name ="doc">
+                    <group name ="en">
+                        <path>.\src\smc_gen\r_cmt_rx\doc\en\r01an1856ej0550-rx-timer.pdf</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="src">
+        <group name ="smc_gen">
+            <group name ="r_cmt_rx">
+                <group name ="doc">
+                    <group name ="ja">
+                        <path>.\src\smc_gen\r_cmt_rx\doc\ja\r01an1856jj0550-rx-timer.pdf</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="src">
+        <group name ="smc_gen">
+            <group name ="r_cmt_rx">
+                <group name ="src">
+                    <path>.\src\smc_gen\r_cmt_rx\src\r_cmt_rx.c</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="src">
+        <group name ="smc_gen">
+            <group name ="r_cmt_rx">
+                <path>.\src\smc_gen\r_cmt_rx\readme.txt</path>
+                <path>.\src\smc_gen\r_cmt_rx\r_cmt_rx_if.h</path>
+            </group>
+        </group>
+    </group>
+    <group name ="src">
+        <group name ="smc_gen">
+            <group name ="r_config">
+                <path>.\src\smc_gen\r_config\r_bsp_config.h</path>
+                <path>.\src\smc_gen\r_config\r_bsp_config_readme.txt</path>
+                <path>.\src\smc_gen\r_config\r_bsp_interrupt_config.h</path>
+                <path>.\src\smc_gen\r_config\r_cmt_rx_config.h</path>
+            </group>
+        </group>
+    </group>
+    <group name ="src">
+        <group name ="smc_gen">
+            <group name ="r_pincfg">
+                <path>.\src\smc_gen\r_pincfg\Pin.c</path>
+                <path>.\src\smc_gen\r_pincfg\Pin.h</path>
+            </group>
+        </group>
+    </group>
+    <group name ="libs">
+        <group name ="threadx">
+            <group name ="ports">
+                <group name ="rxv3">
+                    <group name ="iar">
+                        <group name ="inc">
+                            <path>.\libs\threadx\ports\rxv3\iar\inc\tx_port.h</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="libs">
+        <group name ="threadx">
+            <group name ="ports">
+                <group name ="rxv3">
+                    <group name ="iar">
+                        <group name ="src">
+                            <path>.\libs\threadx\ports\rxv3\iar\src\tx_initialize_low_level.s</path>
+                            <path>.\libs\threadx\ports\rxv3\iar\src\tx_thread_context_restore.s</path>
+                            <path>.\libs\threadx\ports\rxv3\iar\src\tx_thread_context_save.s</path>
+                            <path>.\libs\threadx\ports\rxv3\iar\src\tx_thread_interrupt_control.s</path>
+                            <path>.\libs\threadx\ports\rxv3\iar\src\tx_thread_schedule.s</path>
+                            <path>.\libs\threadx\ports\rxv3\iar\src\tx_thread_stack_build.s</path>
+                            <path>.\libs\threadx\ports\rxv3\iar\src\tx_thread_system_return.s</path>
+                            <path>.\libs\threadx\ports\rxv3\iar\src\tx_timer_interrupt.s</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="libs">
+        <group name ="threadx">
+            <group name ="ports">
+                <group name ="rxv3">
+                    <group name ="iar">
+                        <path>.\libs\threadx\ports\rxv3\iar\readme_threadx.txt</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="libs">
+        <group name ="threadx">
+            <group name ="common">
+                <group name ="inc">
+                    <path>.\libs\threadx\common\inc\tx_api.h</path>
+                    <path>.\libs\threadx\common\inc\tx_block_pool.h</path>
+                    <path>.\libs\threadx\common\inc\tx_byte_pool.h</path>
+                    <path>.\libs\threadx\common\inc\tx_event_flags.h</path>
+                    <path>.\libs\threadx\common\inc\tx_initialize.h</path>
+                    <path>.\libs\threadx\common\inc\tx_mutex.h</path>
+                    <path>.\libs\threadx\common\inc\tx_queue.h</path>
+                    <path>.\libs\threadx\common\inc\tx_semaphore.h</path>
+                    <path>.\libs\threadx\common\inc\tx_thread.h</path>
+                    <path>.\libs\threadx\common\inc\tx_timer.h</path>
+                    <path>.\libs\threadx\common\inc\tx_trace.h</path>
+                    <path>.\libs\threadx\common\inc\tx_user_sample.h</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="libs">
+        <group name ="threadx">
+            <group name ="common">
+                <group name ="src">
+                    <path>.\libs\threadx\common\src\txe_block_allocate.c</path>
+                    <path>.\libs\threadx\common\src\txe_block_pool_create.c</path>
+                    <path>.\libs\threadx\common\src\txe_block_pool_delete.c</path>
+                    <path>.\libs\threadx\common\src\txe_block_pool_info_get.c</path>
+                    <path>.\libs\threadx\common\src\txe_block_pool_prioritize.c</path>
+                    <path>.\libs\threadx\common\src\txe_block_release.c</path>
+                    <path>.\libs\threadx\common\src\txe_byte_allocate.c</path>
+                    <path>.\libs\threadx\common\src\txe_byte_pool_create.c</path>
+                    <path>.\libs\threadx\common\src\txe_byte_pool_delete.c</path>
+                    <path>.\libs\threadx\common\src\txe_byte_pool_info_get.c</path>
+                    <path>.\libs\threadx\common\src\txe_byte_pool_prioritize.c</path>
+                    <path>.\libs\threadx\common\src\txe_byte_release.c</path>
+                    <path>.\libs\threadx\common\src\txe_event_flags_create.c</path>
+                    <path>.\libs\threadx\common\src\txe_event_flags_delete.c</path>
+                    <path>.\libs\threadx\common\src\txe_event_flags_get.c</path>
+                    <path>.\libs\threadx\common\src\txe_event_flags_info_get.c</path>
+                    <path>.\libs\threadx\common\src\txe_event_flags_set.c</path>
+                    <path>.\libs\threadx\common\src\txe_event_flags_set_notify.c</path>
+                    <path>.\libs\threadx\common\src\txe_mutex_create.c</path>
+                    <path>.\libs\threadx\common\src\txe_mutex_delete.c</path>
+                    <path>.\libs\threadx\common\src\txe_mutex_get.c</path>
+                    <path>.\libs\threadx\common\src\txe_mutex_info_get.c</path>
+                    <path>.\libs\threadx\common\src\txe_mutex_prioritize.c</path>
+                    <path>.\libs\threadx\common\src\txe_mutex_put.c</path>
+                    <path>.\libs\threadx\common\src\txe_queue_create.c</path>
+                    <path>.\libs\threadx\common\src\txe_queue_delete.c</path>
+                    <path>.\libs\threadx\common\src\txe_queue_flush.c</path>
+                    <path>.\libs\threadx\common\src\txe_queue_front_send.c</path>
+                    <path>.\libs\threadx\common\src\txe_queue_info_get.c</path>
+                    <path>.\libs\threadx\common\src\txe_queue_prioritize.c</path>
+                    <path>.\libs\threadx\common\src\txe_queue_receive.c</path>
+                    <path>.\libs\threadx\common\src\txe_queue_send.c</path>
+                    <path>.\libs\threadx\common\src\txe_queue_send_notify.c</path>
+                    <path>.\libs\threadx\common\src\txe_semaphore_ceiling_put.c</path>
+                    <path>.\libs\threadx\common\src\txe_semaphore_create.c</path>
+                    <path>.\libs\threadx\common\src\txe_semaphore_delete.c</path>
+                    <path>.\libs\threadx\common\src\txe_semaphore_get.c</path>
+                    <path>.\libs\threadx\common\src\txe_semaphore_info_get.c</path>
+                    <path>.\libs\threadx\common\src\txe_semaphore_prioritize.c</path>
+                    <path>.\libs\threadx\common\src\txe_semaphore_put.c</path>
+                    <path>.\libs\threadx\common\src\txe_semaphore_put_notify.c</path>
+                    <path>.\libs\threadx\common\src\txe_thread_create.c</path>
+                    <path>.\libs\threadx\common\src\txe_thread_delete.c</path>
+                    <path>.\libs\threadx\common\src\txe_thread_entry_exit_notify.c</path>
+                    <path>.\libs\threadx\common\src\txe_thread_info_get.c</path>
+                    <path>.\libs\threadx\common\src\txe_thread_preemption_change.c</path>
+                    <path>.\libs\threadx\common\src\txe_thread_priority_change.c</path>
+                    <path>.\libs\threadx\common\src\txe_thread_relinquish.c</path>
+                    <path>.\libs\threadx\common\src\txe_thread_reset.c</path>
+                    <path>.\libs\threadx\common\src\txe_thread_resume.c</path>
+                    <path>.\libs\threadx\common\src\txe_thread_suspend.c</path>
+                    <path>.\libs\threadx\common\src\txe_thread_terminate.c</path>
+                    <path>.\libs\threadx\common\src\txe_thread_time_slice_change.c</path>
+                    <path>.\libs\threadx\common\src\txe_thread_wait_abort.c</path>
+                    <path>.\libs\threadx\common\src\txe_timer_activate.c</path>
+                    <path>.\libs\threadx\common\src\txe_timer_change.c</path>
+                    <path>.\libs\threadx\common\src\txe_timer_create.c</path>
+                    <path>.\libs\threadx\common\src\txe_timer_deactivate.c</path>
+                    <path>.\libs\threadx\common\src\txe_timer_delete.c</path>
+                    <path>.\libs\threadx\common\src\txe_timer_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_block_allocate.c</path>
+                    <path>.\libs\threadx\common\src\tx_block_pool_cleanup.c</path>
+                    <path>.\libs\threadx\common\src\tx_block_pool_create.c</path>
+                    <path>.\libs\threadx\common\src\tx_block_pool_delete.c</path>
+                    <path>.\libs\threadx\common\src\tx_block_pool_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_block_pool_initialize.c</path>
+                    <path>.\libs\threadx\common\src\tx_block_pool_performance_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_block_pool_performance_system_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_block_pool_prioritize.c</path>
+                    <path>.\libs\threadx\common\src\tx_block_release.c</path>
+                    <path>.\libs\threadx\common\src\tx_byte_allocate.c</path>
+                    <path>.\libs\threadx\common\src\tx_byte_pool_cleanup.c</path>
+                    <path>.\libs\threadx\common\src\tx_byte_pool_create.c</path>
+                    <path>.\libs\threadx\common\src\tx_byte_pool_delete.c</path>
+                    <path>.\libs\threadx\common\src\tx_byte_pool_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_byte_pool_initialize.c</path>
+                    <path>.\libs\threadx\common\src\tx_byte_pool_performance_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_byte_pool_performance_system_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_byte_pool_prioritize.c</path>
+                    <path>.\libs\threadx\common\src\tx_byte_pool_search.c</path>
+                    <path>.\libs\threadx\common\src\tx_byte_release.c</path>
+                    <path>.\libs\threadx\common\src\tx_event_flags_cleanup.c</path>
+                    <path>.\libs\threadx\common\src\tx_event_flags_create.c</path>
+                    <path>.\libs\threadx\common\src\tx_event_flags_delete.c</path>
+                    <path>.\libs\threadx\common\src\tx_event_flags_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_event_flags_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_event_flags_initialize.c</path>
+                    <path>.\libs\threadx\common\src\tx_event_flags_performance_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_event_flags_performance_system_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_event_flags_set.c</path>
+                    <path>.\libs\threadx\common\src\tx_event_flags_set_notify.c</path>
+                    <path>.\libs\threadx\common\src\tx_initialize_high_level.c</path>
+                    <path>.\libs\threadx\common\src\tx_initialize_kernel_enter.c</path>
+                    <path>.\libs\threadx\common\src\tx_initialize_kernel_setup.c</path>
+                    <path>.\libs\threadx\common\src\tx_misra.c</path>
+                    <path>.\libs\threadx\common\src\tx_mutex_cleanup.c</path>
+                    <path>.\libs\threadx\common\src\tx_mutex_create.c</path>
+                    <path>.\libs\threadx\common\src\tx_mutex_delete.c</path>
+                    <path>.\libs\threadx\common\src\tx_mutex_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_mutex_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_mutex_initialize.c</path>
+                    <path>.\libs\threadx\common\src\tx_mutex_performance_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_mutex_performance_system_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_mutex_prioritize.c</path>
+                    <path>.\libs\threadx\common\src\tx_mutex_priority_change.c</path>
+                    <path>.\libs\threadx\common\src\tx_mutex_put.c</path>
+                    <path>.\libs\threadx\common\src\tx_queue_cleanup.c</path>
+                    <path>.\libs\threadx\common\src\tx_queue_create.c</path>
+                    <path>.\libs\threadx\common\src\tx_queue_delete.c</path>
+                    <path>.\libs\threadx\common\src\tx_queue_flush.c</path>
+                    <path>.\libs\threadx\common\src\tx_queue_front_send.c</path>
+                    <path>.\libs\threadx\common\src\tx_queue_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_queue_initialize.c</path>
+                    <path>.\libs\threadx\common\src\tx_queue_performance_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_queue_performance_system_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_queue_prioritize.c</path>
+                    <path>.\libs\threadx\common\src\tx_queue_receive.c</path>
+                    <path>.\libs\threadx\common\src\tx_queue_send.c</path>
+                    <path>.\libs\threadx\common\src\tx_queue_send_notify.c</path>
+                    <path>.\libs\threadx\common\src\tx_semaphore_ceiling_put.c</path>
+                    <path>.\libs\threadx\common\src\tx_semaphore_cleanup.c</path>
+                    <path>.\libs\threadx\common\src\tx_semaphore_create.c</path>
+                    <path>.\libs\threadx\common\src\tx_semaphore_delete.c</path>
+                    <path>.\libs\threadx\common\src\tx_semaphore_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_semaphore_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_semaphore_initialize.c</path>
+                    <path>.\libs\threadx\common\src\tx_semaphore_performance_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_semaphore_performance_system_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_semaphore_prioritize.c</path>
+                    <path>.\libs\threadx\common\src\tx_semaphore_put.c</path>
+                    <path>.\libs\threadx\common\src\tx_semaphore_put_notify.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_create.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_delete.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_entry_exit_notify.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_identify.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_initialize.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_performance_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_performance_system_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_preemption_change.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_priority_change.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_relinquish.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_reset.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_resume.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_shell_entry.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_sleep.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_stack_analyze.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_stack_error_handler.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_stack_error_notify.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_suspend.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_system_preempt_check.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_system_resume.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_system_suspend.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_terminate.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_timeout.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_time_slice.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_time_slice_change.c</path>
+                    <path>.\libs\threadx\common\src\tx_thread_wait_abort.c</path>
+                    <path>.\libs\threadx\common\src\tx_timer_activate.c</path>
+                    <path>.\libs\threadx\common\src\tx_timer_change.c</path>
+                    <path>.\libs\threadx\common\src\tx_timer_create.c</path>
+                    <path>.\libs\threadx\common\src\tx_timer_deactivate.c</path>
+                    <path>.\libs\threadx\common\src\tx_timer_delete.c</path>
+                    <path>.\libs\threadx\common\src\tx_timer_expiration_process.c</path>
+                    <path>.\libs\threadx\common\src\tx_timer_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_timer_initialize.c</path>
+                    <path>.\libs\threadx\common\src\tx_timer_performance_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_timer_performance_system_info_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_timer_system_activate.c</path>
+                    <path>.\libs\threadx\common\src\tx_timer_system_deactivate.c</path>
+                    <path>.\libs\threadx\common\src\tx_timer_thread_entry.c</path>
+                    <path>.\libs\threadx\common\src\tx_time_get.c</path>
+                    <path>.\libs\threadx\common\src\tx_time_set.c</path>
+                    <path>.\libs\threadx\common\src\tx_trace_buffer_full_notify.c</path>
+                    <path>.\libs\threadx\common\src\tx_trace_disable.c</path>
+                    <path>.\libs\threadx\common\src\tx_trace_enable.c</path>
+                    <path>.\libs\threadx\common\src\tx_trace_event_filter.c</path>
+                    <path>.\libs\threadx\common\src\tx_trace_event_unfilter.c</path>
+                    <path>.\libs\threadx\common\src\tx_trace_initialize.c</path>
+                    <path>.\libs\threadx\common\src\tx_trace_interrupt_control.c</path>
+                    <path>.\libs\threadx\common\src\tx_trace_isr_enter_insert.c</path>
+                    <path>.\libs\threadx\common\src\tx_trace_isr_exit_insert.c</path>
+                    <path>.\libs\threadx\common\src\tx_trace_object_register.c</path>
+                    <path>.\libs\threadx\common\src\tx_trace_object_unregister.c</path>
+                    <path>.\libs\threadx\common\src\tx_trace_user_event_insert.c</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="libs">
+        <group name ="threadx">
+            <group name ="common">
+                <path>.\libs\threadx\common\CMakeLists.txt</path>
+            </group>
+        </group>
+    </group>
+    <group name ="libs">
+        <group name ="threadx">
+            <group name ="utility">
+                <group name ="low_power">
+                    <path>.\libs\threadx\utility\low_power\low_power.md</path>
+                    <path>.\libs\threadx\utility\low_power\tx_low_power.c</path>
+                    <path>.\libs\threadx\utility\low_power\tx_low_power.h</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="libs">
+        <group name ="threadx">
+            <path>.\libs\threadx\tx_user.h</path>
+        </group>
+    </group>
+    <group name ="src">
+        <group name ="rtos_config">
+            <path>.\src\rtos_config\azurertos_object_init.c</path>
+            <path>.\src\rtos_config\azurertos_object_init.h</path>
+        </group>
+    </group>
+</files>
+</iarProjectConnection>

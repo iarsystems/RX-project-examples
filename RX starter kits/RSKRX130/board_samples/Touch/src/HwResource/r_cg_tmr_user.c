@@ -1,0 +1,112 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only intended for use with Renesas products.
+* No other uses are authorized. This software is owned by Renesas Electronics Corporation and is protected under all
+* applicable laws, including copyright laws. 
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIESREGARDING THIS SOFTWARE, WHETHER EXPRESS, IMPLIED
+* OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+* NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY
+* LAW, NEITHER RENESAS ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE FOR ANY DIRECT,
+* INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR
+* ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software and to discontinue the availability 
+* of this software. By using this software, you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2015 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* File Name    : r_cg_tmr_user.c
+* Version      : Code Generator for RX130 V1.00.00.02 [30 Oct 2015]
+* Device(s)    : R5F51305AxFN
+* Tool-Chain   : CCRX
+* Description  : This file implements device driver for TMR module.
+* Creation Date: 2015/12/29
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+Pragma directive
+***********************************************************************************************************************/
+/* Start user code for pragma. Do not edit comment generated here */
+/* End user code. Do not edit comment generated here */
+
+/***********************************************************************************************************************
+Includes
+***********************************************************************************************************************/
+#include "r_cg_macrodriver.h"
+#include "r_cg_tmr.h"
+/* Start user code for include. Do not edit comment generated here */
+/* End user code. Do not edit comment generated here */
+#include "r_cg_userdefine.h"
+
+/***********************************************************************************************************************
+Global variables and functions
+***********************************************************************************************************************/
+/* Start user code for global. Do not edit comment generated here */
+
+static volatile uint8_t one_ms_delay_complete = FALSE;
+
+/* End user code. Do not edit comment generated here */
+
+/***********************************************************************************************************************
+* Function Name: r_tmr_cmia0_interrupt
+* Description  : None
+* Arguments    : None
+* Return Value : None
+***********************************************************************************************************************/
+#if FAST_INTERRUPT_VECTOR == VECT_TMR0_CMIA0
+/*
+*CONVERTER REPLACED|REMOVED:
+*#pragma interrupt r_tmr_cmia0_interrupt(vect=VECT(TMR0,CMIA0),fint)
+*/
+__fast_interrupt void  r_tmr_cmia0_interrupt(void)
+#else
+/*
+*CONVERTER REPLACED|REMOVED:
+*#pragma interrupt r_tmr_cmia0_interrupt(vect=VECT(TMR0,CMIA0))
+#endif
+static void r_tmr_cmia0_interrupt(void)
+*/
+#pragma vector=VECT(TMR0,CMIA0)
+__interrupt static void r_tmr_cmia0_interrupt(void)
+#endif
+
+{
+    /* Start user code. Do not edit comment generated here */
+
+    one_ms_delay_complete = TRUE;
+
+    /* End user code. Do not edit comment generated here */
+}
+
+/* Start user code for adding. Do not edit comment generated here */
+
+/*******************************************************************************
+* Function Name: R_TMR_MsDelay
+* Description  : Uses TMR0 to wait for a specified number of milliseconds
+* Arguments    : uint16_t millisecs, number of milliseconds to wait
+* Return Value : None
+*******************************************************************************/
+void R_TMR_MsDelay (const uint16_t millisec)
+{
+    uint16_t ms_count = 0;
+
+    do
+    {
+        R_TMR0_Start();
+        while (FALSE == one_ms_delay_complete)
+        {
+            /* Wait */
+        }
+        R_TMR0_Stop();
+        one_ms_delay_complete = FALSE;
+        ms_count++;
+    } while (ms_count < millisec);
+}
+/*******************************************************************************
+End of function R_TMR_MsDelay
+*******************************************************************************/
+
+/* End user code. Do not edit comment generated here */

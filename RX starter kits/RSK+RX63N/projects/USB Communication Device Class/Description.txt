@@ -1,0 +1,2 @@
+USB Communication Device Class
+Demonstrates the Communication Device Class USB support.

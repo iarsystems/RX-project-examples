@@ -1,0 +1,2 @@
+Timer Event
+The timer is configured to count an external clock signal.

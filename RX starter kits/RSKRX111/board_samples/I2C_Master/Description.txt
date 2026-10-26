@@ -1,0 +1,81 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only 
+* intended for use with Renesas products. No other uses are authorized. This 
+* software is owned by Renesas Electronics Corporation and is protected under 
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+* AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software 
+* and to discontinue the availability of this software.  By using this software, 
+* you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2013 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* File Name    : Description.txt
+* Version      : 1.0
+* Device(s)    : R5F51115AxFM
+* Tool-Chain   : CCRX
+* H/W Platform : RSKRX111
+* Note         : Application Leading Tool (Applilet) is used to generate code 
+*                for this sample program.  The name Applilet is used hereafter.
+*                The Applilet details and version number are given in the file 
+*                header for each relevant module.
+* Description  : Demonstrates usage of IIC unit in master mode, by reading and
+*                writing to internal EEPROM memory or external board emulating  
+*                a slave device. The address for internal EEPROM is 0xA0, and  
+*                external device is 0x60.
+*
+*                For connection to external device, follow the instructions in 
+*                I2C_Slave sample.
+*                 
+* Operation    : 
+*                 1. Compile and download the sample code. Click the 'Debug Icon' 
+*                    button to start program execution. Click again if the program
+*                    stops at Main.
+*
+*                 2. The Pmod LCD will display "IIC Master, followed by the 
+*                    following instructions:
+*
+*                           SW1 = Int/Ext
+*                           SW2 = Write
+*                           SW3 = Read
+*
+*                 3. Line 2 of the displays shows the operating mode, in this case: 
+*                                   "Internal (0xA0)".
+*
+*                 4. Press switch SW2 to perform a write operation. If the write
+*                    is successful, the data identifier will be displayed on the
+*                    screen. Re-press SW2 to write next data.
+*                
+*                 5. Press switch SW3 to perform a read operation. If the read 
+*                    is successful, the identifier of the data read will appear
+*                    on the debug LCD.  Note: the read operation will read the 
+*                    last data written.
+*                    
+*                 6. If a write error occurs, "Write error" will be displayed on 
+*                    the Pmod LCD and if a read error occurs, "Read Error" will be 
+*                    displayed on the Pmod LCD.
+*                    An error "Read mismatch error" will occur if a read operation 
+*                    is performed before doing a write operation. This is because the IIC  
+*                    the IIC master application compares the received data with the 
+*                    last data written.
+*
+*                  7. To perform the test with external slave device, Press switch SW1.
+*                     The display will show "External (0x60)".   
+*                
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+* History      : 20.06.2013 Ver. 1.00 First Release
+***********************************************************************************************************************/

@@ -1,0 +1,2 @@
+ADC Repeat
+Demonstrates usage of the ADC unit in repeat mode

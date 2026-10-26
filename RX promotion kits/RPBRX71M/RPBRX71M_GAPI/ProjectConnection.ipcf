@@ -1,0 +1,1154 @@
+<?xml version="1.0"?>
+<iarProjectConnection version="1.0" name="FIT Modules" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="IarProjectConnection_1.0.xsd">
+    <includePath>
+        <path>$PROJ_DIR$/r_config</path>
+        <path>$PROJ_DIR$/r_flash_rx</path>
+        <path>$PROJ_DIR$/r_flash_rx/src</path>
+        <path>$PROJ_DIR$/r_flash_rx/src/flash_type_1</path>
+        <path>$PROJ_DIR$/r_flash_rx/src/flash_type_2</path>
+        <path>$PROJ_DIR$/r_flash_rx/src/flash_type_3</path>
+        <path>$PROJ_DIR$/r_flash_rx/src/flash_type_4</path>
+        <path>$PROJ_DIR$/r_flash_rx/src/targets</path>
+        <path>$PROJ_DIR$/r_config</path>
+        <path>$PROJ_DIR$/r_tfat_rx</path>
+        <path>$PROJ_DIR$/r_tfat_rx/lib</path>
+        <path>$PROJ_DIR$/r_config</path>
+        <path>$PROJ_DIR$/r_usb_basic</path>
+        <path>$PROJ_DIR$/r_usb_basic\src\driver\inc</path>
+        <path>$PROJ_DIR$/r_usb_basic\src\HW\inc</path>
+        <path>$PROJ_DIR$/r_config</path>
+        <path>$PROJ_DIR$/r_usb_pmsc</path>
+        <path>$PROJ_DIR$/r_usb_pmsc\src\inc</path>
+    </includePath>
+    <files>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\readme.txt</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_bsp_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_bsp_interrupt_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_flash_rx_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_media_driver_api_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_tfat_rx_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_usb_atapi_driver_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_usb_basic_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_usb_pmsc_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <path>\r_flash_rx\readme.txt</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <path>\r_flash_rx\r_flash_rx_if.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="doc">
+                    <path>\r_flash_rx\doc\r01an2184eu0170_rx.pdf</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="ref">
+                    <path>\r_flash_rx\ref\r_flash_rx_config_reference.h</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <path>\r_flash_rx\src\r_flash_rx.c</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <path>\r_flash_rx\src\r_flash_rx.h</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <group name="flash_type_1">
+                        <path>\r_flash_rx\src\flash_type_1\r_codeflash.c</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <group name="flash_type_1">
+                        <path>\r_flash_rx\src\flash_type_1\r_codeflash.h</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <group name="flash_type_1">
+                        <path>\r_flash_rx\src\flash_type_1\r_codeflash_extra.c</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <group name="flash_type_1">
+                        <path>\r_flash_rx\src\flash_type_1\r_codeflash_extra.h</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <group name="flash_type_1">
+                        <path>\r_flash_rx\src\flash_type_1\r_dataflash.c</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <group name="flash_type_1">
+                        <path>\r_flash_rx\src\flash_type_1\r_dataflash.h</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <group name="flash_type_1">
+                        <path>\r_flash_rx\src\flash_type_1\r_flash_common.h</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <group name="flash_type_1">
+                        <path>\r_flash_rx\src\flash_type_1\r_flash_type1.c</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <group name="flash_type_1">
+                        <path>\r_flash_rx\src\flash_type_1\r_flash_type1_if.h</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <group name="flash_type_1">
+                        <path>\r_flash_rx\src\flash_type_1\r_flash_utils.c</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <group name="flash_type_2">
+                        <path>\r_flash_rx\src\flash_type_2\r_flash_type2.c</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <group name="flash_type_2">
+                        <path>\r_flash_rx\src\flash_type_2\r_flash_type2_if.h</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <group name="flash_type_3">
+                        <path>\r_flash_rx\src\flash_type_3\r_flash_type3.c</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <group name="flash_type_3">
+                        <path>\r_flash_rx\src\flash_type_3\r_flash_type3_if.h</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <group name="flash_type_4">
+                        <path>\r_flash_rx\src\flash_type_4\r_flash_type4.c</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <group name="flash_type_4">
+                        <path>\r_flash_rx\src\flash_type_4\r_flash_type4_if.h</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_flash_rx">
+                <group name="src">
+                    <group name="targets">
+                        <group name="rx71m">
+                            <path>\r_flash_rx\src\targets\rx71m\r_flash_rx71m.h</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\readme.txt</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_bsp_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_bsp_interrupt_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_flash_rx_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_media_driver_api_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_tfat_rx_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_usb_atapi_driver_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_usb_basic_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_usb_pmsc_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_tfat_rx">
+                <path>\r_tfat_rx\readme.txt</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_tfat_rx">
+                <path>\r_tfat_rx\r_tfat_lib.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_tfat_rx">
+                <group name="doc">
+                    <group name="en">
+                        <path>\r_tfat_rx\doc\en\r20an0038ej0302_rx_tfat.pdf</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_tfat_rx">
+                <group name="doc">
+                    <group name="en">
+                        <path>\r_tfat_rx\doc\en\r20uw0078ej0301_tfat.pdf</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_tfat_rx">
+                <group name="doc">
+                    <group name="ja">
+                        <path>\r_tfat_rx\doc\ja\r20an0038jj0302_rx_tfat.pdf</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_tfat_rx">
+                <group name="doc">
+                    <group name="ja">
+                        <path>\r_tfat_rx\doc\ja\r20uw0078jj0301_tfat.pdf</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_tfat_rx">
+                <group name="lib">
+                    <path>\r_tfat_rx\lib\r_mw_version.h</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_tfat_rx">
+                <group name="lib">
+                    <path>\r_tfat_rx\lib\r_stdint.h</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_tfat_rx">
+                <group name="lib">
+                    <path>\r_tfat_rx\lib\tfat_rx600_little.lib</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_tfat_rx">
+                <group name="ref">
+                    <path>\r_tfat_rx\ref\r_tfat_rx_config_reference.h</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\readme.txt</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_bsp_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_bsp_interrupt_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_flash_rx_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_media_driver_api_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_tfat_rx_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_usb_atapi_driver_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_usb_basic_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_usb_pmsc_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <path>\r_usb_basic\readme.txt</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <path>\r_usb_basic\r_usb_basic_if.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="doc">
+                    <path>\r_usb_basic\doc\r01an2025ej0110_usb.pdf</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="ref">
+                    <path>\r_usb_basic\ref\r_usb_basic_config_reference.h</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="comm">
+                            <path>\r_usb_basic\src\driver\comm\r_usb_cdataio.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="comm">
+                            <path>\r_usb_basic\src\driver\comm\r_usb_cintfifo.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="comm">
+                            <path>\r_usb_basic\src\driver\comm\r_usb_cinthandler_usbip0.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="comm">
+                            <path>\r_usb_basic\src\driver\comm\r_usb_cinthandler_usbip1.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="comm">
+                            <path>\r_usb_basic\src\driver\comm\r_usb_clibusbip.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="comm">
+                            <path>\r_usb_basic\src\driver\comm\r_usb_cscheduler.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="comm">
+                            <path>\r_usb_basic\src\driver\comm\r_usb_cstdapi.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="comm">
+                            <path>\r_usb_basic\src\driver\comm\r_usb_cstdfunction.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="host">
+                            <path>\r_usb_basic\src\driver\host\r_usb_hbc.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="host">
+                            <path>\r_usb_basic\src\driver\host\r_usb_hcontrolrw.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="host">
+                            <path>\r_usb_basic\src\driver\host\r_usb_hdriver.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="host">
+                            <path>\r_usb_basic\src\driver\host\r_usb_hdriverapi.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="host">
+                            <path>\r_usb_basic\src\driver\host\r_usb_hhubsys.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="host">
+                            <path>\r_usb_basic\src\driver\host\r_usb_hintfifo.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="host">
+                            <path>\r_usb_basic\src\driver\host\r_usb_hlibusbip.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="host">
+                            <path>\r_usb_basic\src\driver\host\r_usb_hmanager.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="host">
+                            <path>\r_usb_basic\src\driver\host\r_usb_hsignal.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="host">
+                            <path>\r_usb_basic\src\driver\host\r_usb_hstdfunction.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="inc">
+                            <path>\r_usb_basic\src\driver\inc\r_usb_api.h</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="inc">
+                            <path>\r_usb_basic\src\driver\inc\r_usb_cdefusbip.h</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="inc">
+                            <path>\r_usb_basic\src\driver\inc\r_usb_cextern.h</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="inc">
+                            <path>\r_usb_basic\src\driver\inc\r_usb_ckernelid.h</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="inc">
+                            <path>\r_usb_basic\src\driver\inc\r_usb_cmacprint.h</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="inc">
+                            <path>\r_usb_basic\src\driver\inc\r_usb_cmacsystemcall.h</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="inc">
+                            <path>\r_usb_basic\src\driver\inc\r_usb_ctypedef.h</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="peri">
+                            <path>\r_usb_basic\src\driver\peri\r_usb_pbc.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="peri">
+                            <path>\r_usb_basic\src\driver\peri\r_usb_pcontrolrw.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="peri">
+                            <path>\r_usb_basic\src\driver\peri\r_usb_pdriver.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="peri">
+                            <path>\r_usb_basic\src\driver\peri\r_usb_pdriverapi.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="peri">
+                            <path>\r_usb_basic\src\driver\peri\r_usb_pintfifo.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="peri">
+                            <path>\r_usb_basic\src\driver\peri\r_usb_psignal.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="peri">
+                            <path>\r_usb_basic\src\driver\peri\r_usb_pstdfunction.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="driver">
+                        <group name="peri">
+                            <path>\r_usb_basic\src\driver\peri\r_usb_pstdrequest.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="HW">
+                        <path>\r_usb_basic\src\HW\RX64M.txt</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="HW">
+                        <group name="comm">
+                            <path>\r_usb_basic\src\HW\comm\rx_mcu.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="HW">
+                        <group name="comm">
+                            <path>\r_usb_basic\src\HW\comm\r_usb_creg_abs.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="HW">
+                        <group name="comm">
+                            <path>\r_usb_basic\src\HW\comm\r_usb_creg_access.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="HW">
+                        <group name="comm">
+                            <path>\r_usb_basic\src\HW\comm\r_usb_creg_dmadtc.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="HW">
+                        <group name="host">
+                            <path>\r_usb_basic\src\HW\host\r_usb_hostelectrical.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="HW">
+                        <group name="host">
+                            <path>\r_usb_basic\src\HW\host\r_usb_hreg_abs.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="HW">
+                        <group name="host">
+                            <path>\r_usb_basic\src\HW\host\r_usb_hreg_access.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="HW">
+                        <group name="inc">
+                            <path>\r_usb_basic\src\HW\inc\rx_rsk_extern.h</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="HW">
+                        <group name="inc">
+                            <path>\r_usb_basic\src\HW\inc\r_usb_cusb_bitdefine.h</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="HW">
+                        <group name="inc">
+                            <path>\r_usb_basic\src\HW\inc\r_usb_defvalue.h</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="HW">
+                        <group name="inc">
+                            <path>\r_usb_basic\src\HW\inc\r_usb_fixed_config.h</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="HW">
+                        <group name="inc">
+                            <path>\r_usb_basic\src\HW\inc\r_usb_reg_access.h</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="HW">
+                        <group name="inc">
+                            <path>\r_usb_basic\src\HW\inc\r_usb_sysdef.h</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="HW">
+                        <group name="peri">
+                            <path>\r_usb_basic\src\HW\peri\r_usb_preg_abs.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_basic">
+                <group name="src">
+                    <group name="HW">
+                        <group name="peri">
+                            <path>\r_usb_basic\src\HW\peri\r_usb_preg_access.c</path>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\readme.txt</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_bsp_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_bsp_interrupt_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_flash_rx_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_media_driver_api_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_tfat_rx_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_usb_atapi_driver_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_usb_basic_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_config">
+                <path>\r_config\r_usb_pmsc_config.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_pmsc">
+                <path>\r_usb_pmsc\readme.txt</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_pmsc">
+                <path>\r_usb_pmsc\r_media_driver_if.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_pmsc">
+                <path>\r_usb_pmsc\r_usb_pmsc_if.h</path>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_pmsc">
+                <group name="doc">
+                    <path>\r_usb_pmsc\doc\r01an2029ej0111_usb.pdf</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_pmsc">
+                <group name="ref">
+                    <path>\r_usb_pmsc\ref\r_media_driver_api_config_reference.h</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_pmsc">
+                <group name="ref">
+                    <path>\r_usb_pmsc\ref\r_usb_atapi_driver_config_reference.h</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_pmsc">
+                <group name="ref">
+                    <path>\r_usb_pmsc\ref\r_usb_pmsc_config_reference.h</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_pmsc">
+                <group name="src">
+                    <path>\r_usb_pmsc\src\r_media_driver_api.c</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_pmsc">
+                <group name="src">
+                    <path>\r_usb_pmsc\src\r_usb_atapi_driver.c</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_pmsc">
+                <group name="src">
+                    <path>\r_usb_pmsc\src\r_usb_pmsc_api.c</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_pmsc">
+                <group name="src">
+                    <path>\r_usb_pmsc\src\r_usb_pmsc_ddi.c</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_pmsc">
+                <group name="src">
+                    <path>\r_usb_pmsc\src\r_usb_pmsc_driver.c</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_pmsc">
+                <group name="src">
+                    <path>\r_usb_pmsc\src\r_usb_pmsc_pci.c</path>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_pmsc">
+                <group name="src">
+                    <group name="inc">
+                        <path>\r_usb_pmsc\src\inc\r_usb_patapi_define.h</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_pmsc">
+                <group name="src">
+                    <group name="inc">
+                        <path>\r_usb_pmsc\src\inc\r_usb_pmsc_api.h</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_pmsc">
+                <group name="src">
+                    <group name="inc">
+                        <path>\r_usb_pmsc\src\inc\r_usb_pmsc_define.h</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+        <group name="">
+            <group name="r_usb_pmsc">
+                <group name="src">
+                    <group name="inc">
+                        <path>\r_usb_pmsc\src\inc\r_usb_pmsc_extern.h</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+    </files>
+</iarProjectConnection>

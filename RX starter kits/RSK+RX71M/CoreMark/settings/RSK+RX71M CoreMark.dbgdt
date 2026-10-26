@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Project>
+  <Desktop>
+    <Static>
+      <Debug-Log>
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1541</ColumnWidth1></Debug-Log>
+      <Build>
+        <ColumnWidth0>20</ColumnWidth0>
+        <ColumnWidth1>1155</ColumnWidth1>
+        <ColumnWidth2>308</ColumnWidth2>
+        <ColumnWidth3>77</ColumnWidth3>
+      </Build>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>179</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Disassembly>
+        <col-names>
+          
+          
+        <item>Disassembly</item><item>_I0</item></col-names>
+        <col-widths>
+          
+          
+        <item>500</item><item>20</item></col-widths>
+        <DisasmHistory/>
+        
+        
+      <ShowCodeCoverage>1</ShowCodeCoverage><ShowInstrProfiling>1</ShowInstrProfiling></Disassembly>
+      <TerminalIO>
+        
+        
+        
+        
+        
+      <InputSource>1</InputSource><InputMode>10</InputMode><Filename>$PROJ_DIR$\TermIOInput.txt</Filename><InputEcho>1</InputEcho><ShowReset>0</ShowReset></TerminalIO>
+    <Register><RegFindHistory/></Register><Find-in-Files><ColumnWidth0>231</ColumnWidth0><ColumnWidth1>38</ColumnWidth1><ColumnWidth2>346</ColumnWidth2><ColumnWidth3>154</ColumnWidth3></Find-in-Files></Static>
+    <Windows>
+      
+      
+      
+      
+    <Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-26654-13507</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-26131-13517</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-4058-11652</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1><Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-4634-13510</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>RSK+RX71M CoreMark</ExpandedNode><ExpandedNode>RSK+RX71M CoreMark/CoreMark</ExpandedNode><ExpandedNode>RSK+RX71M CoreMark/CoreMark/core_matrix.c</ExpandedNode><ExpandedNode>RSK+RX71M CoreMark/CoreMark/core_matrix.c/Output</ExpandedNode><ExpandedNode>RSK+RX71M CoreMark/source_RX71M</ExpandedNode><ExpandedNode>RSK+RX71M CoreMark/source_RX71M/core_portme.c</ExpandedNode><ExpandedNode>RSK+RX71M CoreMark/source_RX71M/r_cg_mtu3_user.c</ExpandedNode><ExpandedNode>RSK+RX71M CoreMark/source_RX71M/r_cg_mtu3_user.c/Output</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-15382-13514</Identity>
+            <TabName>Disassembly</TabName>
+            <Factory>Disassembly</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3><Wnd8>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-31129-13628</Identity>
+            <TabName>Terminal I/O</TabName>
+            <Factory>TerminalIO</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd8><Wnd9><Tabs><Tab><Identity>TabID-7415-24613</Identity><TabName>Register</TabName><Factory>Register</Factory><Session><REG1>0</REG1><REG2>0</REG2><Group>0</Group><States>0</States></Session></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd9></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\core_matrix.s</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>453</YPos2><SelStart2>14636</SelStart2><SelEnd2>14636</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\CoreMark\core_matrix.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>831</SelStart2><SelEnd2>831</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\source_RX71M\low_level_init.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>933</SelStart2><SelEnd2>933</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\source_RX71M\r_cg_cgc.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>79</YPos2><SelStart2>2357</SelStart2><SelEnd2>2357</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\source_RX71M\r_cg_cgc_user.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>2</YPos2><SelStart2>2500</SelStart2><SelEnd2>2500</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\source_RX71M\r_cg_hardware_setup.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>44</YPos2><SelStart2>2624</SelStart2><SelEnd2>2624</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\source_RX71M\r_cg_intprg.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>67</YPos2><SelStart2>2431</SelStart2><SelEnd2>2431</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\source_RX71M\r_cg_mtu3.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>79</YPos2><SelStart2>2464</SelStart2><SelEnd2>2464</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\source_RX71M\r_cg_mtu3_user.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>20</YPos2><SelStart2>4145</SelStart2><SelEnd2>4145</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\120 MHz\List\r_cg_mtu3_user.s</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>74</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\source_RX71M\core_portme.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>3</YPos2><SelStart2>347</SelStart2><SelEnd2>347</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\source_RX71M\core_portme.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>75</YPos2><SelStart2>1911</SelStart2><SelEnd2>1911</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\CoreMark\core_list_join.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>1498</SelStart2><SelEnd2>1498</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\..\stage\buildlib\rx\src\lib\dlib\__dbg_break.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>329</SelStart2><SelEnd2>329</SelEnd2></Tab><ActiveTab>13</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\CoreMark\core_main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>70</YPos2><SelStart2>3234</SelStart2><SelEnd2>3234</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-002D2BA8><key>iaridepm.enu1</key></Toolbar-002D2BA8></Sizes></Row0><Row1><Sizes><Toolbar-1BEDB680><key>debuggergui.enu1</key></Toolbar-1BEDB680></Sizes></Row1><Row2><Sizes/></Row2></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>696</Bottom><Right>270</Right><x>-2</x><y>-2</y><xscreen>200</xscreen><yscreen>193</yscreen><sizeHorzCX>125000</sizeHorzCX><sizeHorzCY>172630</sizeHorzCY><sizeVertCX>170000</sizeVertCX><sizeVertCY>624329</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>696</Bottom><Right>527</Right><x>-2</x><y>-2</y><xscreen>200</xscreen><yscreen>193</yscreen><sizeHorzCX>125000</sizeHorzCX><sizeHorzCY>172630</sizeHorzCY><sizeVertCX>330625</sizeVertCX><sizeVertCY>624329</sizeVertCY></Rect></Wnd3></Sizes></Row0><Row1><Sizes><Wnd9><Rect><Top>-2</Top><Left>525</Left><Bottom>696</Bottom><Right>725</Right><x>525</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>125000</sizeHorzCX><sizeHorzCY>178891</sizeHorzCY><sizeVertCX>125000</sizeVertCX><sizeVertCY>624329</sizeVertCY></Rect></Wnd9></Sizes></Row1></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>353</Bottom><Right>795</Right><x>-2</x><y>-2</y><xscreen>797</xscreen><yscreen>355</yscreen><sizeHorzCX>498125</sizeHorzCX><sizeHorzCY>317531</sizeHorzCY><sizeVertCX>125000</sizeVertCX><sizeVertCY>172630</sizeVertCY></Rect></Wnd1><Wnd8><Rect><Top>0</Top><Left>0</Left><Bottom>135942656</Bottom><Right>1381189965</Right><x>793</x><y>-2</y><xscreen>809</xscreen><yscreen>355</yscreen><sizeHorzCX>505625</sizeHorzCX><sizeHorzCY>317531</sizeHorzCY><sizeVertCX>125000</sizeVertCX><sizeVertCY>771914</sizeVertCY></Rect></Wnd8></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Project>
+
+

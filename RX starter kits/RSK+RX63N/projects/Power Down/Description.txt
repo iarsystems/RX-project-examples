@@ -1,0 +1,2 @@
+Power Down
+Demonstrates usage of the MCU's power modes, by entering standby mode and waking briefly to update a real time clock every second

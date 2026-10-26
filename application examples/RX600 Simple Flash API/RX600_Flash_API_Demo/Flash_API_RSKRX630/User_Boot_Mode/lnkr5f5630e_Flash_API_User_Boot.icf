@@ -1,0 +1,44 @@
+//-----------------------------------------------------------------------------
+// Linker configuration file template for the Renesas RX microcontroller R5F5630E
+//-----------------------------------------------------------------------------
+// Compatibility check
+define exported symbol __link_file_version_4 = 1;
+
+define memory mem with size = 4G;
+
+// UB Codes
+define exported symbol __UB_CODE_A_UPPER = 0x55736572;
+define exported symbol __UB_CODE_A_LOWER = 0x426F6F74;
+define exported symbol __UB_CODE_B_UPPER = 0xFFFFFF07;
+define exported symbol __UB_CODE_B_LOWER = 0x0008C04C;
+
+define region RAM_region16 = mem:[from 0x00000004 to 0x00007FFF];
+define region RAM_region24 = mem:[from 0x00000004 to 0x0001FFFF];
+define region RAM_region32 = mem:[from 0x00000004 to 0x0001FFFF];
+define region USER_BOOT_region = mem:[from 0xFF7FC000 to 0xFF7FFFFF];
+
+initialize by copy { rw, ro section D, ro section D_1, ro section D_2, section CODE_IN_RAM };
+do not initialize  { section .*.noinit };
+
+define block HEAP     with alignment = 4, size = _HEAP_SIZE { };
+define block USTACK   with alignment = 4, size = _USTACK_SIZE { };
+define block ISTACK   with alignment = 4, size = _ISTACK_SIZE { };
+
+define block STACKS with fixed order { block ISTACK,
+                                       block USTACK };
+
+place at address mem:0xFF7FFFE8 { ro section .userbootvec };
+place at address mem:0xFFFFFF80 { ro section .exceptvect };
+
+"RAM16":place in RAM_region16        { rw section .data16*,
+                                       rw section __DLIB_PERTHREAD };
+"RAM24":place in RAM_region24        { rw section .data24* };
+"RAM32":place in RAM_region32        { rw,
+                                       ro section D,
+                                       ro section D_1,
+                                       ro section D_2,
+                                       section CODE_IN_RAM,
+                                       block HEAP,
+                                       block STACKS };
+
+"USERBOOT":place in USER_BOOT_region { ro };

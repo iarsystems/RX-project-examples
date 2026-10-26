@@ -1,0 +1,179 @@
+*******************************************************************************
+DESCRIPTION		Renesas Starter Kit Project Readme File
+*******************************************************************************
+
+/******************************************************************************
+* History 		: 24.03.2010 Ver. 1.00 First Release
+/******************************************************************************
+
+This project can be debugged with HEW and an E1.
+
+The Quick Start Guide supplied with the RSK can be referred to for help in
+connecting to the target. 
+
+Details of the sample project can be found at the top of the C file which
+contains the project's main() function.
+
+Support:
+    Online technical support and information is available at: 
+	www.renesas.com/renesas_starter_kits
+
+Technical Contact Details:-
+	America: techsupport.rta@renesas.com 
+	Europe : tools.support.eu@renesas.com 
+	Japan  : csc@renesas.com 
+
+/*	RSKRX610 - Board Connector Cross-Reference	*/
+Device = R5F56107VNFP
+
+***********************************************************************************************************	
+PORT	 	PIN NAME/			RING 						COMMON 						BUS	
+NUMBER		FUNCTION			BUS PIN						PIN							Hardware
+***********************************************************************************************************		
+---			VCC	- 3V3 			J1-23, J2-23, J3-19			JA1-3 						---
+								J4-24					
+---			VSS					J1-21, J1-12, J2-21,		JA1-4, JA2-4, JA6-24		---
+								J3-4, J3-21, J4-22														
+---			PLLVCC				---							---							---									
+---			PLLVSS				---							---							---
+																			
+---			AVSS				J1-5, J4-32					JA1-6						---											
+---			VREF				J4-34						JA1-7						---
+			
+---			EXTAL				---							---							---
+---			XTAL				---							---							---
+			
+---			RESn				J1-19						JA2-1						RES, E1/E20
+---			NMIn				J1-24						JA2-3						---
+---			WDTOVFn/TDO			
+			
+---			MDE					J1-13						---							J7, E1/E20
+---			MD1					J1-15						---							J9, E1/E20
+---			MD0					J1-16						---							J8, E1/E20
+---			EMLE				J1-10						---							J10, E1/E20
+																		   
+	  
+P10			IRQ0n-B				J2-11						JA2-7						---
+P11			IRQ1n-B				J2-10						JA2-9						---
+P12			IRQ2n-B				J2-9						JA2-23						---
+P13			SW3_ADTRG0n			J2-8						JA2-8						SW3
+P14			SDA1				J2-7						JA1-25						---
+P15			SCL1_SCK3			JA2-6						JA1-26, JA6-11				---
+P16			RxD3				J2-4						JA6-12						---
+P17			TxD3				J2-2						JA6-9						---
+
+P20			TMRI0_TxD0			J2-1						JA-26, JA6-8				---
+P21			TMCI0_RxD0			J1-36						JA2-22, JA6-7				---
+P22			TMO_SCK0			J1-35						JA2-20, JA6-10				---
+P23			TIOCC3				J1-34						JA2-21						---
+P24			TIOCA4				J1-33						JA2-19						---
+P25			RxD1				J1-32						JA2-8						SERIAL
+P26			TxD1				J1-31						JA2-6						SERIAL
+P27			SCK1				J1-30						JA2-10						---
+
+P30			TIOCA0				J1-29						JA5-13						---
+P31			TIOCB0				J1-28						JA5-14						---
+P32			TIOCC0				J1-27						JA5-15						---
+P33			LED2				J1-26						---							LED2
+P34			PIN25				J1-25						---							---
+P35			TCLKC-A				J2-14						JA5-17						---
+P36			LED3				J2-13						---							LED3
+P37			TCLKD-A				J2-12						JA5-18						---
+
+P40			AN7					J4-25						JA5-4						---
+P41			AN6					J4-26						JA5-3						---
+P42			AN5					J4-27						JA5-2						---
+P43			AN4					J4-28						JA5-1						---
+P44			AN3					J4-29						JA1-12						---
+P45			AN2					J4-30						JA1-11						---
+P46			AN1					J4-31						JA1-10						---
+P47			ADPOT_AN0			J433						JA1-9						ADPOT
+
+P50			TRDATA3				J2-16						---							E1/E20
+P51			TRDATA2				J2-17						---							E1/E20
+P52			TRDATA1				J2-18						---							E1/E20
+P53			TRDATA0				J2-19						---							E1/E20
+P54			PIN62_BCLK			J2-26						JA3-44						BUS APP
+P55			RDn					J2-27						JA3-25						BUS APP
+P56			WR1n				J2-28						JA3-47						BUS APP
+P57			WRn_WR0n			J2-29						JA3-26, JA3-48				BUS APP
+
+P60			PIN118_CS0n			J4-19						JA3-27						BUS APP
+P61			PIN117_CS1n			J4-9						JA3-28						BUS APP
+P62			PIN116_CS2n-A		J4-8						JA3-45						BUS APP
+P63			PIN115				J4-7						---							---
+P64			PIN114				J4-6						---							---
+P65			IRQ15n-A			J1-9						JA1-23						---
+P66			DA0					J1-4						JA1-13						---
+P67			DA1					J1-4						JA1-14						---
+
+P70			IO0					J3-18						JA1-15						---
+P71			IO1					J3-17						JA1-16						---
+P72			IO2					J3-16						JA1-17						---
+P73			IO3					J3-15						JA1-18						---
+P74			IO4					J3-14						JA1-19						---
+P75			IO5					J2-32						JA1-20						---
+P76			IO6					J2-31						JA1-21						---
+P77			IO7					J2-30						JA1-22						---
+
+P80			PIN61				J2-25						---							---
+P81			TRSYNCn				J2-24						---							E1/E20
+P82			TRCLK				J2-22						---							E1/E20
+P83			LED0				J2-20						---							LED0
+P84			LED1				J2-15						---							LED1
+P85			DLCDRS				J1-18						---							LCD
+P86			DLCDE				J1-17						---							LCD
+
+P90			DLCDD7				J4-15						---							LCD
+P91			DLCDD6				J4-16						---							LCD
+P92			DLCDD5				J4-17						---							LCD
+P93			DLCDD4				J4-18						---							LCD
+P94			AN11				J4-19						JA5-12						---
+P95			AN10				J4-20						JA5-11						---
+P96			AN9					J4-21						JA5-10						---
+P97			AN8					J4-23						JA5-9						---
+
+PA0			A0					J3-29						JA3-1						BUS APP
+PA1			A1					J3-28						JA3-2						BUS APP
+PA2			A2					J3-27						JA3-3						BUS APP
+PA3			A3					J3-26						JA3-4						BUS APP
+PA4			A4					J3-25						JA3-5						BUS APP
+PA5			A5					J3-24						JA3-6						BUS APP
+PA6			A6					J3-23						JA3-7						BUS APP
+PA7			A7					J3-22						JA3-8						BUS APP
+
+PB0			A8					J3-20						JA3-9						BUS APP
+PB1			A9					J3-13						JA3-10						BUS APP
+PB2			A10					J3-12						JA3-11						BUS APP
+PB3			A11					J3-11						JA3-12						BUS APP
+PB4			A12					J3-10						JA3-13						BUS APP
+PB5			A13					J3-9						JA3-14						BUS APP
+PB6			A14					J3-8						JA3-15						BUS APP
+PB7			A15					J3-7						JA3-37						BUS APP
+						
+PC0			A16					J3-6						JA3-37						BUS APP
+PC1			A17					J3-5						JA3-38						BUS APP
+PC2			A18					J3-3						JA3-39						BUS APP
+PC3			A19					J3-1						JA3-40						BUS APP
+PC4			A20					J2-26						JA3-41						BUS APP
+PC5			A21					J2-35						JA3-42						BUS APP
+PC6			A22					J2-34						JA3-43						BUS APP
+PC7			PIN69				J2-33						---							---
+                     
+PD0			D7					J4-2						JA3-24						BUS APP
+PD1			D6					J4-3						JA3-23						BUS APP
+PD2			D5					J4-4						JA3-22						BUS APP
+PD3			D4					J4-5						JA3-21						BUS APP
+PD4			D3					J4-11						JA3-20						BUS APP
+PD5			D2					J4-12						JA3-19						BUS APP
+PD6			D1					J4-13						JA3-18						BUS APP
+PD7			D0					J4-14						JA3-17						BUS APP
+
+PE0			D15					J3-30						JA3-36						BUS APP
+PE1			D14					J3-31						JA3-35						BUS APP
+PE2			D13					J3-32						JA3-34						BUS APP
+PE3			D12					J3-33						JA3-33						BUS APP
+PE4			D11					J3-34						JA3-32						BUS APP
+PE5			D10					J3-35						JA3-31						BUS APP
+PE6			D9					J3-36						JA3-30						BUS APP
+PE7			D8					J4-1						JA3-29						BUS APP

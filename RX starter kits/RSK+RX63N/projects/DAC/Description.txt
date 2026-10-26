@@ -1,0 +1,2 @@
+DAC
+Demonstrates the use of the DAC by outputting the potentiometer value onto a DAC pin

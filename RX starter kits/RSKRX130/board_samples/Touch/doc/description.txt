@@ -1,0 +1,54 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only intended for use with Renesas products.
+* No other uses are authorized. This software is owned by Renesas Electronics Corporation and is protected under all
+* applicable laws, including copyright laws. 
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIESREGARDING THIS SOFTWARE, WHETHER EXPRESS, IMPLIED
+* OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+* NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY
+* LAW, NEITHER RENESAS ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE FOR ANY DIRECT,
+* INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR
+* ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software and to discontinue the availability 
+* of this software. By using this software, you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2015 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* Project      : Touch_Demo
+*
+* History      : DD.MM.YYYY Version      Description
+*              : 29.12.2015 Ver. 1.00    First Release
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* File Name    : description.txt
+*
+* System Requirements:
+* Device(s)               : R5F51305AxFN
+* Tool-Chain              : CC-RX V2.04.01
+* Development environment : Renesas e2 studio
+* Version                 : Code Generator for RX130 V1.00.00.02 [30 Oct 2015]
+* H/W Platform            : RSKRX130
+*
+* Description  : Demonstration of the capacitive touch sensing unit (CTSU). If touch key or touch slider on the board
+*                is touched, a sensing result will be outputted to LCD and LEDs.
+*
+* Operating Procedure:
+*                For details of Building and Downloading the sample code refer to the RSK Tutorial Manual.
+*             1. Compile and download the sample code. Click the 'Resume' button to start program execution.
+*                Click 'Resume' again if the program stops at main().
+*                The LCD display will show 'Touch Demo'.
+*
+*             2. Touch the touch key on the board. LCD will indicate by 'ON' according to the touched key.
+*                LED output will also be then interlocked with it.
+*
+*             3. Touch and slide the touch slider on the board. LCD will slide a indicate bar to right and
+*                left according to a slider position.
+*                LED output will also be then interlocked with it.
+*
+***********************************************************************************************************************/
+

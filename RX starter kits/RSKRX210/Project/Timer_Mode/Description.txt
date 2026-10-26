@@ -1,0 +1,2 @@
+Timer_Mode
+The timer is configured to output a 1 KHz square wave.

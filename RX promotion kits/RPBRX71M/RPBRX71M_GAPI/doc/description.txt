@@ -1,0 +1,82 @@
+/******************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only
+* intended for use with Renesas products. No other uses are authorized. This
+* software is owned by Renesas Electronics Corporation and is protected under
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+* AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software
+* and to discontinue the availability of this software. By using this software,
+* you agree to the additional terms and conditions found by accessing the
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2016 Renesas Electronics Corporation. All rights reserved.
+******************************************************************************/
+/******************************************************************************
+* System Name : RPB RX71M GAPI Demonstration
+* File Name   : description.txt
+******************************************************************************/
+/***********************************************************************************************************************
+* History      : DD.MM.YYYY Version      Description
+*              : 06/06/2016 Ver. 1.00    First Release
+***********************************************************************************************************************/
+1. Before Use
+
+  This sample program has been written for and tested on the RPB RX71M
+  target board.
+
+  ****************************** CAUTION ******************************
+   This sample program is for reference only. Please use this sample 
+   program for technical reference.
+  ****************************** CAUTION ******************************
+  
+2.  System Requirements 
+  The system requirements for this sample program are listed below.
+  
+ Device(s)               : R5F571MLCDFP 
+ H/W Platform            : RPB RX71M
+ Tool-Chain              : CC-RX 
+                           Version 2.05
+ Development environment : Renesas e2 studio
+                           Version 5.1
+ Application Note        : R20UT3803EG RX71M Revelation Kit User's Manual
+ GAPI User's Manual      : R21UT0231EG Renesas GAPI Graphics API User's Manual
+
+ 3. Description           
+                           This project demonstrates the capabilities of the RPB RX71M 
+			   with a number of Graphical User Interface simulations
+                           using the Renesas Graphics API.
+
+ 4. Operating Conditions 
+	Ensure SW2 is set as follows:
+                          SW2 - Position 1 - ON
+                                Position 2 - OFF
+
+ 5. Operating Procedure     
+
+ Use the following procedure to execute this sample program.
+                   1) Connect the USB cable between CN9 'Debug' of the RPB RX71M to 
+                      the development PC.
+
+                   2) Start the integrated development environment, e2 studio.
+                      Import the project [RPBRX71M_GAPI] into a workspace.
+
+                   3) Build the [RPBRX71M_GAPI] project using the HardwareDebugRPBRX71M
+                      build configuration.
+                   
+                   4) Start a debug session using the [HardwareDebug]
+                      debug configuration.
+                       
+                   5) Run the demonstration by using the 'Resume' menu command.             
+
+                   For details of operating the sample refer to the User's Manual.
+***********************************************************************************************************************/

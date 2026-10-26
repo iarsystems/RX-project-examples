@@ -1,0 +1,62 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only intended for use with Renesas products. No 
+* other uses are authorized. This software is owned by Renesas Electronics Corporation and is protected under all 
+* applicable laws, including copyright laws. 
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, 
+* FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED. TO THE MAXIMUM 
+* EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES 
+* SHALL BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR ANY REASON RELATED TO THIS 
+* SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software and to discontinue the availability of 
+* this software. By using this software, you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer 
+*
+* Copyright (C) 2016 Renesas Electronics Corporation. All rights reserved.    
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* Project      : Timer_PWM
+*
+* History      : DD.MM.YYYY Version      Description
+*              : 30/11/2016 Ver. 1.00    First Release
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* File Name    : description.txt
+*
+* System Requirements: 
+* Device(s)               : R5F524UEAxFB
+* Tool-Chain              : CC-RX V2.06.00
+* Development environment : Renesas e2 studio
+* Version                 : Code Generator for RX24U V1.02.00.06 [15 Feb 2017]
+* H/W Platform            : RSKRX24U
+*
+* Description  : This sample uses channel 9 of the MTU3 to output a 1KHz PWM 
+*                square waveform on the MTIOC9A output pin. 
+*
+* Note         : Code Generator is used to generate code for this sample program. 
+*                The Code Generator details and version number are given in the file 
+*                header for each relevant module.
+*
+* Operating Procedure:  
+*                For details of Building and Downloading the sample code refer to the RSKRX24U Tutorial Manual 
+*                (r20ut3762eg0100-rskrx24u-tutorialmanual.pdf).
+*
+*             1. Connect an oscilloscope probe to J3.Pin27. 
+*
+*             2. Compile and download the sample code. Click the 'Resume' button to start program execution.
+*                Click the 'Resume' button again if the program stops at main().
+*
+*             3. A 1KHz PWM output increasing from 10% to 90% then stepping
+*                back to 10% will be displayed on the oscilloscope.
+*                The signal can also be seen on LED0.
+*
+*             4. Press SW1 to stop the duty cycle modulation and display the duty as a percentage.
+*                Observe the static waveform on the oscilloscope.
+*
+*             5. Press SW1 to continue duty cycle modulation.Observe the waveform's duty cycle varying.
+*
+***********************************************************************************************************************/

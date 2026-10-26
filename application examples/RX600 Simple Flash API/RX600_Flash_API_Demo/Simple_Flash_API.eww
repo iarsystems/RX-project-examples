@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\Flash_API_RDKRX62N\Flash_API_RDKRX62N.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash_API_RDKRX63N\Flash_API_RDKRX63N.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash_API_RSKRX610\Flash_API_RSKRX610.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash_API_RSKRX610\User_Boot_Mode\Flash_API_RSKRX610_User_Boot_Mode.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash_API_RSKRX62N\Flash_API_RSKRX62N.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash_API_RSKRX62N\User_Boot_Mode\Flash_API_RSKRX62N_User_Boot_Mode.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash_API_RSKRX62T\Flash_API_RSKRX62T.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash_API_RSKRX630\Flash_API_RSKRX630.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash_API_RSKRX630\User_Boot_Mode\Flash_API_RSKRX630_User_Boot_Mode.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash_API_RSKRX63N\Flash_API_RSKRX63N.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash_API_RSKRX63N\User_Boot_Mode\Flash_API_RSKRX63N_User_Boot_Mode.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+

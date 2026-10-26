@@ -1,0 +1,2 @@
+WDT
+The watchdog module is configured to halt the main program when the timer interval exceeds the watchdog overflow period.

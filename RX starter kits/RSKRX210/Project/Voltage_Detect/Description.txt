@@ -1,0 +1,2 @@
+Voltage_Detect
+The LVD circuit is configured to flash the user LEDs until VCC falls below the LVD threshold.

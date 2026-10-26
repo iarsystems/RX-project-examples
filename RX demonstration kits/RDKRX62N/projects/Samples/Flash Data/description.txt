@@ -1,0 +1,2 @@
+Flash Data
+The application demonstrates usage of the FCU by writing to and from data flash memory using the Flash API.

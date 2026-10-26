@@ -1,0 +1,2 @@
+CRC Calculator
+The application demonstrates usage of the CRC unit by calculating checksums of key strokes from a UART terminal.

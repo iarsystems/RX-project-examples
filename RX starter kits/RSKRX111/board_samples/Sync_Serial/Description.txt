@@ -1,0 +1,77 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only 
+* intended for use with Renesas products. No other uses are authorized. This 
+* software is owned by Renesas Electronics Corporation and is protected under 
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+* AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software 
+* and to discontinue the availability of this software.  By using this software, 
+* you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2013 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* File Name    : Description.txt
+* Version      : 1.0
+* Device(s)    : R5F51115AxFM
+* Tool-Chain   : CCRX
+* H/W Platform : RSKRX111
+* Note         : Application Leading Tool (Applilet) is used to generate code 
+*                for this sample program.  The name Applilet is used hereafter.
+*                The Applilet details and version number are given in the file 
+*                header for each relevant module.
+* Description  : This sample demonstrates usage of the SCI unit in synchronous
+*                mode by performing a loop back test between two SCI channels.
+*
+* Modification : Remove R111, R122, R116 and R224.
+*                Fit R192 and R195.
+*                Ensure Link J11 is connected between 1 - 2.
+*
+* Wire Connections:
+*                 JA2, pin 10 (SCK1) to JA6, pin 11 (SCK12)
+*                 JA2, pin 8  (RXD1) to JA6, pin 9  (TXD12)
+*                 JA2, pin 6  (TXD1) to JA6, pin 12 (RXD12)
+*
+* Operation    : 
+*                 1. Compile and download the sample code. 
+*
+*                 2. Double click the variable g_sci1_rx_buffer and drag it into
+*                    the Expressions window, and do the same for the variables
+*                    g_sci12_tx_buffer, g_sci1_tx_buffer and g_sci12_rx_buffer.
+*                    From the Expressions window, right-click on the buffers
+*                    and select 'Real Time Refresh'.
+
+*                 3. Click the 'Debug Icon' button to start program execution. 
+*                    Click again if the program stops at Main. The name of the
+*                    sample will be displayed on the debug LCD. 
+*                    
+*                 4. The sample will then begin the data transfer. When the SCI
+*                    activity is complete, the debug LCD will display either
+*                    "Success" or "Failure".
+*                   
+*                 5. You can observe that the contents of g_sci1_rx_buffer have
+*                    filled with the contents of g_sci12_tx_buffer. Likewise the
+*                    contents of g_sci12_rx_buffer have been filled with that of
+*                    g_sci1_tx_buffer.
+*                   
+*                 6. If the debug LCD reports "Failure", or shows "RX/TX" 
+*                    without changing; check the configuration specified is set
+*                    and click "Restart" to start again.
+*                
+*                
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+* History      : 20.06.2013 Ver. 1.00 First Release
+***********************************************************************************************************************/

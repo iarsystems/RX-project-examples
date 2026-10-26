@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\FL_Bootloader_RSKRX62N\FL_Bootloader_RSKRX62N.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\FL_Bootloader_RSKRX63N\FL_Bootloader_RSKRX63N.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\FL_UserApp_RSKRX62N\FL_UserApp_RSKRX62N.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\FL_UserApp_RSKRX63N\FL_UserApp_RSKRX63N.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+

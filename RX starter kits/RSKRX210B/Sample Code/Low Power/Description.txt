@@ -1,0 +1,2 @@
+Low Power
+Demonstrates the MCU's power modes, by switching mode when a switch is pressed.

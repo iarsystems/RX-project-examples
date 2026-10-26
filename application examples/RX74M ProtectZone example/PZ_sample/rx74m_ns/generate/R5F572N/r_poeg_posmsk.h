@@ -1,0 +1,52 @@
+/***********************************************************************************************************************
+ * Copyright [2020-2022] Renesas Electronics Corporation and/or its affiliates.  All Rights Reserved.
+ *
+ * This software and documentation are supplied by Renesas Electronics Corporation and/or its affiliates and may only
+ * be used with products of Renesas Electronics Corp. and its affiliates ("Renesas").  No other uses are authorized.
+ * Renesas products are sold pursuant to Renesas terms and conditions of sale.  Purchasers are solely responsible for
+ * the selection and use of Renesas products and Renesas assumes no liability.  No license, express or implied, to any
+ * intellectual property right is granted by Renesas.  This software is protected under all applicable laws, including
+ * copyright laws. Renesas reserves the right to change or discontinue this software and/or this documentation.
+ * THE SOFTWARE AND DOCUMENTATION IS DELIVERED TO YOU "AS IS," AND RENESAS MAKES NO REPRESENTATIONS OR WARRANTIES, AND
+ * TO THE FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE LAW, DISCLAIMS ALL WARRANTIES, WHETHER EXPLICITLY OR IMPLICITLY,
+ * INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT, WITH RESPECT TO THE
+ * SOFTWARE OR DOCUMENTATION.  RENESAS SHALL HAVE NO LIABILITY ARISING OUT OF ANY SECURITY VULNERABILITY OR BREACH.
+ * TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT WILL RENESAS BE LIABLE TO YOU IN CONNECTION WITH THE SOFTWARE OR
+ * DOCUMENTATION (OR ANY PERSON OR ENTITY CLAIMING RIGHTS DERIVED FROM YOU) FOR ANY LOSS, DAMAGES, OR CLAIMS WHATSOEVER,
+ * INCLUDING, WITHOUT LIMITATION, ANY DIRECT, CONSEQUENTIAL, SPECIAL, INDIRECT, PUNITIVE, OR INCIDENTAL DAMAGES; ANY
+ * LOST PROFITS, OTHER ECONOMIC DAMAGE, PROPERTY DAMAGE, OR PERSONAL INJURY; AND EVEN IF RENESAS HAS BEEN ADVISED OF THE
+ * POSSIBILITY OF SUCH LOSS, DAMAGES, CLAIMS OR COSTS.
+ **********************************************************************************************************************/
+
+#ifndef R_POEG_POSMSK_H
+#define R_POEG_POSMSK_H
+
+/* =========================================================================================================================== */
+/* ================                                        R_GPT_POEG0                                        ================ */
+/* =========================================================================================================================== */
+
+/* =========================================================  POEGG  ========================================================= */
+#define R_GPT_POEG0_POEGG_NFCS_Pos     (30UL)         /*!< NFCS (Bit 30)                                         */
+#define R_GPT_POEG0_POEGG_NFCS_Msk     (0xc0000000UL) /*!< NFCS (Bitfield-Mask: 0x03)                            */
+#define R_GPT_POEG0_POEGG_NFEN_Pos     (29UL)         /*!< NFEN (Bit 29)                                         */
+#define R_GPT_POEG0_POEGG_NFEN_Msk     (0x20000000UL) /*!< NFEN (Bitfield-Mask: 0x01)                            */
+#define R_GPT_POEG0_POEGG_INV_Pos      (28UL)         /*!< INV (Bit 28)                                          */
+#define R_GPT_POEG0_POEGG_INV_Msk      (0x10000000UL) /*!< INV (Bitfield-Mask: 0x01)                             */
+#define R_GPT_POEG0_POEGG_ST_Pos       (16UL)         /*!< ST (Bit 16)                                           */
+#define R_GPT_POEG0_POEGG_ST_Msk       (0x10000UL)    /*!< ST (Bitfield-Mask: 0x01)                              */
+#define R_GPT_POEG0_POEGG_OSTPE_Pos    (6UL)          /*!< OSTPE (Bit 6)                                         */
+#define R_GPT_POEG0_POEGG_OSTPE_Msk    (0x40UL)       /*!< OSTPE (Bitfield-Mask: 0x01)                           */
+#define R_GPT_POEG0_POEGG_IOCE_Pos     (5UL)          /*!< IOCE (Bit 5)                                          */
+#define R_GPT_POEG0_POEGG_IOCE_Msk     (0x20UL)       /*!< IOCE (Bitfield-Mask: 0x01)                            */
+#define R_GPT_POEG0_POEGG_PIDE_Pos     (4UL)          /*!< PIDE (Bit 4)                                          */
+#define R_GPT_POEG0_POEGG_PIDE_Msk     (0x10UL)       /*!< PIDE (Bitfield-Mask: 0x01)                            */
+#define R_GPT_POEG0_POEGG_SSF_Pos      (3UL)          /*!< SSF (Bit 3)                                           */
+#define R_GPT_POEG0_POEGG_SSF_Msk      (0x8UL)        /*!< SSF (Bitfield-Mask: 0x01)                             */
+#define R_GPT_POEG0_POEGG_OSTPF_Pos    (2UL)          /*!< OSTPF (Bit 2)                                         */
+#define R_GPT_POEG0_POEGG_OSTPF_Msk    (0x4UL)        /*!< OSTPF (Bitfield-Mask: 0x01)                           */
+#define R_GPT_POEG0_POEGG_IOCF_Pos     (1UL)          /*!< IOCF (Bit 1)                                          */
+#define R_GPT_POEG0_POEGG_IOCF_Msk     (0x2UL)        /*!< IOCF (Bitfield-Mask: 0x01)                            */
+#define R_GPT_POEG0_POEGG_PIDF_Pos     (0UL)          /*!< PIDF (Bit 0)                                          */
+#define R_GPT_POEG0_POEGG_PIDF_Msk     (0x1UL)        /*!< PIDF (Bitfield-Mask: 0x01)                            */
+
+#endif /* R_POEG_POSMSK_H */

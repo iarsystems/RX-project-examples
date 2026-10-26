@@ -1,0 +1,2 @@
+CAN API Demo
+Demonstrates usage of the CAN unit, using the CAN API to communicate with another CAN board

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\ADC Oneshot\ADC12_Oneshot.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\ADC Repeat\ADC12_Repeat.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Analog Comparator\Analog_Comparator.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Async Serial\Async_Serial.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Clock Accuracy Circuit\CAC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\CRC\CRC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\DMAC\DMAC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Data Operation\DOC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\DTC\DTC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Event Link Controller\ELC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash BGO\Flash_BGO.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\IIC Master\IIC_Master.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Independent Watchdog Timer\IWDT.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Power Down\Power_Down.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Power Off\Power_Off.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\PWM\PWM.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\RTC\RTC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\SPI\SPI.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Capture\Timer_Capture.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Compare\Timer_Compare.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Event\Timer_Event.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Mode\Timer_Mode.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Voltage Detect\Voltage_Detect.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+

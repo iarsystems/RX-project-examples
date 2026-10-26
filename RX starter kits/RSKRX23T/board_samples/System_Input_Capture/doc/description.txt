@@ -1,0 +1,111 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only intended for use with Renesas products.
+* No other uses are authorized. This software is owned by Renesas Electronics Corporation and is protected under all
+* applicable laws, including copyright laws. 
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIESREGARDING THIS SOFTWARE, WHETHER EXPRESS, IMPLIED
+* OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+* NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY
+* LAW, NEITHER RENESAS ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE FOR ANY DIRECT,
+* INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR
+* ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software and to discontinue the availability 
+* of this software. By using this software, you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2015 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* Project      : System_Input_capture
+*
+* History      : DD.MM.YYYY Version      Description
+*              : 24/08/2015 Ver. 1.00    First Release
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* File Name    : description.txt
+*
+* System Requirements: 
+* Device(s)               : R5F523T5AxFM
+* Tool-Chain              : CC-RX V2.03
+* Development environment : Renesas e2 studio
+* Version                 : Code Generator for RX23T V1.00.00.03 [28 May 2015]
+* H/W Platform            : RSKRX23T
+*
+* Description  : System Input Capture sample application.
+*                This application logs counts and an ADC reading into Non Volatile storage
+*                and allows data retrieval via the SCI to a terminal program.  Data is stored in 
+*                fixed length 16 byte records in internal IIC EEEPROM.  
+*                Each record is stored at a regular interval as determined by the 8bit timer clock (TMR)
+*                constant period interrupt.  This may be set to either 0.5 seconds, 1 second or 2 seconds
+*                by user switch presses.  The sample application will send the RX23T into software standby mode
+*                if the ADC value falls below a predefined threshold (200H) and will wake from software standby
+*                when the value rises again above the threshold.  Data may be retrieved or erased from 
+*                the non volatile memory by connecting a serial cable to the RSK COM port and using 
+*                a terminal emulation program such as HyperTerminal with the settings 9600, 8, N, 1.
+*
+* Note         : Code Generator is used to generate code for this sample program. 
+*                The Code Generator details and version number are given in the file 
+*                header for each relevant module.
+*
+*                Exclude the following codes from build. If these codes are regenerated, sample project will
+*                not work.
+*
+*                r_cg_main.c
+*
+* Operating Conditions:
+*                This sample is configured to look for the on-board IIC EEPROM at IIC address 0xA6
+*                and if found the sample uses this EEPROM for Non Volatile Memory (NVM) storage.
+*                Works with the Renesas R1EX24xxx series, 2Kbit EEPROM and compatible devices. 
+*                The size of the EEPROM is defined in the file r_rsk_iic_eeprom.h and may be changed by editing
+*                line 39:
+*                #define IIC_EEPROM_SIZE_BYTES (256)
+*
+* Operating Procedure:
+*                For details of Building and Downloading the sample code refer to the RSK Tutorial Manual.
+*
+*             1. Connect the RSK's G1CUSB0 port to a PC using a USB Type A to mini B cable.
+*                The first time this port is connected to the PC an 'Installing Device Driver Software'
+*                pop-up will appear and the driver will be automatically installed. In Device Manager, the virtual
+*                COM port will appear under 'Port (COM & LPT)' as 'RSK USB Serial Port (COMx)', 
+*                where x is a number.
+*                
+*             2. Open a terminal program (e.g HyperTerminal) on the virtual COMx port created in step 1.
+*                Ensure the terminal program connection settings are as follows:
+*                
+*                Baud Rate..............9600
+*                Data Bits.................8
+*                Parity.................None
+*                Stop Bits.................1
+*                Flow Control...........None
+*
+*             3. Compile the sample code and download to the RSK. Ensure the potentiometer RV1 is turned fully 
+*                anti-clockwise. Click the 'Resume' button to start program execution.
+*                Click 'Resume' again if the program stops at main().
+*
+*             4. The platform and sample name will be displayed in the first two lines of the LCD display.
+*                The data acquisition interval default of 1 sec is displayed on the 4th line.
+*                This interval may be set to 0.5 sec, 1 sec, 2 sec. To increase the acquisition interval press SW1,
+*                to decrease it press SW2.
+*
+*             5. At every acquisition interval period the system will take the ADC value and display this information
+*                on the 5th of the LCD panel.
+*
+*             6. In addition the system stores data log record to NVM every second.
+*
+*             7. Turn the potentiometer gradually clockwise.  When the ADC value falls below 200H the RX23T will
+*                enter SNOOZE mode and data logging will be suspended.  In SNOOZE mode the MCU will wake and take
+*                an ADC reading at the current acquisition interval (0.5s, 1s, or 2s).  If the ADC reading rises
+*                above 200H then the system will wake from SNOOZE and data logging will resume.
+*
+*             6. Pressing 'R' or 'r' in the terminal window results in all the data stored in NVM to be sent to
+*                the terminal in a readable .csv format.  This data may copied from the terminal and saved to a .csv
+*                file for later importing into Microsoft Excel or a similar spreadsheet application.
+*
+*             7. At some point, depending on the data logger interval and NVM medium used, the NVM storage will be
+*                exhausted and 'FULL' will be displayed at the bottom of the LCD panel.  Pressing 'E' or 'e' in the
+*                terminal window will perform a full erase of the NVM and data logging will immediately be resumed.
+*
+***********************************************************************************************************************/

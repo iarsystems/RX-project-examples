@@ -1,0 +1,74 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only 
+* intended for use with Renesas products. No other uses are authorized. This 
+* software is owned by Renesas Electronics Corporation and is protected under 
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+* AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software 
+* and to discontinue the availability of this software.  By using this software, 
+* you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2014 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+* Project      : LIN_Slave
+* History      : 28/10/2014 Ver. 1.00 First Release
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+* File Name    : description.txt
+*
+* System Requirements: 
+* Device(s)               : R5F51138AxFP
+* Tool-Chain              : IAR Systems ICCRX
+* Development environment : IAR Embedded Workbench
+* Version                 : Code Generator for RX113 V1.01.00.02 [31 Jul 2014]
+* H/W Platform            : RSKRX113 with RSK LCD APP V2 
+*
+* Description   : Demonstration of SCI12 module in LIN Slave mode.
+*                 The SCI12 has extended serial mode features that are
+*                 used to detect LIN SYNC BREAK and perform auto baud rate detection.
+*
+* Powering	: The LIN Slave may be powered from the E1 debugger, or the RSK may be programmed and
+*             an external +5v DC Centre Positive power supply can be connected to the PWR connector.
+*
+*
+* Configuration: Links & Jumpers: 
+* Setup the LIN Slave RSK to default configuration shown in RSK User's Manual with the following changes:
+*		
+*		  Configuration resistors
+*		  -----------------------
+*		  Remove: R20, R225, R226, R232, R238, R257 
+*		  Fit: R230, R237, R258
+*
+*		  Jumper Configuration
+*        --------------------
+*		  Jumper J16: Pins 2-3 shorted.
+*
+* Operating Procedure:  
+*    For details of Building and Downloading the sample code refer to  the RSK Tutorial Manual.
+*
+*         1. Attach the E1 debugger to the RSK.
+*
+*         2. Build the sample code, and download to the RSK. This will program the LIN Slave sample in to
+*		     RX113 Flash memory. 
+*
+*		  3. If powering externally, remove the E1 Debugger from the LIN Slave RSK and connect the power supply.
+*		     If powering from the E1 debugger, Click the 'Resume' button to start program execution.
+*            Click 'Resume' again if the program stops at main().
+*			 LSLV will be displayed on the bottom line of the LCD. 
+*
+*         4. Follow the instructions for the LIN_Master sample in the 'description.txt' file.      
+*                
+*
+***********************************************************************************************************************/

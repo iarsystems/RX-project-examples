@@ -1,0 +1,4 @@
+Analog input signal to port P40 (AN000) is automatically converted in repeat mode.
+Timer interrupt cmt_cmi0_interrupt of Compare Match Timer CMT0 is used to trigger
+a periodic read of the ADC results.
+

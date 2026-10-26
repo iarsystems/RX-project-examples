@@ -1,0 +1,113 @@
+/*******************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only
+* intended for use with Renesas products. No other uses are authorized. This
+* software is owned by Renesas Electronics Corporation and is protected under
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+* AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software
+* and to discontinue the availability of this software. By using this software,
+* you agree to the additional terms and conditions found by accessing the
+* following link:
+* http://www.renesas.com/disclaimer
+*******************************************************************************/
+/* Copyright (C) 2013 Renesas Electronics Corporation. All rights reserved.   */
+/*******************************************************************************
+* File Name     : flashled.c
+* Version       : 1.00
+* Device        : R5F563TE
+* Tool-Chain    : RX Family C Compiler 1.2.1.0
+* H/W Platform  : RSKRX63T144
+* Description   : Defines functions used for flashing the LEDs
+*******************************************************************************/
+/*******************************************************************************
+* History       : 05.12.2013  Ver. 1.00 First Release
+*******************************************************************************/
+
+/*******************************************************************************
+User Includes (Project Level Includes)
+*******************************************************************************/
+/* Following header file provides C99 type definitions. */
+#include <stdint.h>
+
+/* Defines R5F563TE registers */
+#include <iorx63t.h>
+
+/* Defines R5F563TE LEDs and switches */
+#include "rskrx63tdef.h"
+
+/* Flashing LED function definitions */
+#include "flashled.h"
+
+/* LCD controlling function prototypes & macro definitions */
+#include "lcd.h"
+
+/* Switch controlling function prototypes & macro definitions */
+#include "switch.h"
+
+/*******************************************************************************
+* Global Variables
+*******************************************************************************/
+
+/*******************************************************************************
+* Function Name : Flash_LED
+* Description   : The LED flash function used at the beginning of the program
+* Argument      : none
+* Return value  : none
+*******************************************************************************/
+void Flash_LED (void)
+{
+
+    /* Variable used to count down the number of LED flashes */
+    static uint16_t flash_count = 0xC8;
+
+    /* Declare a delay count variable */
+    uint32_t        ulLed_Delay = 0;
+
+    /* Flash the LEDs for 200 times or until a user switch is pressed */
+    while ((0 == g_switch_flag ) && (--flash_count > 0))
+    {
+        for (ulLed_Delay = 0; ulLed_Delay < 4000000; ++ulLed_Delay)
+        {
+            /* delay */
+        }
+
+        /* Toggles the LEDs after a specific delay. */
+        Toggle_LED();
+    }
+
+    /* Reset the g_switch_flag flag variable */
+    g_switch_flag = 0;
+}
+/*******************************************************************************
+* End of function Flash_LED
+*******************************************************************************/
+
+/*******************************************************************************
+* Function Name : Toggle_LED
+* Description   : Function used to toggle the output of all user LEDs
+* Argument      : none
+* Return value  : none
+*******************************************************************************/
+void Toggle_LED (void)
+{
+
+    /* Toggle the state of the user LEDs    */
+    LED0 = (uint8_t) ~LED0;
+    LED1 = (uint8_t) ~LED1;
+    LED2 = (uint8_t) ~LED2;
+    LED3 = (uint8_t) ~LED3;
+}
+/*******************************************************************************
+* End of function Toggle_LED
+*******************************************************************************/
+
+

@@ -1,0 +1,2 @@
+Power Down
+The MCU is configured to switch between normal and standby mode using RTC.

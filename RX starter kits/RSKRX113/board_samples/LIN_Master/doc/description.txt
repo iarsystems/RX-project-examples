@@ -1,0 +1,92 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only 
+* intended for use with Renesas products. No other uses are authorized. This 
+* software is owned by Renesas Electronics Corporation and is protected under 
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+* AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software 
+* and to discontinue the availability of this software.  By using this software, 
+* you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2014 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+* Project      : LIN_Master
+* History      : 26/10/2014 Ver. 1.00 First Release
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+* File Name    : description.txt
+*
+* System Requirements: 
+* Device(s)               : R5F51138AxFP
+* Tool-Chain              : IAR Systems ICCRX
+* Development environment : IAR Embedded Workbench
+* Version                 : Code Generator for RX113 V1.01.00.02 [31 Jul 2014]
+* H/W Platform            : RSKRX113 with RSK LCD APP V2 
+*
+* Description   : Demonstration of SCI12 module in LIN Master mode.
+*                 The SCI12 has extended serial mode features that are
+*                 applicable to the LIN SYNC BREAK and SYNC frame structure.
+*
+* Powering	: Due to the LIN bus voltage requirements a +5v DC, centre positive power supply is
+*             required to power the LIN Master RSK. This sample is configured to not power the RSK via
+*             the E1 debugger. Please connect the power supply to the PWR socket on the RSK before
+*             attempting to connect with the E1.
+*
+* Configuration: Links & Jumpers: 
+* Setup the LIN Master RSK to default configuration shown in RSK User's Manual with the following changes:
+*
+*		  Configuration resistors
+*		  -----------------------
+*		  Remove: R232, R238, R257
+*		  Fit: R230, R237, R258
+* 
+*          Jumper Configuration
+*          --------------------
+*		  Jumper J16: Pins 2-3 shorted.
+*                
+*          Wire Connections
+*         ----------------
+*		  Connect the LIN Master to an RSKRX113 running the LIN Slave Sample.
+*
+*            LIN Master <--------------> LIN Slave
+*            ----------                  ---------- 
+*        a. LIN pin no.1 (VBAT)<---> LIN pin no.1 (VBAT)
+*        b. LIN pin no.2 (LIN) <---> LIN pin no.2 (LIN)
+*        c. LIN pin no.3 (GND) <---> LIN pin no.3 (GND)
+*
+*
+* Operating Procedure:  
+*    For details of Building and Downloading the sample code refer to  the RSK Tutorial Manual.
+*
+*         1. Attach a +5v DC centre positive power supply to the PWR socket and 
+*            attach the E1 debugger to the RSK.
+*
+*		  2. Build the sample code, and download to the RSK. Click the 'Resume' button to start program execution.
+*            Click 'Resume' again if the program stops at main().
+*			 Ensure the sample code is running on the LIN Slave RSK.
+*
+*         3. LMAS will be displayed in the bottom line of the LCD.
+*			 Adjust the potentiometer on the slave RSK. The samples ADC value 
+*            will be displayed on the slave LCD and transmitted to the LIN Master,
+*            where it will also be displayed on the Master LCD.
+*
+*         4. The ADC result displayed on the LCD connected to Master
+*            RSK and Slave RSK should match. Data transmission is 
+*            checksum protected and if the LIN master detects a checksum
+*            error the master LCD will display 'BAD' in the LCD. If
+*            this occurs check the connection between the boards and
+*            restart both RSKs.       
+*                
+***********************************************************************************************************************/

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\ADC_Oneshot\ADC_Oneshot.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\ADC_Repeat\ADC_Repeat.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Async\Async.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\CRC\CRC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\DMAC\DMAC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\DTC\DTC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\HID\HID.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\MSC\MSC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Power_Down\Power_Down.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\PWM\PWM.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer_Capture\Timer_Capture.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer_Compare\Timer_Compare.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\WDT\WDT.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+

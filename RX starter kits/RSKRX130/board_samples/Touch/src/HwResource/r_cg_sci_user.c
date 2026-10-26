@@ -1,0 +1,183 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only intended for use with Renesas products.
+* No other uses are authorized. This software is owned by Renesas Electronics Corporation and is protected under all
+* applicable laws, including copyright laws. 
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIESREGARDING THIS SOFTWARE, WHETHER EXPRESS, IMPLIED
+* OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+* NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY
+* LAW, NEITHER RENESAS ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE FOR ANY DIRECT,
+* INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR
+* ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software and to discontinue the availability 
+* of this software. By using this software, you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2015 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* File Name    : r_cg_sci_user.c
+* Version      : Code Generator for RX130 V1.00.00.02 [30 Oct 2015]
+* Device(s)    : R5F51305AxFN
+* Tool-Chain   : CCRX
+* Description  : This file implements device driver for SCI module.
+* Creation Date: 2015/12/29
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+Pragma directive
+***********************************************************************************************************************/
+/* Start user code for pragma. Do not edit comment generated here */
+/* End user code. Do not edit comment generated here */
+
+/***********************************************************************************************************************
+Includes
+***********************************************************************************************************************/
+#include "r_cg_macrodriver.h"
+#include "r_cg_sci.h"
+/* Start user code for include. Do not edit comment generated here */
+/* End user code. Do not edit comment generated here */
+#include "r_cg_userdefine.h"
+
+/***********************************************************************************************************************
+Global variables and functions
+***********************************************************************************************************************/
+extern uint8_t * gp_sci6_tx_address;                /* SCI6 send buffer address */
+extern uint16_t  g_sci6_tx_count;                   /* SCI6 send data number */
+/* Start user code for global. Do not edit comment generated here */
+
+/* Global used to receive a character from the PC terminal */
+uint8_t g_rx_char;
+
+/* Flag used to control transmission to PC terminal */
+volatile uint8_t g_tx_flag = FALSE;
+
+/* Flag used locally to detect transmission complete */
+static volatile uint8_t sci6_txdone;
+
+/* End user code. Do not edit comment generated here */
+
+/***********************************************************************************************************************
+* Function Name: r_sci6_transmit_interrupt
+* Description  : None
+* Arguments    : None
+* Return Value : None
+***********************************************************************************************************************/
+#if FAST_INTERRUPT_VECTOR == VECT_SCI6_TXI6
+/*
+*CONVERTER REPLACED|REMOVED:
+*#pragma interrupt r_sci6_transmit_interrupt(vect=VECT(SCI6,TXI6),fint)
+*/
+__fast_interrupt void  r_sci6_transmit_interrupt(void)
+#else
+/*
+*CONVERTER REPLACED|REMOVED:
+*#pragma interrupt r_sci6_transmit_interrupt(vect=VECT(SCI6,TXI6))
+#endif
+static void r_sci6_transmit_interrupt(void)
+*/
+#pragma vector=VECT(SCI6,TXI6)
+__interrupt static void r_sci6_transmit_interrupt(void)
+#endif
+
+{
+    if (0U < g_sci6_tx_count)
+    {
+        SCI6.TDR = *gp_sci6_tx_address;
+        gp_sci6_tx_address++;
+        g_sci6_tx_count--;
+    }
+    else
+    {
+        SCI6.SCR.BIT.TIE = 0U;
+        SCI6.SCR.BIT.TEIE = 1U;
+    }
+}
+/***********************************************************************************************************************
+* Function Name: r_sci6_transmitend_interrupt
+* Description  : None
+* Arguments    : None
+* Return Value : None
+***********************************************************************************************************************/
+#if FAST_INTERRUPT_VECTOR == VECT_SCI6_TEI6
+/*
+*CONVERTER REPLACED|REMOVED:
+*#pragma interrupt r_sci6_transmitend_interrupt(vect=VECT(SCI6,TEI6),fint)
+*/
+__fast_interrupt void  r_sci6_transmitend_interrupt(void)
+#else
+/*
+*CONVERTER REPLACED|REMOVED:
+*#pragma interrupt r_sci6_transmitend_interrupt(vect=VECT(SCI6,TEI6))
+#endif
+static void r_sci6_transmitend_interrupt(void)
+*/
+#pragma vector=VECT(SCI6,TEI6)
+__interrupt static void r_sci6_transmitend_interrupt(void)
+#endif
+
+{
+    SCI6.SCR.BIT.TIE = 0U;
+    SCI6.SCR.BIT.TEIE = 0U;
+
+    /* Clear TE and RE bits */
+    if(0U == SCI6.SCR.BIT.RIE)
+    {
+        SCI6.SCR.BYTE &= 0xCFU;
+    }
+
+    r_sci6_callback_transmitend();
+}
+/***********************************************************************************************************************
+* Function Name: r_sci6_callback_transmitend
+* Description  : This function is a callback function when SCI6 finishes transmission.
+* Arguments    : None
+* Return Value : None
+***********************************************************************************************************************/
+static void r_sci6_callback_transmitend(void)
+{
+    /* Start user code. Do not edit comment generated here */
+
+    sci6_txdone = TRUE;
+
+    /* End user code. Do not edit comment generated here */
+}
+
+/* Start user code for adding. Do not edit comment generated here */
+
+/*******************************************************************************
+* Function Name: R_SCI6_SPIMasterTransmit
+* Description  : This function sends SPI6 data to slave device.
+* Arguments    : tx_buf -
+*                    transfer buffer pointer
+*                tx_num -
+*                    buffer size
+* Return Value : status -
+*                    MD_OK or MD_ARGERROR
+*******************************************************************************/
+MD_STATUS R_SCI6_SPIMasterTransmit (uint8_t * const tx_buf,
+                                      const uint16_t tx_num)
+{
+    MD_STATUS status = MD_OK;
+
+    /* clear the flag before initiating a new transmission */
+    sci6_txdone = FALSE;
+
+    /* Send the data using the API */
+    status = R_SCI6_SPI_Master_Send(tx_buf, tx_num);
+
+    /* Wait for the transmit end flag */
+    while (FALSE == sci6_txdone)
+    {
+        /* Wait */
+    }
+
+    return (status);
+}
+/*******************************************************************************
+* End of function R_SCI6_SPIMasterTransmit
+*******************************************************************************/
+
+/* End user code. Do not edit comment generated here */

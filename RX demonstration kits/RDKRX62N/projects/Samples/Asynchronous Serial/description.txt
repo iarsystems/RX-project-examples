@@ -1,0 +1,2 @@
+Asynchronous Serial
+The application demonstrates usage of the SCI unit in asynchronous mode, by communicating to a UART PC terminal.

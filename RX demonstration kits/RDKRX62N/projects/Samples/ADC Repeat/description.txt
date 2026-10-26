@@ -1,0 +1,2 @@
+ADC Repeat
+The application demonstrates usage of the ADC unit in repeat mode, by making repeat conversions of the potentiometer.

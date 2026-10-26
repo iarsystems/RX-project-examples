@@ -1,0 +1,2 @@
+CRC
+Demonstrates usage of the CRC unit by returning the CRC checksum of characters typed into a PC terminal

@@ -1,0 +1,2 @@
+CRC
+The CRC module is configured to generate checksums of keystrokes from the UART terminal.

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\Samples\ADC Oneshot\ADC Oneshot.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\ADC Repeat\ADC Repeat.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\Application Project\Application Project.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\Asynchronous Serial\Asynchronous Serial.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\CAN\CAN.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\CMT Compare\CMT Compare.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\CRC Calculator\CRC Calculator.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\Dhrystone\Dhrystone.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\DMAC\DMAC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\DTC\DTC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\Etherent uIP\Ethernet uIP.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\Flash Data\Flash Data.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\FPU Bouncing Ball\FPU Bouncing Ball.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\IIC Master\IIC Master.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\MTU Timer\MTU Timer.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\Power Down\Power Down.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\SPI Flash\SPI Flash.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\Timer Capture\Timer Capture.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\TMR Oneshot\TMR Oneshot.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\Tutorial Project\Tutorial Project.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\USB Communication Device Class\USB Communication Device Class.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\USB Human Interface Device Class\USB Human Interface Device Class.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Samples\Watchdog Timer\Watchdog Timer.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+

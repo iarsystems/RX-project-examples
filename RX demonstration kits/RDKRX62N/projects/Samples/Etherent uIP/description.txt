@@ -1,0 +1,2 @@
+Etherent uIP
+Demonstrates the Ethernet peripheral by implmenting uIP as a web server.

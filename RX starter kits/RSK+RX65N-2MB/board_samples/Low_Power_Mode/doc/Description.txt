@@ -1,0 +1,113 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only intended for use with Renesas products.
+* No other uses are authorized. This software is owned by Renesas Electronics Corporation and is protected under all
+* applicable laws, including copyright laws. 
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIESREGARDING THIS SOFTWARE, WHETHER EXPRESS, IMPLIED
+* OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+* NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY
+* LAW, NEITHER RENESAS ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE FOR ANY DIRECT,
+* INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR
+* ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software and to discontinue the availability 
+* of this software. By using this software, you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2016, 2017 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* Project      : Low_Power_Mode
+*
+* History      : DD.MM.YYYY Version      Description
+*              : 31.05.2017 Ver. 1.00    First Release
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* File Name    : description.txt
+*
+* System Requirements: 
+* Device(s)               : R5F565NEDxFC
+* Tool-Chain              : CC-RX V2.07.00
+* Development environment : Renesas e2 studio
+* Version                 : Renesas Smart Configurator V1.2.0
+* H/W Platform            : RSK+RX65N-2MB
+*
+* Description  : Demonstrates the low power modes SLEEP, SW STANDBY and DEEP SW STANDBY for reducing current consumption.
+*                
+*                
+*                NORMAL - Normal operation with peripheral operation and all clocks running.
+* 
+*                SLEEP - In sleep mode, the CPU stops operating but the contents of its internal registers are retained.
+*                Other peripheral functions do not stop.
+*                When the WDT is used, the WDT stops counting when sleep mode is entered.
+*                
+*                SW STANDBY - In this mode, the CPU, on-chip peripheral functions, and the oscillator functions stop.
+*                However, the contents of the CPU internal registers, RAM data, on-chip peripheral functions,
+*                and the states of the I/O ports are retained.
+*
+*                DEEP SW STANDBY - in deep software standby mode, the CPU, internal peripheral modules (except for parts 
+*                of the RTC alarm, RTC periodic,SCL2-DS, SDA2-DS, CRX1-DS, and USB suspend/resume detecting unit), 
+*                RAM, expansion RAM, and functions of the oscillators are stopped; furthermore, since the internal  
+*                supply of power for these modules is stopped, power consumption is markedly reduced. Yet, the main and 
+*                sub clock oscillators can be operated or stopped. Entering and Exiting Low Power Consumption Modes and 
+*                Operating States in Each Mode. At this time, the contents of all the registers of the CPU and internal 
+*                peripheral modules (except for parts of the RTC alarm, RTC periodic, SCL2-DS, SDA2-DS, CRX1-DS, and 
+*                USB suspend/resume detecting unit) become undefined.
+*
+* Note         : Smart Configurator is used to generate code for this sample program.
+*                The Smart Configurator details and version number are given in the file 
+*                header for each relevant module.
+*
+* Operating Conditions:
+*                External Device/Component
+*                -------------------------
+*                Remove R45,R40,R35,R18,R84,R77,R85,R76,R117,R49,R31 and connect an ammeter across J13,
+*                configure the ammeter for current measurement.
+*                NOTE: Use of the ammeter autorange function may cause large resistive loads to be
+*                inserted in the power supply to the microcontroller, causing CPU under voltage on the supply rails
+*                and a reset when the MCU comes out of SLEEP mode. For this reason, do not use the ammeter autorange
+*                function and be sure to switch the ammeter back to the mA range before coming out of SLEEP mode.
+*
+* Operating Procedure:
+*                For details of Building and Downloading the sample code refer to the RSK+RX65N-2MB Tutorial Manual 
+*                (r20ut3892eg0100-rsk+rx65n-2mb-tutorialmanual.pdf).
+*
+*             1. Compile and download the sample code. Click the 'Resume' button to start program execution.
+*                Click 'Resume' again if the program stops at main().
+*                Press 'Stop' and disconnect the debugger from the RSK.
+*
+*             2. The hardware platform and sample name will be displayed in the first two lines of the LCD display.
+*                A real time clock will be displayed in the format: HH:MM:SS on the 3rd line of the LCD display.
+*                'Normal Mode' will be displayed on the 4th line of the LCD display.
+*                The clock is updated when the device is in normal operating mode.
+*
+*             3. The sample code will cycle through the different operating modes on each 
+*                switch press starting with Normal, SLEEP, Normal, SW STANDBY, Normal then DEEP SW STANDBY. 
+*
+*             4. Press SW1 to enter SLEEP mode, 'Sleep Mode' will be displayed on the LCD. (*1)
+*                Observe the current for SLEEP mode.  Press SW1 again to return to Normal mode.
+*
+*             5. Press SW1 to enter SW STANDBY mode, 'SW Standby Mode' will be displayed on the LCD. (*1)
+*                Observe the current for SW STANDBY mode.  Press SW1 again to return to Normal mode.
+*
+*             6. Press SW1 to enter DEEP SW STANDBY mode, 'Deep SW Standby Mode' will be displayed on the LCD. (*1)
+*                Observe the current for DEEP SW STANDBY mode. 
+*
+*             7. Press RESET to exit DEEP SW STANDBY  mode and go to step 2 to repeat the test.
+*
+*           (*1) By performing the following steps for get accurate reading values.
+*
+*             a. Disconnect 5V power from the RSK.
+*
+*             b. Disconnect Pmod LCD display and connect 5V power to the RSK.
+*
+*             c. Typical current reading after removing LCD display:
+*
+*                NORMAL: 19.5 mAmp
+*                SLEEP: 11.5 mAmp
+*                SW STANDBY: 0.99 mAmp
+*                DEEP SW STANDBY: 0.0055 mAmp
+*
+***********************************************************************************************************************/

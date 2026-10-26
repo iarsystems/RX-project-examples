@@ -1,0 +1,79 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only 
+* intended for use with Renesas products. No other uses are authorized. This 
+* software is owned by Renesas Electronics Corporation and is protected under 
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+* AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software 
+* and to discontinue the availability of this software.  By using this software, 
+* you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2014 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+* Project      : Tutorial
+* History      : 26/10/2014 Ver. 1.00 First Release
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+* File Name    : description.txt
+*
+* System Requirements: 
+* Device(s)               : R5F51138AxFP
+* Tool-Chain              : IAR Systems ICCRX
+* Development environment : IAR Embedded Workbench
+* Version                 : Code Generator for RX113 V1.01.00.02 [31 Jul 2014]
+* H/W Platform            : RSKRX113 with RSK LCD APP V2 
+* 
+* Description  : This is a simple tutorial application used in conjunction with the Tutorial Manual and 
+*                the Code Generator Tutorial Manual.
+*
+* Note         : Code Generator is used to generate code for this sample program. 
+*                The Code Generator details and version number are given in the file 
+*                header for each relevant module.
+*
+* Configuration:
+*        Links & Jumpers: Set to default configuration shown in RSK User's Manual.
+*
+* Operating Procedure:  
+*    For details of Building and Downloading the sample code refer to  the RSK Tutorial Manual.
+*
+*             1. Attach the E1 debugger to the RSK.
+*
+*             2. Connect the RSK G1CUSB0 port to a PC using a USB Type A to mini B cable.
+*                The first time this port is connected to the PC an 'Installing Device Driver Software'
+*                pop-up will appear and the driver will be automatically installed. In Device Manager, the virtual
+*                COM port will appear under 'Port (COM & LPT)' as 'RSK USB Serial Port (COMx)', 
+*                where x is a number.
+*                
+*             3. Open a terminal program (e.g HyperTerminal) on the virtual COMx port created in step 1. 
+*                Ensure the terminal program connection settings are as follows:
+*                
+*                Baud Rate.............19200
+*                Data Bits.................8
+*                Parity.................None
+*                Stop Bits.................1
+*                Flow Control...........None
+*
+*             4. Build and download the sample code. Click the 'Resume' button to start program execution.
+*                Click 'Resume' again if the program stops at main().
+*                The LCD display will show 'TUTOR' on the bottom line.
+*                
+*             5. Press SW3 or the character 'C' in the terminal window. An A/D conversion will be performed. 
+*                The resulting hex value will be displayed in the centre of the LCD.
+*				 The result and count will also be displayed in the terminal window.
+*                
+*             6. Adjust the potentiometer RV1 and repeat step 4.
+*
+***********************************************************************************************************************/
+

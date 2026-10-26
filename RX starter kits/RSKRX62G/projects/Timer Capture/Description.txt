@@ -1,0 +1,2 @@
+Timer Capture
+The timer unit is configured as a counter, clocked from the MCU clock.

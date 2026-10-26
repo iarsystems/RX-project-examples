@@ -1,0 +1,5 @@
+This example generates 2 PWM output signals on port PE2 (GTIOC0B-A) and PE5 (GTIOC0A-A).
+All timing settings are done in the GPTIO interrupt routines:
+gtcia0_interrupt - Adjust PWM for GTIOC0A
+gtcib0_interrupt - Adjust PWM for GTIOC0B
+gtciv0_interrupt - Trigger PWM output

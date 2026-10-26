@@ -1,0 +1,2 @@
+IIC Master
+Demonstrates usage of the IIC unit in master mode, by writing to the onbard R1EX24xxx series EEPROM device.

@@ -1,0 +1,2 @@
+Timer Capture
+Demonstrates usage of the MTU unit to measure length of switch presses

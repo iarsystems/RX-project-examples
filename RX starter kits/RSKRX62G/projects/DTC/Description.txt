@@ -1,0 +1,2 @@
+DTC
+The DTC module is configured to transfer ADC values to an incremented memory location.

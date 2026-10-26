@@ -1,0 +1,2 @@
+Flash BGO
+Demonstrates usage of the flash unit in BGO (Background Operation Mode), using the Flash API.

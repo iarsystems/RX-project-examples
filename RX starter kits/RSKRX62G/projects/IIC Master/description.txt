@@ -1,0 +1,2 @@
+IIC Master
+The application demonstrates usage of the I2C unit in master mode, by writing to and from an external EEPROM device.

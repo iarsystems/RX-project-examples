@@ -1,0 +1,2 @@
+Timer Mode
+Demonstrates usage of the timer unit by generating a 1KHz squarewave

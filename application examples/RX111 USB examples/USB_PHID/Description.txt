@@ -1,0 +1,93 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only 
+* intended for use with Renesas products. No other uses are authorized. This 
+* software is owned by Renesas Electronics Corporation and is protected under 
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+* AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software 
+* and to discontinue the availability of this software. By using this software, 
+* you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+* Copyright (C) 2013 Renesas Electronics Corporation. All rights reserved.    */ 
+/***********************************************************************************************************************
+* Project      : USB_PHID
+* Version      : 
+* Device(s)    : R5F51115AxFM
+* Tool-Chain   : CCRX
+* H/W Platform : RSKRX111
+*
+* Description  : This sample demonstrates the use of the RX111 as a USB 
+*                Peripheral HID . It can be configured as a HID Keyboard,
+*                HID Mouse or in HID demo mode.
+*
+* Operation    : Ensure the RSK is configured as a self-powered USB Peripheral.
+*                Short pins 2-3 of J12 and 2-3 of J9, and power the RSK from a +5V
+*                centre positive PSU via the PWR connector or from the E1.
+*                Configure the code for the required mode by uncommenting out 
+*                one of the following lines from r_usb_phid_usrcfg.h:
+*
+*       //#define USB_PHID_APL_MODE       USB_PHID_DEMO_MODE      /* Peripheral HID Application demo mode */
+*       //#define USB_PHID_APL_MODE       USB_PHID_KEYBOARD_MODE  /* Peripheral HID Application keyboard mode */
+*       #define USB_PHID_APL_MODE       USB_PHID_MOUSE_MODE     /* Peripheral HID Application mouse mode */
+*
+*
+* Instructions (USB_PHID_DEMO_MODE): 
+*             1. Compile the sample code and download to the RSK. Click the 'Restart' 
+*                button to start program execution.
+*
+*             2. 'USB DEMO Appstart' should be displayed on the LCD.
+*               
+*             3. Connect to a Windows PC to the RSK connector USB0_2 using a USB Type-A to Type 
+*                mini-B cable. 'USB DEM ATTACH' should be displayed on the LCD.
+*
+*             4. Launch the RSK_HID.exe application. Click the 'Connect' button and use VID = 0x0000
+*                and PID = 0x0003.  The application should display a message indicating a successful
+*                connection to the RSK.
+*
+*             5. Use the 'Toggle LED', 'ReadADC' and 'Set LCD' buttons on the RSK_HID.exe application to 
+*                interact with the device.
+*
+* Instructions (USB_PHID_KEYBOARD_MODE): 
+*             1. Compile the sample code and download to the RSK. Click the 'Restart' 
+*                button to start program execution.
+*
+*             2. 'USB KBD Appstart' should be displayed on the LCD.
+*               
+*             3. Connect to a Windows PC to the RSK connector USB0_2 using a USB Type-A to Type 
+*                mini-B cable. 'USB KBD ATTACH' should be displayed on the LCD.
+*
+*             4. Launch the Windows Notepad application or any simple text editor. Pressing SW2 should
+*                result in the program sending HID reports for characters 'a' to 'z' when pressed repeatedly.
+*                Pressing SW3 should result in the program sending HID reports for numbers  '1' to '0' when 
+*                pressed repeatedly.
+*
+* Instructions (USB_PHID_MOUSE_MODE): 
+*             1. Compile the sample code and download to the RSK. Click the 'Restart' 
+*                button to start program execution.
+*
+*             2. 'USB MSE Appstart' should be displayed on the LCD.
+*               
+*             3. Connect to a Windows PC to the RSK connector USB0_2 using a USB Type-A to Type 
+*                mini-B cable. 'USB MSE ATTACH' should be briefly displayed on the LCD, followed by
+*                'USB MSE SW0'.
+*
+*             4. Use RSK SW2 to move the Windows mouse pointer up/down and SW 3 to move it left/right.
+*                Use SW1 for left mouse button click.
+*
+***********************************************************************************************************************/  
+/***********************************************************************************************************************
+* History      : 21.06.2013 Ver. 1.00 First Release
+***********************************************************************************************************************/

@@ -1,0 +1,2 @@
+IIC_Master
+The application demonstrates the usage of the IIC module in master mode, by writing to and from an external EEPROM device.

@@ -1,0 +1,36 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: RSK_LibUSB - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x809 /fo"Debug/RSK_LibUSB.res" /d "_DEBUG" /d "_AFXDLL" "C:\Projects\USB\RSK_USB_enhancement\Host\WindowsPC\LibUSB\RSK_LibUSB\RSK_LibUSB.rc"" 
+Creating temporary file "C:\DOCUME~1\pinda\LOCALS~1\Temp\RSP65A.tmp" with contents
+[
+libusb.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/RSK_LibUSB.pdb" /debug /machine:I386 /out:"Debug/RSK_LibUSB.exe" /pdbtype:sept /libpath:"C:\Projects\USB\LibUSB\Extracted\libusb-win32-device-bin-0.1.12.2\lib\msvc" 
+.\Debug\DlgConnect.obj
+.\Debug\DlgLCD.obj
+.\Debug\GUI.obj
+.\Debug\HexEdit.obj
+.\Debug\LibUSB.obj
+.\Debug\LibUSBDlg.obj
+.\Debug\RSK_LibUSB.obj
+.\Debug\RSKUSB.obj
+.\Debug\StdAfx.obj
+.\Debug\USBComms.obj
+.\Debug\RSK_LibUSB.res
+]
+Creating command line "link.exe @C:\DOCUME~1\pinda\LOCALS~1\Temp\RSP65A.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+RSK_LibUSB.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

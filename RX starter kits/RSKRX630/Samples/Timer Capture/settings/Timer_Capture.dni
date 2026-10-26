@@ -1,0 +1,93 @@
+[DebugChecksum]
+Checksum=1148794646
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[E1_E20 Emulator]
+BlockBits=15
+B0=1,0
+B1=1,1024
+B2=1,2048
+B3=1,3072
+StartEnabled=0
+StartSymbol=
+StopEnabled=0
+StopSymbol=
+TraceMode=0
+TraceOutput=2
+TraceCapacity=0
+TraceRestart=0
+OperatingFrequency=192.000000
+PerfEnabled=0
+PerfCondition=0,0
+PerfDisplayTime=0,0
+PerfOnlyOnce=0,0
+PerfUse64Bit=0
+ChipName=R5F5630E
+PinMode=0
+RegMode=0
+Endian=0
+ExtMemBlockNum=7
+ExtMemEndian_000=0    
+ExtMemCondAccess_000=0    
+ExtMemEndian_001=0    
+ExtMemCondAccess_001=0    
+ExtMemEndian_002=0    
+ExtMemCondAccess_002=0    
+ExtMemEndian_003=0    
+ExtMemCondAccess_003=0    
+ExtMemEndian_004=0    
+ExtMemCondAccess_004=0    
+ExtMemEndian_005=0    
+ExtMemCondAccess_005=0    
+ExtMemEndian_006=0    
+ExtMemCondAccess_006=0    
+InputClock=12.000000
+AllowClkSrcChange=0
+WorkRamStart=4096
+ComunicationSelect=0
+JtagClock=10
+FINE=2000000
+FlashOvrNum=0
+DebugFlags=0,0
+EmulatorMode=0
+PowerTargetFromEmulator=1
+Voltage=0
+NeedInit=1
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[CallStackLog]
+Enabled=0
+[DriverProfiling]
+Enabled=0
+Mode=3
+Graph=0
+Symbiont=0
+Exclusions=
+[Breakpoints]
+Count=0
+[Monitor Execution]
+Leave target running=0
+Release target=0
+[Aliases]
+Count=0
+SuppressDialog=0
+[Trace1]
+Enabled=0
+ShowSource=1

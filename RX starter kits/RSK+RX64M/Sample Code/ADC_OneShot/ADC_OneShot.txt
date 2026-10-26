@@ -1,0 +1,4 @@
+Analog input signal to port P40 (AN000) is converted after a maual trigger.
+Timer interrupt tmr_cmi0_interrupt of 8-bit timer TMR0 is used to start AD 
+conversion and read the ADC results.
+

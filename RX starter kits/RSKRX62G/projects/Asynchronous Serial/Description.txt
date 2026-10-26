@@ -1,0 +1,2 @@
+Asynchronous Serial
+The SCI unit is configured to communicate to a PC terminal via asynchronous mode.

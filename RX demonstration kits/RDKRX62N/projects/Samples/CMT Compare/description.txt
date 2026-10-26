@@ -1,0 +1,2 @@
+Timer Compare
+The application demonstrates usage of the CMT unit in compare match mode, by toggling the LEDs periodically when a compare match occurs.

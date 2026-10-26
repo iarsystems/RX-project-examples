@@ -1,0 +1,16 @@
+%!: /refhead.html
+<h1>
+%! dhry-string
+</h1>
+<center><p>
+This page refreshes every 3 seconds. The Dhrystone test is rerun at every refresh.
+The number of refreshes is shown in brackets '[]'.<br><br>
+The Multi Tasking Framework is disabled while calculating Dhrystone. If a VNC client
+is currently running the MandelBrot, Bouncing Balls, or Pong Game demo, these demos
+will appear to have delays of about 3 seconds every time a new Dhrystone result is calculated.
+<center>
+<p>
+  <A HREF="democontrol.shtml">Back to demo control page</A>
+</p>
+</center>
+%!: /footer.html

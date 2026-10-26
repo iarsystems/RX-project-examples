@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\ADC_OneShot\ADC_OneShot.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\ADC_Repeat\ADC_Repeat.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\GPT_PWM\GPT_PWM.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\IO_Port\IO_Port.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\MTU3a_PWM\MTU3a_PWM.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Application\Application.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Async_Serial\Async_Serial.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Low_Power_Mode\Low_Power_Mode.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\RTC\RTC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\System_Input_Capture\System_Input_Capture.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer_PWM\Timer_PWM.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Tutorial\Tutorial.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+

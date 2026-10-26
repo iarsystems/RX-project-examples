@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\ADC Oneshot\ADC Oneshot.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\ADC Repeat\ADC Repeat.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Application\Application.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Async Serial\Async Serial.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\CAN API Demo\CAN API Demo.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\CRC\CRC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\DAC\DAC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\DMAC\DMAC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\DTC\DTC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Ethernet\Ethernet.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash BGO\Flash BGO.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash Data\Flash Data.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash Suspend\Flash Suspend.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\IIC Master\IIC Master.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\IIC Slave\IIC Slave.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\MPU\MPU.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Power Down\Power Down.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Power Off\Power Off.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\PWM\PWM.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\RTC\RTC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\SPI\SPI.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Sync Serial\Sync Serial.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Capture\Timer Capture.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Compare\Timer Compare.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Event\Timer Event.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Mode\Timer Mode.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Tutorial Program\Tutorial Program.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\uIP Demo\uIP Demo.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\USB Communication Device Class\USB Communication Device Class.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\USB Human Interface Device Class\USB Human Interface Device Class.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\USB LibUSB Device\USB LibUSB Device.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\USB Mass Storage Device Class\USB Mass Storage Device Class.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Voltage Detect\Voltage Detect.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\WDT\WDT.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+

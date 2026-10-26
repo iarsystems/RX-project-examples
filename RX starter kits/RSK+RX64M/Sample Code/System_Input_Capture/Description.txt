@@ -1,0 +1,112 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only 
+* intended for use with Renesas products. No other uses are authorized. This 
+* software is owned by Renesas Electronics Corporation and is protected under 
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+* AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software 
+* and to discontinue the availability of this software.  By using this software, 
+* you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2014 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* Project      : System_Input_Capture
+* File Name    : Description.txt
+* Version      : Code Generator for RX64M V1.00.01.01 [09 May 2014]
+* Device(s)    : R5F564MLCxFC
+* Tool-Chain   : IAR Embedded Workbench
+* H/W Platform : RSKRX64M
+* Description  : System Input Capture sample application.
+*                This application logs time, temperature and an ADC reading into Non Volatile storage
+*                and allows data retrieval via the SCI to a terminal program.  Data is stored in 
+*                fixed length 16 byte records in internal IIC EEEPROM.  
+*                Each record is stored at a regular interval as determind by the Real-time clock (RTC)
+*                contant period interrupt.  This may be set to either 0.5 seconds, 1 second or 1 minute
+*                by user switch presses.  The sample application will send the RX64M into software standby mode
+*                if the ADC value falls below a predefined threshold (200H) and will wake from software standby
+*                when the value rises again above the threshold.  Data may be retreived or erased from 
+*                the non volatile memory by connecting a serial cable to the RSK COM port and using 
+*                a terminal emulation program such as HyperTerminal with the settings 9600, 8, N, 1.
+*                
+* Note         : Code Generator is used to generate code for this sample program. 
+*                The Code Generator details and version number are given in the file 
+*                header for each relevant module.
+* Modifications: 
+*                External Device/Component
+*                -------------------------
+*                This sample is configured to look for the on-board IIC EEPROM at IIC address 0xA0
+*                and if found the sample uses this EEPROM for Non Volatile Memory (NVM) storage.
+*                Works with the Renesas R1EX24xxx series, 16Kbit EEPROM and 
+*                compatible devices. 
+*                The size of the EEPROM is defined in the file iic_eeprom.h and may be changed by editing
+*                line 44:
+*                #define IIC_EEPROM_SIZE_BYTES 2048
+*                The RSK+RX64M is shippped with J27 open.
+*                To enable the on board EEPROM U14 configure J27 closed, J6 not fitted.
+*                To disbale to the on board EEPROM and use data flash for NVM configure J27 open.
+*                
+* Operation    : Power the RSK from a +5V centre positive PSU via the PWR connector.
+*
+* Instructions : 
+*             1. Connect the RSK G1CUSB0 port to a PC using a USB Type A to mini B cable.
+*                The first time this port is connected to the PC an 'Installing Device Driver Software'
+*                pop-up will appear and the driver will be automatically installed. In Device Manager, the virtual
+*                COM port will appear under 'Port (COM & LPT)' as 'RSK USB Serial Port (COMx)', 
+*                where x is a number.
+*                
+*             2. Open a terminal program (e.g PuTTY) on the virtual COMx port created in step 1. 
+*                Ensure the terminal program connection settings are as follows:
+*                
+*                Baud Rate..............9600
+*                Data Bits.................8
+*                Parity.................None
+*                Stop Bits.................1
+*                Flow Control...........XON/XOFF
+*
+*             3. Compile the sample code and download to the RSK. Ensure the potentiometer RV1 is turned fully 
+*                counter-clockwise. Click the 'Go' button to start program execution from main().
+*
+*             4. The platform and sample name will be displayed in the first two lines of the LCD display.
+*                A real time clock will be displayed on the 3rd line in the format: HH:MM:SS
+*                The clock is updated when the device is in normal operating mode.
+*                The data acquisition interval default of 1 sec is displayed on the 4th line.  This interval
+*                may be set to 0.5 sec, 1 sec, 2 sec and 1 minute.  To increase the acquisition interval
+*                press SW1, to decrease it press SW2.
+*
+*             5. At every acquistion interval period the system will measure temperature and 
+*                take the ADC value and display this information on the 5th and 6th lines 
+*                of the LCD panel.
+*          
+*             6. In addition the system stores data log record to NVM every second.
+*         
+*             7. Turn the potentiometer gradually clockwise.  When the ADC value falls below 200H the RX64M will
+*                enter SNOOZE mode and data logging will be suspended.  In SNOOZE mode the MCU will wake and take an ADC reading
+*                at the current acquisition interval (0.5s, 1s. 2s or 1 min).  If the ADC reading rises 
+*                above 200H then the system will wake from SNOOZE and data logging will resume.
+*
+*             6. Pressing 'R' or 'r' in the terminal window results in all the data stored in NVM to be sent to the terminal in 
+*                a readable .csv format.  This data may copied from the terminal and saved to a .csv file for later 
+*                importing into Microsoft Excel or a similar spreadsheet application.
+*          
+*             7. At some point, depending on the data logger interval and NVM medium used, the NVM storage will be
+*                exhausted and 'FULL' will be displayed at the bottom of the LCD panel.  Pressing 'E' or 'e' in the terminal
+*                window will perform a full erase of the NVM and data logging will immediately be resumed.
+*                            
+*
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+* History      : 17/12/2013 Ver. 1.00 First Release
+***********************************************************************************************************************/

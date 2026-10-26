@@ -1,0 +1,268 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only intended for use with Renesas products.
+* No other uses are authorized. This software is owned by Renesas Electronics Corporation and is protected under all
+* applicable laws, including copyright laws. 
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING THIS SOFTWARE, WHETHER EXPRESS, IMPLIED
+* OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+* NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY
+* LAW, NEITHER RENESAS ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE FOR ANY DIRECT,
+* INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR
+* ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software and to discontinue the availability 
+* of this software. By using this software, you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2022 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* File Name    : main.c
+* Version      : 1.00
+* Device(s)    : R5F56609HxFB
+* Tool-Chain   : CCRX
+* H/W Platform : RSKRX660
+* Description  : This file implements main function.
+* Creation Date: 2022-01-18
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+Includes   <System Includes> , "Project Includes"
+***********************************************************************************************************************/
+#include "r_smc_entry.h"
+#include "r_okaya_lcd.h"
+#include "r_rsk_switch.h"
+#include "rskrx660def.h"
+
+#include "Config_RTC.h"
+
+#include "r_cg_userdefine.h"
+
+/***********************************************************************************************************************
+Macro definitions
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+Typedef definitions
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+Exported global variables (to be accessed by other files)
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+Private global variables and functions
+***********************************************************************************************************************/
+
+static void cb_switch_press (void);
+static void display_time (void);
+static void display_alarm (void);
+
+/* Flag to indicate when the user has cancelled the alarm */
+static uint8_t s_alarm_cancelled = FALSE;
+
+void main (void);
+
+/***********************************************************************************************************************
+* Function Name: main
+* Description  : This function implements main function.
+* Arguments    : None
+* Return Value : None
+***********************************************************************************************************************/
+void main(void)
+{
+    /* Initialize the switch module */
+    R_SWITCH_Init();
+
+    /* Set the call back function when SW1 is pressed */
+    R_SWITCH_SetPressCallback(cb_switch_press);
+
+    /* Initialise the debug LCD */
+    R_LCD_Init();
+
+    /* Displays the application name on the debug LCD */
+    R_LCD_Display(0, (uint8_t *)" RSKRX660  ");
+
+    /* Casting for use as characters. */
+    R_LCD_Display(1, (uint8_t *)" RTC ");
+
+    /* Start the RTC and enable the constant period interrupt */
+    R_Config_RTC_Start();
+    R_Config_RTC_Set_ConstPeriodInterruptOn(PES_1_SEC);
+
+    while (1U)
+    {
+        if (TRUE == g_rtc_interrupt)
+        {
+            /* Clear down the interrupt flag and display the new time */
+            g_rtc_interrupt = FALSE;
+            display_time();
+            
+            /* Check the alarm status and display/process accordingly */
+            if (ALARM_ON == g_alarm_status)
+            {
+                display_alarm();
+            }
+        }
+    }
+}
+/***********************************************************************************************************************
+* End of function main
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* Function Name : cb_switch_press
+* Description   : Switch press callback function.
+* Argument      : none
+* Return value  : none
+***********************************************************************************************************************/
+static void cb_switch_press(void)
+{
+    /* Check if switch 1 was pressed */
+    if (g_switch_flag & SWITCHPRESS_1)
+    {
+        /* Cancel the alarm, only if it is active */
+        if (ALARM_ON == g_alarm_status)
+        {
+            s_alarm_cancelled = TRUE;
+        }
+
+        /* Clear flag */
+        g_switch_flag = 0x0;
+    }
+}
+/***********************************************************************************************************************
+* End of function cb_switch_press
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* Function Name : display_time
+* Description   : function to get the current time from the RTC and display it on the LCD.
+* Argument      : none
+* Return value  : none
+***********************************************************************************************************************/
+static void display_time(void)
+{
+    /* Create a new instance of data structure RTCCounterValue */
+    rtc_calendarcounter_value_t st_rtc_data;
+
+    char_t time_str[12] = "           ";
+
+    /* Read the RTC time */
+    R_Config_RTC_Get_CalendarCounterValue(&st_rtc_data);
+
+    /* Read the hours value */
+    /* When using 12H mode, bit 6 of the HOUR sfr indicates AM(0)/PM(1),
+       need to ensure this bit is not considered displaying the time */
+    time_str[1] = (((char_t)st_rtc_data.rhrcnt >> 4) & 0x03) + 0x30;
+
+    /* Set the hour lower value */
+    time_str[2] = ((char_t)st_rtc_data.rhrcnt & 0x0F) + 0x30;
+
+    /* ASCII code for ':' */
+    time_str[3] = 0x3A; 
+
+    /* Set the minutes upper value */
+    time_str[4] = ((char_t)st_rtc_data.rmincnt >> 4) + 0x30;
+
+    /* Set the minutes lower value */
+    time_str[5] = ((char_t)st_rtc_data.rmincnt & 0x0F) + 0x30;
+
+    /* ASCII code for ':' */
+    time_str[6] = 0x3A; 
+
+    /* Set the seconds upper value */
+    time_str[7] = ((char_t)st_rtc_data.rseccnt >> 4) + 0x30;
+
+    /* Set the seconds lower value  */
+    time_str[8] = ((char_t)st_rtc_data.rseccnt & 0x0F) + 0x30;
+
+    /* Set the AM/PM bit, check if it indicates AM
+       and add the appropriate symbol */
+    if (st_rtc_data.rhrcnt & _40_RTC_HOUR_ATTRIB_PM)
+    {
+        time_str[9] = 'p';
+
+        /* Additional check for 12 pm, RTC will contain 0 in the rhrcnt */
+        if (0 == (st_rtc_data.rhrcnt & 0x3f))
+        {
+            time_str[1] = '1';
+            time_str[2] = '2';
+        }
+    }
+    else
+    {
+        time_str[9] = 'a';
+    }
+    time_str[10] = 'm';
+
+    /* Casting for use as characters. */
+    R_LCD_Display(2, (uint8_t *)time_str);
+}
+
+/***********************************************************************************************************************
+* End of function display_time
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* Function Name : display_alarm
+* Description   : function to display the alarm on LCD and LEDs and check for user cancellation.
+* Argument      : none
+* Return value  : none
+***********************************************************************************************************************/
+static void display_alarm(void)
+{
+    /* Variable used to count the number of seconds after the alarm interrupt
+       occurs */
+    static uint8_t s_alarm_timeout = 30u;
+
+    /* Check for alarm cancelled flag or timeout */
+    if ((TRUE == s_alarm_cancelled) || (0 == (s_alarm_timeout-- )))
+    {
+        /* Clear down flags and blank out alarm areas on LCD and turn off LED*/
+        g_alarm_status    = ALARM_OFF;
+        s_alarm_cancelled = FALSE;
+
+        /* Casting for use as characters. */
+        R_LCD_Display(3, (uint8_t *)"       ");
+
+        /* Casting for use as characters. */
+        R_LCD_Display(4, (uint8_t *)"                     ");
+
+        /* Turn off LED1 */
+        LED1 = LED_OFF;
+    }
+    else
+    {
+        rtc_calendarcounter_value_t st_rtc_data;
+
+        /* Read the RTC time */
+        R_Config_RTC_Get_CalendarCounterValue(&st_rtc_data);
+
+        /* toggle ALARM every second */
+        if ((st_rtc_data.rseccnt % 2) == 0)
+        {
+            /* Casting for use as characters. */
+            R_LCD_Display(3, (uint8_t *)" ALARM");
+
+            /* Turn off LED1 */
+            LED1 = LED_OFF;
+        }
+        else
+        {
+            /* Casting for use as characters. */
+            R_LCD_Display(3, (uint8_t *)"      ");
+
+            /* Turn on LED1 */
+            LED1 = LED_ON;
+        }
+
+        /* Casting for use as characters. */
+        R_LCD_Display(4, (uint8_t *)" Press SW1 to cancel");
+    }
+}
+
+/***********************************************************************************************************************
+* End of function display_alarm
+***********************************************************************************************************************/

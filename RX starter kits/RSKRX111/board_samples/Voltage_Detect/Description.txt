@@ -1,0 +1,68 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only 
+* intended for use with Renesas products. No other uses are authorized. This 
+* software is owned by Renesas Electronics Corporation and is protected under 
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+* AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software 
+* and to discontinue the availability of this software.  By using this software, 
+* you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2013 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* File Name     : Description.txt
+* Version       : 1.0
+* Device(s)     : R5F51115AxFM
+* Tool-Chain    : CCRX
+* H/W Platform  : RSKRX111
+* Note          : Application Leading Tool (Applilet) is used to generate code 
+*                 for this sample program.  The name Applilet is used hereafter.
+*                 The Applilet details and version number are given in the file 
+*                 header for each relevant module.
+* Description   : This sample demonstrates usage of the voltage detect 
+*                 peripheral, by indicating when the power supply voltage 
+*                 falls below a certain threshold (3.0 V).
+*
+* Operation     : Before starting this sample, power the RSK board from a 
+*                 variable power supply instead of by the debugger. Set 
+*                 variable power supply to 3.3V initially. Apply the power 
+*                 to pin 3 (3V3) and pin 4(GND) of JA1.  
+*
+*                 1. Compile and download the sample code. Click the 'Debug Icon' 
+*                    button to start program execution. Click again if the program
+*                    stops at Main.
+*
+*                 2. Observe all the user LEDs flashing, and that the debug LCD 
+*                    indicates that VCC > VDET (detection voltage).
+*
+*                 3. Gradually reduce the power supply voltage, until the user
+*                    LEDs stop flashing and LED3 is lit constantly (at approx.
+*                    3.0V). The debug LCD will display VCC < VDET, but it may not 
+*                    be possible to see this as the low voltage will decrease the 
+*                    brightness of the display.
+*
+*                 4. Raise the power supply voltage to above 3.0V and the user
+*                    LEDs and debug LCD will return to their original state.
+*
+* Note           : DO NOT EXCEED 3.5V FOR THE POWER SUPPLY
+*                  The debug LCD may appear dim as the power supply voltage is
+*                  reduced, which is to be expected.
+*                
+*                
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+* History      : 20.06.2013 Ver. 1.00 First Release
+***********************************************************************************************************************/

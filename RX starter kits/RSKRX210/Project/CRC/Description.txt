@@ -1,0 +1,2 @@
+CRC
+The CRC module is configured to generate 16 bit CRC checksum of keystrokes from the terminal program.

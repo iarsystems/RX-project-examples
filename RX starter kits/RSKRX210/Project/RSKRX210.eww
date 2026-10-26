@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\ADC12_Repeat\ADC12_Repeat.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Analog_Compare\Analog_Compare.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Async_Serial\Async_Serial.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\CRC\CRC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\DMAC\DMAC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\DOC\DOC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\DTC\DTC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\ELC\ELC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\IIC_Master\IIC_Master.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Low_Power\Low_Power.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Power_Down\Power_Down.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\PWM\PWM.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\RTC\RTC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\SPI\SPI.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Temperature_Sensor\temperature_sensor.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer_Mode\Timer_Mode.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Tutorial Program\Tutorial.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Voltage_Detect\Voltage_Detect.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\WDT\WDT.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+

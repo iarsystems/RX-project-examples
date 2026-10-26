@@ -1,0 +1,2 @@
+ADC12 Oneshot
+The application demonstrates usage of the 12bit ADC unit in oneshot mode, by making conversions of the potentiometer on switch presses.

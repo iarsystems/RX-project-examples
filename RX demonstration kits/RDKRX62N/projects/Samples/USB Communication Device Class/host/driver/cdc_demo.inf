@@ -1,0 +1,55 @@
+;--------------------------------------------------------
+;	Renesas
+;
+;	Communication Device Class
+;	Virtual Serial Port
+;	
+;	20/12/04
+;--------------------------------------------------------
+
+
+[Version] 
+Signature="$Windows NT$" 
+Class=Ports 
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318} 
+Provider=%STRING_PROVIDER% 
+LayoutFile=layout.inf 
+DriverVer=20/12/2004,1 
+
+[Manufacturer] 
+%STRING_MAUNUFACTURER%=Model 
+
+[Model] 
+%STRING_MODEL%=CDC, USB\VID_045B&PID_2014  
+
+[DestinationDirs] 
+DefaultDestDir=12 
+
+[CDC.NT] 
+CopyFiles=CDC.NT.Copy 
+AddReg=CDC.NT.AddReg 
+
+[CDC.NT.Copy] 
+usbser.sys,,,0x20
+
+[CDC.NT.AddReg] 
+HKR,,DevLoader,,*ntkern 
+HKR,,NTMPDriver,,usbser.sys 
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider" 
+
+[CDC.NT.Services] 
+AddService = usbser, 0x00000002, Service_Inst 
+
+[Service_Inst] 
+DisplayName = %STRING_DISPLAY_NAME% 
+ServiceType = 1 ; SERVICE_KERNEL_DRIVER 
+StartType = 3 ; SERVICE_DEMAND_START 
+ErrorControl = 1 ; SERVICE_ERROR_NORMAL 
+ServiceBinary = %12%\usbser.sys 
+LoadOrderGroup = Base 
+
+[Strings]
+STRING_PROVIDER = "Renesas"
+STRING_MAUNUFACTURER = "Renesas" 
+STRING_MODEL = "CDC USB Demonstration"  
+STRING_DISPLAY_NAME = "CDC USB Demonstration Driver"

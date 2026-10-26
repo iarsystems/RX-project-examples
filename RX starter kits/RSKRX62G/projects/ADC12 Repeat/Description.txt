@@ -1,0 +1,2 @@
+ADC12 Repeat
+The 12bit ADC is configured to repeatedly take readings.

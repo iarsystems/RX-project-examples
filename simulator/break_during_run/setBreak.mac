@@ -1,0 +1,81 @@
+//========================================================
+// IAR EMBEDDED WORKBENCH
+// Example macro file for the CSPY debugger:
+// Shows how to set breakpoints and perform actions
+// at breakpoint hits without stopping execution.
+//
+//          
+//========================================================
+
+__var counter;
+__var breakId;
+
+//====================
+// User defined macros
+//====================
+
+/* Check if "set breakpoint" was succesful */
+checkBreakpoint()
+{
+  if (breakId == 0)
+  {
+    __message "Breakpoint set failed\n";
+  }
+  else
+  {
+    __message "Breakpoint set OK\n";
+  }
+}
+
+/* do something at breakpoint hit */
+breakpointHit()
+{
+  __message "Breakpoint hit: ", ++counter, "\n";
+  __message "    PC: ", #PC:%X, ", Cycles: ", #CYCLECOUNTER:%d, "\n";
+  __message "    Result: ", result:%d, "\n";
+
+  /* This return value decides if the condition for the breakpoint is fulfilled */ 
+  /* "1" => Condition fulfilled => execution is stopped */
+  /* "0" => Condition not fulfilled => continue execution */
+  return 0;
+}
+
+//=======================================================
+// C-SPY setup macros                                    
+// The setup macros are reserved macro names that will   
+// be called by C-SPY at specific stages during execution.
+//=======================================================
+
+// Called after communication with the target system is established
+execUserPreload() 
+{
+  return 0;
+}
+
+// Called once after the target program is downloaded.
+execUserSetup() 
+{
+  // Set a breakpoint at label "main" and call a function at breakpoint hit
+  breakId = __setCodeBreak("main", 0, "breakpointHit()", "TRUE", "");  
+  checkBreakpoint();  
+  // Set a breakpoint at a function label and call a function at breakpoint hit
+  breakId = __setCodeBreak("multiplyByTwo", 0, "breakpointHit()", "TRUE", "");  
+  checkBreakpoint();  
+  // Set a breakpoint at label "exit" and call a function at breakpoint hit
+  breakId = __setCodeBreak("_exit", 0, "breakpointHit()", "TRUE", "");  
+  checkBreakpoint();  
+}
+
+// Called each time the reset command is issued 
+execUserReset() 
+{
+  counter = 0;
+  __message "Counter reset\n";
+}
+
+// Called once when the debug session ends
+execUserExit() 
+{
+  return 0;
+}
+

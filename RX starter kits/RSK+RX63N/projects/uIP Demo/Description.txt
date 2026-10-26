@@ -1,0 +1,2 @@
+uIP Sample
+Demonstrates the Ethernet inteface by configuring the RSK+RX63N as a basic web server.

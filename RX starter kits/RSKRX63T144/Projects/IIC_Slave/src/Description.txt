@@ -1,0 +1,2 @@
+IIC Slave
+Demonstrates usage of the IIC unit in slave mode, by simulating an R1EX24xxx series EEPROM device (accessible via IIC Master sample code)

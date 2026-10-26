@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\ADC Oneshot\ADC_Oneshot_.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\ADC Repeat\ADC_Repeat.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Async Serial\Async_Serial.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\CAN API Demo\CAN_API_Demo.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\CRC\CRC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\DMAC\DMAC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\DTC\DTC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash BGO\Flash_BGO.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash Data\Flash_Data.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash Suspend\Flash_Suspend.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\IIC Master\IIC_Master.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\IIC Slave\IIC_Slave.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Power Down\Power_Down.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Power Off\Power_Off.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\PWM\PWM.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\RTC\RTC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\SPI\SPI.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Sync Serial\Sync_Serial.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Capture\Timer_Capture.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Compare\Timer_Compare.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Event\Timer_Event.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Mode\Timer_Mode.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Tutorial Program\Tutorial.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\USB Communication Device Class\CDC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\USB Human Interface Device Class\HID.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\USB LibUSB Device\LibUSB.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\USB Mass Storage Device Class\MSC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Voltage Detect\Voltage_Detect.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\WDT\WDT.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+

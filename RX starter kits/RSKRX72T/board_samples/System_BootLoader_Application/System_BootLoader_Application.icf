@@ -1,0 +1,49 @@
+//-----------------------------------------------------------------------------
+// Linker configuration file template for the Renesas RX microcontroller R5F572TK
+//-----------------------------------------------------------------------------
+// Compatibility check
+define exported symbol __link_file_version_4 = 1;
+
+define memory mem with size = 4G;
+
+define region RAM_region = mem:[from 0x00008000 to 0x0001FFFF];
+
+define region ROM_region = mem:[from 0xFFF10000 to 0xFFFFFFFF];
+
+define region DATA_FLASH   = mem:[from 0x00100000 to 0x00107FFF];
+
+initialize manually { rw section .textrw };
+initialize by copy { rw, ro section D, ro section D_1, ro section D_2 };
+do not initialize  { section .*.noinit };
+
+define block HEAP     with alignment = 4, size = _HEAP_SIZE { };
+define block USTACK   with alignment = 4, size = _USTACK_SIZE { };
+define block ISTACK   with alignment = 4, size = _ISTACK_SIZE { };
+
+define block STACKS with fixed order { block USTACK,
+                                       block ISTACK };
+
+place at address mem:0x00120040      { ro section .option_mem };
+
+if (__STAND_ALONE_APP == 1)
+{
+  place at address mem:0xFFFFFFFC      { ro section .resetvect };
+  place at address mem:0xFFFFFF80      { ro section .exceptvect };
+}
+else
+{
+  place at address mem:0xFFFFFF70      { ro section .resetvect };
+  place at address mem:0xFFFFFEF4      { ro section .exceptvect };
+}
+
+
+"ROM":place in ROM_region            { ro };
+"RAM":place in RAM_region            { rw,
+                                       ro section D,
+                                       ro section D_1,
+                                       ro section D_2,
+                                       block HEAP };
+"STACKS":place at end of RAM_region  { block STACKS };
+
+"DATAFLASH":place in DATA_FLASH      { ro section .dataflash* };
+

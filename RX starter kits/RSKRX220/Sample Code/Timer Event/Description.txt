@@ -1,0 +1,2 @@
+Timer Event
+Demonstrates usage of the timer unit to count switch presses

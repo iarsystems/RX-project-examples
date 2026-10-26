@@ -1,0 +1,2 @@
+DMAC
+The DMAC unit is configured to transfer data to a block of memory addresses.

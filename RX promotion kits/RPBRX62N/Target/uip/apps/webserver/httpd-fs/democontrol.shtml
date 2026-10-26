@@ -1,0 +1,81 @@
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+-->
+</style>
+%!: /header.html
+<h1>Welcome to Demo Control</h1>
+<center>
+<p>
+  <table cellpadding="15">
+<tr align="center" valign="top">
+  <td width="50%"><h1>LED Control </h1>
+    <p align="left" class="style1">The RPBRX62N board has 3 user LEDs, labelled &ldquo;LED0&rdquo;, &ldquo;LED1&rdquo;, and &ldquo;LED2&rdquo;. Select for each of the three LEDs whether to switch it on or off, then press &ldquo;Send&rdquo;.</p>
+    <p align="left" class="style1"><a href="led.shtml">Click here</a> to go to the LED control demo.</p>
+    <h1>USB HID Mouse Emulation</h1>
+    <p align="left" class="style1">The joystick on the RPBRX62N can be used as a USB HID Mouse on your PC. The RPBRX62N must be connected to your PC via USB for this to work. Press the &ldquo;HID Mouse Emulation On&rdquo; button, the mouse pointer on your PC will now move as you move the joystick on the RPBRX62N. The joystick centre works as a right-mouse button, and the SW1 button (next to the joystick) works as a left-mouse button. </p>
+    <p align="left" class="style1">Note that some of the other demos also use the joystick, and to avoid confusion it&rsquo;s best to switch USBHID Mouse Emulation off when running the Mandelbrot Demo or the Pong Game.</p>
+    <FORM ACTION="mouseon.shtml" METHOD="GET">
+      <INPUT TYPE="SUBMIT" VALUE="HID Mouse Emulation On">
+    </FORM>
+    <FORM ACTION="mouseoff.shtml" METHOD="GET">
+      <INPUT TYPE="SUBMIT" VALUE="HID Mouse Emulation Off">
+    </FORM>    </td>
+  <td width="50%"><p><img src="RPBRX62N.jpg" width="321" height="227"></p>
+    <h1>Dhrystone benchmark</h1>
+    <p align="left" class="style1">The Dhrystone benchmark is an industry standard benchmark developed originally in 1984 intended to be representative of system (integer) programming. To run the Dhrystone Demo, press the button below. The web page shown will refresh every 3 seconds, showing you the benchmark results of the previous invocation of the Dhrystone benchmark.</p>
+    <FORM ACTION="dhrystone.shtml" METHOD="GET">
+      <INPUT TYPE="SUBMIT" VALUE="Run Dhrystone">
+    </FORM>    </td>
+</tr>
+<tr align="center" valign="middle">
+<td colspan="2"><div align="left"><span class="style1">The Mandelbrot, Bouncing Ball, and Pong demo use a VNC client. These demos support 1 VNC connection, at port 5900. When switching from one demo to another (on the &ldquo;Demo Control web page) the VNC connection remains alive and the newly chosen demo is displayed. A VNC client is not provided with this Renesas Promotional Board kit so you will need to download the VNC client of your choice from the internet. When developing the demo the realVNC client (<a href="http://www.realvnc.com" target="_blank">www.realvnc.com</a>) was used, but any VNC client should work and there are several freely available online. <br>
+  To view the Mandelbrot, Bouncing Ball, or Pong Game demo, start the VNC client and connect to the same IP address as used with the web browser.</span></div></td>
+</tr>
+<tr align="center" valign="middle">
+<td width="50%" valign="top">
+  <h1>FPU versus non-FPU Bouncing Ball Demo</h1>
+          <p>            <span class="style1">Start the VNC client, and press button below. If
+            the VNC client is already running (displaying the Mandelbrot or Pong Game demo),
+      the FPU (Bouncing Ball) demo will be displayed instead. The RPBRX62N demo
+      program uses only one VNC connection. <br>
+      The green ball represents the position calculated when using the FPU (Floating Point
+      Unit, colloquially a math coprocessor). The red ball represents the position calculated 
+      when using floating point emulation.</span></p>
+
+  <FORM ACTION="balls.shtml" METHOD="GET">
+        <INPUT TYPE="SUBMIT" VALUE="Run FPU Demo">
+    </FORM>
+</td>
+<td width="50%" valign="top">
+  <h1>Mandelbrot Demo</h1>
+    <br>
+    <img src="mandelthumb.jpg" width="58" height="64" align="absmiddle"> 
+  <p align="left" class="style1">Start the VNC client, and select the button below. 
+  If the VNC client is already running (displaying the Bouncing Ball or Pong Game
+  demo), the Mandelbrot demo will be displayed instead. The RPBRX62N demo
+  program uses only one VNC connection.</p>
+<FORM ACTION="mandelbrot.shtml" METHOD="GET">
+  <INPUT TYPE="SUBMIT" VALUE="Run Mandelbrot">
+</FORM>    
+<h1>&nbsp;</h1>
+    </td>
+</tr>
+</table> 
+
+    <h1>** Pong GAME! ** <img src="pongthumb.jpg" width="58" height="64" align="absmiddle"></h1>
+    <p class="style1">Start the VNC client, and press button below. If the
+      VNC client is already running (displaying the Mandelbrot or the Bouncing Ball
+      demo), the Pong Game demo will be displayed instead. 
+      The RPBRX62N demo
+    program uses only one VNC connection. Use the RPBRX62N joystick centre button to start (or restart) a game. Use the<br>
+    joystick to move the paddles up and down, preventing the ball to pass.</p>
+    <FORM ACTION="game.shtml" METHOD="GET">
+        <INPUT TYPE="SUBMIT" VALUE="Run Game">
+    </FORM>
+</p>
+</center>
+%!: /footer.html

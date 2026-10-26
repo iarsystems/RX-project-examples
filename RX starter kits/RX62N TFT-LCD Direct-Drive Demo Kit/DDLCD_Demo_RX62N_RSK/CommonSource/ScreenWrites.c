@@ -1,0 +1,255 @@
+/******************************************************************************
+* DISCLAIMER
+
+* This software is supplied by Renesas Electronics Corp. and is only 
+* intended for use with Renesas products. No other uses are authorized.
+
+* This software is owned by Renesas Electronics Corp. and is protected under 
+* all applicable laws, including copyright laws.
+
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES 
+* REGARDING THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, 
+* INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+* PARTICULAR PURPOSE AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY 
+* DISCLAIMED.
+
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+* ELECTRONICS CORP. NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES 
+* FOR ANY REASON RELATED TO THE THIS SOFTWARE, EVEN IF RENESAS OR ITS 
+* AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+* Renesas reserves the right, without notice, to make changes to this 
+* software and to discontinue the availability of this software.  
+* By using this software, you agree to the additional terms and 
+* conditions found by accessing the following link:
+* http://www.renesas.com/disclaimer
+******************************************************************************/
+/***********************************************************************/
+/*                                                                     */
+/*  FILE        :ScreenWrites.c                                        */
+/*  DATE        :Wen, Mar 12, 2008                                     */
+/*  DESCRIPTION :Screen Handler for showing BMP write speed            */        
+/*                                                                     */
+/*  CPU TYPE    :H8S/H8SX                                              */
+/*                                                                     */
+/***********************************************************************/
+/************************************************************************
+Revision History
+DD.MM.YYYY OSO-UID Description
+07.16.2008 RTA-JMB First Release
+*
+************************************************************************/
+#include "Global.h"
+#include "LCD_demo.h"
+
+#define SCHEME T_SchemeBlue
+static void Constructor(Screen_t const *pS);
+static void Destructor(Screen_t const *pS);
+
+static void Button1bpp(ScreenObj_t const *pS, EVENT_MSG const *pMsg);
+static void Button4bpp(ScreenObj_t const *pS, EVENT_MSG const *pMsg);
+static void Button8bpp(ScreenObj_t const *pS, EVENT_MSG const *pMsg);
+static void ButtonRLE(ScreenObj_t const *pS, EVENT_MSG const *pMsg);
+static void Button16bpp(ScreenObj_t const *pS, EVENT_MSG const *pMsg);
+static void Button32bpp(ScreenObj_t const *pS, EVENT_MSG const *pMsg);
+
+/* MUST INCLUDE NULL TERMINATED RECORD */
+static const ScreenObj_t Icons[]=
+{
+  { &pBMP_HomeIcon,T_HomeScheme,   ButtonBack,     SX(0.872), SY(0.870) },
+  { &pBMP_ButtonS, T_SchemeBlue,   Button1bpp,     SX(0.050), SY(0.060) },
+  { &pBMP_ButtonS, T_SchemeBlue,   Button4bpp,     SX(0.200), SY(0.060) },
+  { &pBMP_ButtonS, T_SchemeBlue,   Button8bpp,     SX(0.350), SY(0.060) },
+  { &pBMP_ButtonS, T_SchemeBlue,   ButtonRLE,      SX(0.500), SY(0.060) },
+  { &pBMP_ButtonS, T_SchemeBlue,   Button16bpp,    SX(0.650), SY(0.060) },
+  { &pBMP_ButtonS, T_SchemeBlue,   Button32bpp,    SX(0.800), SY(0.060) },
+  {  NULL,         NULL,           NULL,           0,   0 },
+};
+
+static const Screen_t ScreenWritesData=
+{
+  Constructor, Destructor, Icons
+};
+
+/* Shared event message */
+static EVENT_MSG msg;
+static char TextBuffer[32];
+
+static void Constructor(Screen_t const *pS)
+{
+  // Clear the background
+  (void)R_GAPI_FillGradient(backFrameBuf, 0, 0, DD_FRAME_WIDTH, DD_FRAME_HEIGHT,  SCHEME[1].ct , 90);
+
+  // Run default behavior
+  BasicConstructor(pS);
+}
+
+static void Destructor(Screen_t const *pS)
+{
+  // Run default behavior
+  BasicDestructor(pS);
+}
+
+/**********************************************************************************
+Function Name:   ScreenWrites
+Description:  Process activation button from calling screen
+Arguments:   Standard Button Inputs
+Return value:   None
+***********************************************************************************/
+/* Include this in the Home Screen...the _SCR_HM section will be used as the Icon list for the home screen
+     - By doing this, screens can be added (or removed) simply by linking them into the project */
+static void ScreenWrites(ScreenObj_t const *pS, EVENT_MSG const *pMsg);
+#pragma location=".C_SCR_HM_CLASSIC"
+__root const ScreenObj_t HomeIconWrites= { &pBMP_ButtonR, T_SchemeBlue,   ScreenWrites,         SX(0.375), SY(0.500) };
+
+static void ScreenWrites(ScreenObj_t const *pS, EVENT_MSG const *pMsg)
+{
+  static int16_t state=0;
+  if(0 != (state = ButtonHandler(pS, pMsg, (uint8_t *)"Writes", state)))
+    if (ME_RELEASE == pMsg->event)
+    {
+      // send a screen change command to the handler
+      msg.source = MS_DISPLAY;
+      msg.event = ME_SCREEN_PUSH;
+      msg.param.pS = &ScreenWritesData;
+      (void)xQueueSend(EventQueue, (void *)&msg, 0UL); /* RTOS_USAGE */
+    }
+}
+
+/**********************************************************************************
+Function Name:   WriteTest
+Description:  Button to test 1bpp performance
+Arguments:   Standard Button Inputs
+Return value:   None
+***********************************************************************************/
+static void WriteTest(BMP_t const *const pS, uint32_t transparency)
+{
+  if(NULL != pS)
+  {
+    int16_t Width=R_BMP_Width(pS);
+    int16_t Height=R_BMP_Height(pS);
+    int16_t PosX, PosY;
+    int16_t dTime;
+    uint16_t WriteStart = (uint16_t)xTaskGetTickCount();  /* RTOS_USAGE */
+
+    for (PosY=0; PosY < DD_FRAME_HEIGHT; PosY+=Height)
+    {
+      for (PosX=0; PosX < DD_FRAME_WIDTH; PosX+=Width)
+        (void)R_GAPI_CopySub(pS,backFrameBuf,PosX,PosY,0,0,Width,Height,R_BMP_Ct(pS),transparency);
+    }
+
+    dTime = (uint16_t)xTaskGetTickCount()-WriteStart; /* RTOS_USAGE */
+    dTime = (uint16_t)port_TICK_to_mS(dTime);          /* RTOS_USAGE */
+  
+    BasicConstructor(&ScreenWritesData);
+
+    (void)sprintf(TextBuffer, "%uKb,%umS to Back,", (uint16_t)(R_BMP_FileSize(pS)/1024), dTime);
+    PosX=R_GAPI_PutS((uint8_t const *)TextBuffer, &T1, displayFrameBuf, SX(0.000), SY(0.000)); 
+#if 0
+    dTime = (uint16_t)xTaskGetTickCount()-WriteStart; /* RTOS_USAGE */
+    dTime = (uint16_t)port_TICK_to_mS(dTime);          /* RTOS_USAGE */
+    (void)sprintf(TextBuffer, "%umS Overall", dTime);
+    PosX=R_GAPI_PutS((uint8_t const *)TextBuffer, &T1, displayFrameBuf, PosX, SY(0.000)); 
+#endif  
+    (void)sprintf(TextBuffer, "%lu Px/Sec",((uint32_t)DD_FRAME_HEIGHT * (uint32_t)DD_FRAME_WIDTH * 1000L)/(uint32_t)dTime);
+    PosX=R_GAPI_PutS((uint8_t const *)TextBuffer, &T1, displayFrameBuf, PosX, SY(0.000)); 
+  }
+}
+
+/**********************************************************************************
+Function Name:   Button1bpp
+Description:  Button to test 1bpp performance
+Arguments:   Standard Button Inputs
+Return value:   None
+***********************************************************************************/
+static void Button1bpp(ScreenObj_t const *pS, EVENT_MSG const *pMsg)
+{
+  static int16_t state=0;
+  if(0 != (state = ButtonHandler(pS, pMsg, (uint8_t *)"1bpp", state)))
+  {
+    if (ME_RELEASE == pMsg->event)
+      WriteTest(FileFind(pResources, "TestImage1bpp"), TRANSPARENCY(GAPI_T_NONE,0));
+  }
+}
+
+/**********************************************************************************
+Function Name:   Button4bpp
+Description:  Button to test 4bpp performance
+Arguments:   Standard Button Inputs
+Return value:   None
+***********************************************************************************/
+static void Button4bpp(ScreenObj_t const *pS, EVENT_MSG const *pMsg)
+{
+  static int16_t state=0;
+  if(0 != (state = ButtonHandler(pS, pMsg, (uint8_t *)"4bpp", state)))
+  {
+    if (ME_RELEASE == pMsg->event)
+      WriteTest(FileFind(pResources, "TestImage4bpp"), TRANSPARENCY(GAPI_T_NONE,0));
+  }
+}
+
+/**********************************************************************************
+Function Name:   Button8bpp
+Description:  Button to test 8bpp performance
+Arguments:   Standard Button Inputs
+Return value:   None
+***********************************************************************************/
+static void Button8bpp(ScreenObj_t const *pS, EVENT_MSG const *pMsg)
+{
+  static int16_t state=0;
+  if(0 != (state = ButtonHandler(pS, pMsg, (uint8_t *)"8bpp", state)))
+  {
+    if (ME_RELEASE == pMsg->event)
+      WriteTest(FileFind(pResources, "TestImage8bpp"), TRANSPARENCY(GAPI_T_NONE,0));
+  }
+}
+
+/**********************************************************************************
+Function Name:   Button8bpp
+Description:  Button to test RLE performance
+Arguments:   Standard Button Inputs
+Return value:   None
+***********************************************************************************/
+static void ButtonRLE(ScreenObj_t const *pS, EVENT_MSG const *pMsg)
+{
+  static int16_t state=0;
+  if(0 != (state = ButtonHandler(pS, pMsg, (uint8_t *)"RLE", state)))
+  {
+    if (ME_RELEASE == pMsg->event)
+      WriteTest(FileFind(pResources, "TestImageRLE"), TRANSPARENCY(GAPI_T_NONE,0));
+  }
+}
+
+/**********************************************************************************
+Function Name:   Button16bpp
+Description:  Button to test 16bpp performance
+Arguments:   Standard Button Inputs
+Return value:   None
+***********************************************************************************/
+static void Button16bpp(ScreenObj_t const *pS, EVENT_MSG const *pMsg)
+{
+  static int16_t state=0;
+  if(0 != (state = ButtonHandler(pS, pMsg, (uint8_t *)"16bpp", state)))
+  {
+    if (ME_RELEASE == pMsg->event)
+      WriteTest(FileFind(pResources, "TestImage16bpp"), TRANSPARENCY(GAPI_T_NONE,0));
+  }
+}
+
+/**********************************************************************************
+Function Name:   Button32bpp
+Description:  Button to test 24bpp performance
+Arguments:   Standard Button Inputs
+Return value:   None
+***********************************************************************************/
+static void Button32bpp(ScreenObj_t const *pS, EVENT_MSG const *pMsg)
+{
+  static int16_t state=0;
+  if(0 != (state = ButtonHandler(pS, pMsg, (uint8_t *)"32bpp", state)))
+  {
+    if (ME_RELEASE == pMsg->event)
+      WriteTest(FileFind(pResources, "MrSun"), TRANSPARENCY(GAPI_T_MULT,0));
+  }
+}
+

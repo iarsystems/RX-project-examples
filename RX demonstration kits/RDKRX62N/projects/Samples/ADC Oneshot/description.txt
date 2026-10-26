@@ -1,0 +1,2 @@
+ADC Oneshot
+The application demonstrates usage of the ADC unit in oneshot mode, by making conversions of the potentiometer on switch presses.

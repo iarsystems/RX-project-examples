@@ -1,0 +1,123 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only
+* intended for use with Renesas products. No other uses are authorized. This
+* software is owned by Renesas Electronics Corporation and is protected under
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+* AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software
+* and to discontinue the availability of this software.  By using this software,
+* you agree to the additional terms and conditions found by accessing the
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2012 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* File Name    : r_cg_main.c
+* Version      : Applilet4 for RX111 V1.00.00.05 [06 Jun 2013]
+* Device(s)    : R5F51115AxFM
+* Tool-Chain   : IAR Systems icc78k0r
+* Description  : This file implements main function.
+* Creation Date: 2013-08-16
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+Pragma directive
+***********************************************************************************************************************/
+/* Start user code for pragma. Do not edit comment generated here */
+/* End user code. Do not edit comment generated here */
+
+/***********************************************************************************************************************
+Includes
+***********************************************************************************************************************/
+#include "r_cg_macrodriver.h"
+#include "r_cg_cgc.h"
+#include "r_cg_icu.h"
+#include "r_cg_dtc.h"
+#include "r_cg_port.h"
+#include "r_cg_cmt.h"
+#include "r_cg_sci.h"
+#include "r_cg_s12adb.h"
+/* Start user code for include. Do not edit comment generated here */
+#include "lcd.h"
+/* End user code. Do not edit comment generated here */
+#include "r_cg_userdefine.h"
+
+/***********************************************************************************************************************
+Global variables and functions
+***********************************************************************************************************************/
+/* Start user code for global. Do not edit comment generated here */
+/* End user code. Do not edit comment generated here */
+
+
+/* Set option bytes */
+#pragma location = "OPTBYTE"
+__root const uint32_t OFS0_location = 0xFFFFFFFFUL;
+#pragma location = "OPTBYTE"
+__root const uint32_t OFS1_location = 0xFFFFFFFFUL;
+
+
+void R_MAIN_UserInit(void);
+/***********************************************************************************************************************
+* Function Name: main
+* Description  : This function implements main function.
+* Arguments    : None
+* Return Value : None
+***********************************************************************************************************************/
+void main(void)
+{
+    R_MAIN_UserInit();
+    /* Start user code. Do not edit comment generated here */
+
+    /* Display Demo Type on Screen */
+    Display_LCD(0, (uint8_t *)"DTC: Press SW1 to put");
+    Display_LCD(1, (uint8_t *)"POT ADCs into array");
+
+    /* Demo displays destination array on screen */
+    /* so show columns */
+    Display_LCD(3, (uint8_t *)"0:3  4:7  8:11 12:15");
+
+    while (1U)
+    {
+        /* update display with contents of array */
+        displayDestinationArray();
+    }
+    /* End user code. Do not edit comment generated here */
+}
+/***********************************************************************************************************************
+* Function Name: R_MAIN_UserInit
+* Description  : This function adds user code before implementing main function.
+* Arguments    : None
+* Return Value : None
+***********************************************************************************************************************/
+void R_MAIN_UserInit(void)
+{
+    /* Start user code. Do not edit comment generated here */
+
+    /* Initialise LCD */
+    Init_LCD();
+
+    /* Initialise DTC */
+    Init_DTC();
+
+    /* Start A2D converter */
+    R_S12ADb_Start();
+
+    /* Configure the switches SW1 - SW3 */
+    Init_Switches();
+
+    /* End user code. Do not edit comment generated here */
+}
+
+/* Start user code for adding. Do not edit comment generated here */
+/* End user code. Do not edit comment generated here */

@@ -1,0 +1,10 @@
+    DxStepOverAlgorithm: Original CFA = 0x15C
+  DxStepOverAlgorithm @ kStart
+    rsp = Step 0xFFF8844A, Statement([78:3-18])
+    vsp = Step 0xFFF8844A, Direct call([78:3-17])
+  Reachable:
+      Step 0xFFF8844E, Return([78:3-17])
+  Stopped at break: 0
+  DxStepOverAlgorithm terminated
+    rsp = Step 0xFFF8844E, Statement([81:3-23])
+    vsp = Step 0xFFF8844E, Statement([81:3-23])

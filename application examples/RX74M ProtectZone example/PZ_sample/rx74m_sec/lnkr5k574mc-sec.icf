@@ -1,0 +1,136 @@
+//-----------------------------------------------------------------------------
+// Linker configuration file template for the Renesas RX microcontroller R5K574MC
+//-----------------------------------------------------------------------------
+// Compatibility check
+define exported symbol __link_file_version_4 = 1;
+
+define exported symbol FLASH_NS_IMAGE_START = 0x0200FFFC;
+define exported symbol _SRAM0_NS_GLB_VAL_START = 0x0200BF00;
+define exported symbol _PRE_INT_FUNC_NS = 0x0200F000;
+
+// Non-secure memory regions (used only as reference material)
+
+define region NS_RAM_region = mem:[from 0x0200'8000 size 0x8000];
+define region NS_ROM_region = mem:[from 0x7FF0'0000 size 1048576];
+
+define region NS_OFS1_region = mem:[from 0x06C2'E850 size 462768];
+define region NS_OFS2_region = mem:[from 0x06E0'0000 size 200432];
+define region NS_OFS3_region = mem:[from 0x06F4'1D00 size 528];
+
+
+// Secure memory regions
+
+define region RAM_region16 = mem:[from 0x8200'0000 size 0];
+define region RAM_region24 = mem:[from 0x8200'0000 size 0];
+define region RAM_region32 = mem:[from 0x8200'0000 size 0x8000];
+
+define region ROM_region16 = mem:[from 0xFFFF'8000 to 0xFFFF'FFFF];
+define region ROM_region24 = mem:[from 0xFFF0'0000 to 0xFFFF'FFFF];
+define region ROM_region32 = mem:[from 0xFFF0'0000 to 0xFFFF'FFFF];
+
+define region S_OFS1_region = mem:[from 0x86C2'E850 size 462768];
+define region S_OFS2_region = mem:[from 0x86E0'0000 size 200432];
+define region S_OFS3_region = mem:[from 0x86F4'1D00 size 528];
+
+
+define region DATA_FLASH   = mem:[from 0x8690'0000 to 0x8690'BFFF];
+
+initialize manually { rw section .textrw };
+initialize by copy { rw, ro section D, ro section D_1, ro section D_2 };
+initialize by copy with packing = none { section __DLIB_PERTHREAD };
+do not initialize  { section .*.noinit };
+
+define block HEAP     with alignment = 4, size = _HEAP_SIZE { };
+define block USTACK   with alignment = 4, size = _USTACK_SIZE { };
+define block ISTACK_TR   with alignment = 4, size = _ISTACK_SIZE { };
+define block ISTACK_S with alignment = 4, size = _ISTACK_SIZE { };
+
+define block RVECTORS with alignment = 4 { ro section .rvectors };
+
+// S_OFS1
+place at address mem:0x86C2'E850     { ro section .dualsel };
+place at address mem:0x06C4'EC60     { ro section .banksel_ns };
+place at address mem:0x06C4'EC70     { ro section .blsel_ns };
+place at address mem:0x06C9'F480     { ro section .bpsd_nsn };
+place at address mem:0x06C9'F600     { ro section .bps_nsn };
+place at address mem:0x86C2'E870     { ro section .sas };
+place at address mem:0x86C2'E874     { ro section .sas2 };
+place at address mem:0x86C2'E9B0     { ro section .banksel_s };
+place at address mem:0x86C2'E9C0     { ro section .blsel_s };
+place at address mem:0x86C2'E9E0     { ro section .banksel_sel };
+place at address mem:0x86C2'E9F0     { ro section .blsel_sel };
+place at address mem:0x86C9'F080     { ro section .bpsd_sn };
+place at address mem:0x86C9'F200     { ro section .bps_sn };
+
+// S_OFS2
+place at address mem:0x86E0'0000     { ro section .hoemrtpk0 };
+place at address mem:0x86E0'0030     { ro section .hoemrtpk1 };
+place at address mem:0x86E0'0060     { ro section .hoemrtpk2 };
+place at address mem:0x86E0'0090     { ro section .hoemrtpk3 };
+place at address mem:0x86E0'0400     { ro section .fsblctrl0 };
+place at address mem:0x86E0'0408     { ro section .fsblctrl2 };
+place at address mem:0x86E0'0414     { ro section .samr };
+place at address mem:0x86E0'0420     { ro section .sacc00 };
+place at address mem:0x86E0'0430     { ro section .sacc10 };
+place at address mem:0x86E0'0440     { ro section .sacc01 };
+place at address mem:0x86E0'0450     { ro section .sacc11 };
+place at address mem:0x86E0'0460     { ro section .sacc02 };
+place at address mem:0x86E0'0470     { ro section .sacc12 };
+place at address mem:0x86E0'0480     { ro section .sacc03 };
+place at address mem:0x86E0'0490     { ro section .sacc13 };
+place at address mem:0x86E1'0640     { ro section .ofs0 };
+place at address mem:0x86E1'0644     { ro section .ofs2 };
+place at address mem:0x86E1'064C     { ro section .mde };
+place at address mem:0x86E1'07A0     { ro section .ofs1_s };
+place at address mem:0x86E1'07D0     { ro section .ofs1_sel };
+place at address mem:0x86E1'0A00     { ro section .pbps_sm };
+place at address mem:0x86E1'0A80     { ro section .pbpsd_sm };
+place at address mem:0x86E3'0E10     { ro section .revoke };
+place at address mem:0x86E3'0E20     { ro section .zhuk };
+place at address mem:0x86E3'0E30     { ro section .arccs };
+place at address mem:0x86E3'0E50     { ro section .ufsblcr };
+place at address mem:0x86E3'0E60     { ro section .pofspssn };
+place at address mem:0x86E3'0EE0     { ro section .pofspsns0 };
+
+// S_OFS3
+place at address mem:0x86F4'1D00     { ro section .arcs };
+place at address mem:0x86F4'1E00     { ro section .arcns0 };
+place at address mem:0x86F4'1E20     { ro section .arcns1 };
+place at address mem:0x86F4'1E40     { ro section .arcns2 };
+place at address mem:0x86F4'1E60     { ro section .arcns3 };
+place at address mem:0x86F4'1E00     { ro section .arcns };
+place at address mem:0x86F4'1F00     { ro section .arcoembl };
+
+// NS_OFS2
+place at address mem:0x06E2'0850     { ro section .ofs1_ns };
+place at address mem:0x06E2'0C00     { ro section .pbps_nsm };
+place at address mem:0x06E2'0C80     { ro section .pbpsd_nsm };
+
+place at address mem:0xFFFFFF80      { ro section .exvectors };
+place at address mem:0xFFFFFFFC      { ro section .fvectors };
+
+"ROM16":place in ROM_region16        { ro section .code16*,
+                                       ro section .data16* };
+"RAM16":place in RAM_region16        { rw section .data16*,
+                                       rw section __DLIB_PERTHREAD };
+"ROM24":place in ROM_region24        { ro section .code24*,
+                                       ro section .data24* };
+"RAM24":place in RAM_region24        { rw section .data24* };
+"ROM32":place in ROM_region32        { ro, block RVECTORS };
+"RAM32":place in RAM_region32        { rw,
+                                       ro section D,
+                                       ro section D_1,
+                                       ro section D_2,
+                                       block HEAP,
+                                       block USTACK,
+                                       block ISTACK_TR,
+                                       block ISTACK_S,
+                                       };
+
+
+
+
+"DATAFLASH":place in DATA_FLASH
+                                     { ro section .dataflash* };
+
+keep symbol __iar_init_sp_tr;

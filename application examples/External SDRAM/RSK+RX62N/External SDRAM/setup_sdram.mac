@@ -1,0 +1,130 @@
+//========================================================
+// IAR EMBEDDED WORKBENCH
+// Example macro file for the CSPY debugger:
+// Shows how to set breakpoints and perform actions
+// at breakpoint hits without stopping execution.
+//
+//          
+//========================================================
+
+__var _value;
+__var _value1;
+__var _value2;
+
+//=======================================================
+// C-SPY setup macros
+// The setup macros are reserved macro names that will
+// be called by C-SPY at specific stages during execution.
+//=======================================================
+
+boardInit()
+{
+
+  __message "boardInit called\n";
+    
+  //Setup the clocks
+  // Enable the external memory bus and the on-chip ROM (System control register 0)
+  __writeMemory16(0x5A03, 0x00080006, "Memory");
+
+  __message "Configuring clocks\n";
+  //---------------------------------Clocks--------------------------------------
+  //Configure the clocks
+  // SCKCR
+  //  Peripheral module clk = 48Mhz
+  //  External bus clock    = 48Mhz
+  //  System clk            = 96Mhz
+  //  ENABLE SDCLK and BCLK
+  __writeMemory32(0x00010100, 0x00080020, "Memory");
+
+  //-----------------------------------------------------------------------------
+  
+  __message "Setting port/pin configurations\n";
+  //PF4BUS - enable A15-0
+  __writeMemory8(0xFF, 0x0008C104, "Memory");
+
+  //PF5BUS
+  __writeMemory8(0x10, 0x0008C105, "Memory");
+
+  //PF6BUS
+  __writeMemory8(0xD0, 0x0008C106, "Memory");
+  
+  for(_value1 = 0; _value1 < 10000; _value1++){}; 
+  
+  __message "Configuring the SDRAM\n";
+  //SDIR (Word)
+  __writeMemory16(0x00F0, 0x00083C24, "Memory");
+  
+  //SDICR
+  __writeMemory8(0x01, 0x00083C20, "Memory");
+  
+  //Wait for SDSR -> INIST bit == 1 (b3 0x08) 
+  while ( __readMemory8(0x00083C50, "Memory") & 0x08 == 0x08 ) { }
+  //_value = __readMemory8(0x00083C50, "Memory");
+  
+  //SDCMOD 0x00083C01
+  __writeMemory8(0x00, 0x00083C01, "Memory");
+  //SDCCR  0x00083C00
+  __writeMemory8(0x00, 0x00083C00, "Memory");
+  //SDMOD  0x00083C48 (16)
+  __writeMemory16(0x0220, 0x00083C48, "Memory");
+  //SDRFCR 0x00083C14 (16)
+  __writeMemory16(0x42CF, 0x00083C14, "Memory");
+  //SDTR   0x00083C44 (32)
+  __writeMemory32(0x00000002, 0x00083C44, "Memory");
+  //SDADR  0x00083C40
+  __writeMemory8(0x01, 0x00083C40, "Memory");
+  //SDRFEN 0x00083C16
+  __writeMemory8(0x01, 0x00083C16, "Memory");  
+  //SDCCR  0x00083C00
+  __writeMemory8(0x01, 0x00083C00, "Memory");
+  
+  __message "Configuration complete\n";
+  for(_value1 = 0; _value1 < 10000; _value1++){}; 
+
+}
+
+// Called after communication with the target system is established
+execUserPreload()
+{
+  __message "Communication Established\n";
+
+  boardInit();
+  
+  __message "Writing 0xBA to memory location 0x08000000\n";
+  __writeMemory8(0xBA, 0x08000000, "Memory");
+  _value = __readMemory8(0x08000000, "Memory");
+  __message "*********Value at 0x08000000**********: 0x", _value:%X, "\n";
+  
+  return 0;
+}
+
+// Called once after the target program is downloaded.
+execUserSetup()
+{
+  __message "Program downloaded\n";
+  return 0;
+}
+
+// Called each time the reset command is issued
+execUserReset()
+{
+  
+  __message "Board Reset\n";
+  
+  // call boardInit again after reset.
+  boardInit();
+  
+  __message "Writing 0xCE to memory location 0x08000000\n";
+  __writeMemory8(0xCE, 0x08000000, "Memory");
+  _value = __readMemory8(0x08000000, "Memory");
+  __message "*********Value at 0x08000000**********: 0x", _value:%X, "\n";
+  return 0;
+}
+
+// Called once when the debug session ends
+execUserExit()
+{
+  __message "Debugging stopped\n";
+  return 0;
+}
+

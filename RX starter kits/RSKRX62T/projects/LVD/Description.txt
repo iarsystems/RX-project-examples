@@ -1,0 +1,2 @@
+Low Voltage Detect
+The LVD1 circuit is configured to flash the user LEDs until VCC falls below the LVD1 threshold.

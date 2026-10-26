@@ -1,0 +1,60 @@
+/******************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only 
+* intended for use with Renesas products. No other uses are authorized. This 
+* software is owned by Renesas Electronics Corporation and is protected under 
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+* AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software 
+* and to discontinue the availability of this software.  By using this software, 
+* you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2012 Renesas Electronics Corporation. All rights reserved.
+******************************************************************************/
+/*******************************************************************************
+* File Name     : Description.txt
+* Device        : R5F51115AxFM
+* Tool Chain    : RX Family C Compiler 1.2.1.0
+* H/W Platform  : RSKRX111
+* Note          : Application Leading Tool (Applilet) is used to generate code 
+*                 for this sample program.  The name Applilet is used hereafter.
+*                 The Applilet details and version number are given in the file 
+*                 header for each relevant module.
+* Description   : This sample demonstrates usage of the timer unit with an 
+*                 external clock, by counting switch SW2 presses.
+*
+* Operation     : 1. Connect J1 pin 5 (SW2) and J2 pin 12 (MTCLKA_USB0EXICEN**).
+*
+*                 2. Build and download the sample code to the RSK.
+*
+*                 3. Click 'Resume' to start the software. Instructions will 
+*                    be displayed on the debug LCD.
+*
+*                 4. Press switch SW2, and observe the count value displayed on
+*                    debug LCD. The value will increment each time the switch is
+*                    pressed.
+*
+*                 5. Keep pressing the switch, the value will increment
+*                    up to 99, then loop back around to 1.
+*
+* Note          : **MTCLKA and USB0EXICEN are multiplexed on pin 6 of PortC.
+*                 Since the clock source for the timer is a non-debounced 
+*                 switch, count may increment by more than one with each switch
+*                 press. This does not represent the final accuracy of the 
+*                 timer. Do not press any other switches other than switch SW2.
+*
+******************************************************************************/
+
+/*******************************************************************************
+* History       : 27 Jun. 2013   Ver. 1.00 First Release
+*******************************************************************************/

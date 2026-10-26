@@ -1,0 +1,2 @@
+Power Off
+Demonstrates the MCU's power modes, by entering and waking from standby mode when a switch is pressed

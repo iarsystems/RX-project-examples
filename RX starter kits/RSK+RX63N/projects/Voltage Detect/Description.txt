@@ -1,0 +1,2 @@
+RTC
+Configures the RTC module to generate a periodic interrupt and alarm at the specified time.

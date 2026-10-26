@@ -1,0 +1,3 @@
+This example MTU3 timer unit PWM output signals on port P34 (MTIOC0A).
+In addition 8-bit timer TMR0 is used to adjust the PWM signal width.
+tmr_cmia0_interrupt - Adjust PWM signal width

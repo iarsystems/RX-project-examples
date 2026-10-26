@@ -1,0 +1,2 @@
+USB Mass Storage Device Class
+Demonstrates the Mass Storage Device Class USB support.

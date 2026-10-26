@@ -1,0 +1,2 @@
+Ethernet
+Demonstrates the onboard Ethernet module by generating and receiving ARP frames

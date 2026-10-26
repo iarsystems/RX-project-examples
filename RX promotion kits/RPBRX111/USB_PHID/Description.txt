@@ -1,0 +1,76 @@
+/*******************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only
+* intended for use with Renesas products. No other uses are authorized. This
+* software is owned by Renesas Electronics Corporation and is protected under
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+* AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software
+* and to discontinue the availability of this software. By using this software,
+* you agree to the additional terms and conditions found by accessing the
+* following link:
+* http://www.renesas.com/disclaimer
+*******************************************************************************/
+/* Copyright (C) 2013 Renesas Electronics Corporation. All rights reserved.   */
+/*******************************************************************************
+* File Name     : Description.txt
+* Version       : 1.00
+* Device        : R5F51115ADFM
+* Tool Chain    : EWRX v2.42
+* H/W Platform  : RPBRX111
+* Description   : This sample demonstrates the use of the RX111 as a USB 
+*                Peripheral HID . It can be configured as a HID Keyboard,
+*                HID Mouse or in HID demo mode.
+*
+* CAUTION       : Driving PA0_LDOEN low will turn off the Power Supply to the
+*                 RX111. Only do this if you intend to supply power externally 
+*                 via VCC_HARVEST on CN7 pin 5.  Refer to the Troubleshooting 
+*                 section in the Design Manual to recover from this state.
+*
+* Operation     :   1. Configure the code for the required mode by uncommenting
+*                      one of the following lines from r_usb_phid_usrcfg.h: 
+*  
+*       //#define USB_PHID_APL_MODE       USB_PHID_DEMO_MODE      /* Peripheral HID Application demo mode */
+*       //#define USB_PHID_APL_MODE       USB_PHID_KEYBOARD_MODE  /* Peripheral HID Application keyboard mode */
+*       #define USB_PHID_APL_MODE       USB_PHID_MOUSE_MODE     /* Peripheral HID Application mouse mode */
+*
+*                   2. Compile and download the sample code to the target. 
+*                      Click the 'Go' icon to start program execution.
+*
+*                   3. Connect a mini-USB cable to CN1 and a Windows PC. The RPB
+*                      will be detected and HID drivers installed.
+*
+*                   If USB_PHID_DEMO_MODE is selected:
+*                   a. Launch the RSK_HID.exe application, which can be found in 
+*                      USB_PHID root project folder. Click the 'Connect'
+*                      button and use VID = 0x0000 and PID = 0x0003. The
+*                      application should display a message indicating a 
+*                      successful connection to the RPB.
+*
+*                   b. Use the 'ReadADC' and 'Toggle LED' buttons on the 
+*                      application to interact with the device. Note that the
+*                      'Set LCD' functionality requires the Pmod connector to
+*                      be fitted and an RSK Pmod Compatible display connected.
+*
+*                   If USB_PHID_KEYBOARD_MODE is selected:
+*                   a. Launch a text editor (Notepad or similar)
+*
+*                   b. Press SW2 to send the characters 'a' to 'z' in sequence.
+*
+*                   If USB_PHID_MOUSE_MODE is selected:
+*                   a. Press SW2 to move the mouse pointer down the screen.
+*
+*                   b. Press SW1 to left-click the mouse.
+*
+*******************************************************************************/
+/*******************************************************************************
+* History       : 01.07.2013  Ver. 1.00 First Release
+*******************************************************************************/

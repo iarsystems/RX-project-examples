@@ -1,0 +1,2 @@
+ADC One Shot
+ADC is configured to read the ADC on a switch press.

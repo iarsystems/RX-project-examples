@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\benchmark\rx65n_envision_benchmark.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\rx65n_secure_boot\rx65n_secure_boot.ewp</path>
+    </project>    
+    <project>
+        <path>$WS_DIR$\standard\rx65n_envision_standard.ewp</path>
+    </project>       
+    <batchBuild />
+</workspace>

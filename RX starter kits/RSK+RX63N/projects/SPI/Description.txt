@@ -1,0 +1,2 @@
+SPI
+Demonstrates usage of the SPI unit by transferring data from one SPI channel to another

@@ -1,0 +1,2 @@
+Async Serial
+Demonstrates the SCI unit in asynchronous mode by connecting to a PC terminal.

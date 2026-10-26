@@ -1,0 +1,2 @@
+DMAC
+The application demonstrates the usage of DMAC module in normal transfer mode, by transferring data from a single source to multiple destinations.

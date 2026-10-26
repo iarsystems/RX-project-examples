@@ -1,0 +1,2 @@
+WDT
+Demonstrates usage of the WDT (Watchdog Timer) by resetting the WDT counter at variably controlled intervals

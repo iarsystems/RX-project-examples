@@ -1,0 +1,2 @@
+Sync Serial
+Demonstrates usage of the SCI unit in clock synchronous mode, but transfering data from one SCI channel to another

@@ -1,0 +1,2 @@
+USB Human Interface Device Class
+Demonstrates the Human Interface Device Class USB support.

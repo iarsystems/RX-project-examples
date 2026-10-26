@@ -1,0 +1,2 @@
+Flash Data
+Demonstrates usage of the flash unit in normal mode (blocking operations), using the Flash API

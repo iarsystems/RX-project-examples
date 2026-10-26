@@ -1,0 +1,2 @@
+ADC Oneshot
+Demonstrates usage of the ADC unit in oneshot mode

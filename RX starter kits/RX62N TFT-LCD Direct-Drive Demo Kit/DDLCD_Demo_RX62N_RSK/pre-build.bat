@@ -1,0 +1,1 @@
+"$PROJ_DIR$\..\Utility\Resource_Gen.exe" -b -q -D "$PROJ_DIR$\..\Resources" "$PROJ_DIR$\..\Resources.bin"

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\ADC10 Oneshot\ADC10_Oneshot.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\ADC10 Repeat\ADC10_Repeat.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\ADC12 Oneshot\ADC12_Oneshot.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\ADC12 Repeat\ADC12_Repeat.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Asynchronous Serial\Async_Serial.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\CAN_API_Demo_RX62G_RSK\CAN_API_Demo_RX62G_RSK.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\CRC\CRC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\DTC\DTC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Flash Data\Flash_Data.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\IIC Master\IIC_Master.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\IIC Slave\IIC_Slave.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Indepedent Watchdog Timer\IWDT.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\LIN_Master\LIN_Master.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Low Voltage Detect\LVD.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Power Down\Power_Down.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\PWM\PWM.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\SPI\SPI.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Synchronous Serial\Sync_Serial.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Capture\Timer_Capture.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Compare\Timer_Compare.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Event\Timer_Event.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Timer Mode\Timer_Mode.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Watchdog Timer\WDT.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+

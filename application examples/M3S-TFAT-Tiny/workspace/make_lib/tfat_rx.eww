@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\tfat_rx200_big\tfat_rx200_big.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\tfat_rx200_little\tfat_rx200_little.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\tfat_rx600_big\tfat_rx600_big.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\tfat_rx600_little\tfat_rx600_little.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+

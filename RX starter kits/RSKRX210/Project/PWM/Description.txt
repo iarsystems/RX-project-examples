@@ -1,0 +1,2 @@
+PWM
+The timer is configured to output a varying duty cycle square wave.

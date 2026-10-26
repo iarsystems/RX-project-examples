@@ -1,0 +1,92 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only intended for use with Renesas products. No 
+* other uses are authorized. This software is owned by Renesas Electronics Corporation and is protected under all 
+* applicable laws, including copyright laws. 
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, 
+* FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED. TO THE MAXIMUM 
+* EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES 
+* SHALL BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR ANY REASON RELATED TO THIS 
+* SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software and to discontinue the availability of 
+* this software. By using this software, you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer 
+*
+* Copyright (C) 2016 Renesas Electronics Corporation. All rights reserved.    
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* Project      : Low_Power_Mode
+*
+* History      : DD.MM.YYYY Version      Description
+*              : 30/06/2016 Ver. 1.00    First Release
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* File Name    : description.txt
+*
+* System Requirements: 
+* Device(s)               : R5F565N9AxFB
+* Tool-Chain              : CC-RX V2.05.00
+* Development environment : Renesas e2 studio
+* Version                 : Code Generator for RX65N V1.00.00.08 [25 Aug 2016]
+* H/W Platform            : RSK+RX65N
+*
+* Description  : Demonstrates the low power modes SLEEP, DEEP SLEEP and SW STANDBY for reducing current consumption.
+*                
+*                NORMAL - Normal operation with peripheral operation and all clocks running.
+*
+*                SLEEP - In sleep mode, the CPU stops operating but the contents of its internal registers are retained.
+*                Other peripheral functions do not stop.  When the WDT is used, the WDT stops counting when sleep mode
+*                is entered.
+*
+*                DEEP SLEEP - In deep sleep mode, the CPU and the DTC, ROM, and RAM clocks stop.
+*                Peripheral functions do not stop.
+*
+*                SW STANDBY - In this mode, the CPU, on-chip peripheral functions, and all the oscillator functions
+*                stop. However, the contents of the CPU internal registers, RAM data, on-chip peripheral functions,
+*                states of the I/O ports are retained.
+*
+* Note         : Code Generator is used to generate code for this sample program.
+*                The Code Generator details and version number are given in the file header for each relevant module.
+*
+* Operating Conditions:
+*                External Device/Component
+*                -------------------------
+*                Remove R66,R68,R71,R79,R96,R135,R141,R148,R111,R125,R202 and connect an ammeter across J16,
+                 configure the ammeter for current measurement.
+*                NOTE: Use of the ammeter autorange function may cause large resistive loads to be
+*                inserted in the power supply to the microcontroller, causing CPU under voltage on the supply rails
+*                and a reset when the MCU comes out of SLEEP mode. For this reason, do not use the ammeter autorange
+*                function and be sure to switch the ammeter back to the mA range before coming out of SLEEP mode.
+*
+* Operating Procedure:
+*                For details of Building and Downloading the sample code refer to the RSK+RX65N Tutorial Manual 
+*                (r20ut3562eg0100-rsk+rx65n-tutorialmanual.pdf).
+*
+*             1. Compile and download the sample code. Click the 'Resume' button to start program execution.
+*                Click 'Resume' again if the program stops at main().
+*                Press 'Stop' and disconnect the debugger from the RSK E1 connector.
+*
+*             2. The hardware platform and sample name will be displayed in the first two lines of the LCD display.
+*                A real time clock will be displayed in the format: HH:MM:SS on the 3rd line of the LCD display.
+*                'Normal Mode' will be displayed on the 4th line of the LCD display.
+*                The clock is updated when the device is in normal operating mode.
+*
+*             3. The sample code will cycle through the different operating modes on each 
+*                switch press starting with Normal, SLEEP, Normal, DEEP SLEEP, Normal then SW STANDBY.
+*
+*             4. Press SW1 to enter SLEEP mode, 'Sleep Mode' will be displayed on the LCD. 
+*                Observe the current for SLEEP mode.  Press SW1 again to return to Normal mode.
+*
+*             5. Press SW1 to enter DEEP SLEEP mode, 'Deep Sleep Mode' will be displayed on the LCD.
+*                Observe the current for DEEP SLEEP mode.  Press SW1 again to return to Normal mode.
+*
+*             6. Press SW1 to enter SW STANDBY mode, 'SW Standby Mode' will be displayed on the LCD.
+*                Observe the current for SW STANDBY mode.
+*
+*             7. Press SW1 to exit SW STANDBY mode and go to step 4 to repeat the test.
+*
+***********************************************************************************************************************/

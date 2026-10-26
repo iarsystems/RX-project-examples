@@ -1,0 +1,54 @@
+//-----------------------------------------------------------------------------
+// Linker configuration file for the Renesas RX65N Envision Kit
+// secure boot program
+//-----------------------------------------------------------------------------
+// Compatibility check
+define exported symbol __link_file_version_4 = 1;
+
+define memory mem with size = 4G;
+
+define region RAM_region2            = mem:[from 0x00840000 to 0x0085FFFF];
+
+define region NOT_SECURE_BOOT_region = mem:[from 0xFFF00000 to 0xFFFF0000];
+define region SECURE_BOOT_region     = mem:[from 0xFFFF0000 to 0xFFFFFFFF];
+
+define region DATA_FLASH             = mem:[from 0x00100000 to 0x00107FFF];
+
+initialize manually { ro section FRAM2, rw section .textrw };
+initialize by copy with packing = none { rw, ro section D, ro section D_1, ro section D_2 };
+do not initialize  { section .*.noinit };
+
+define block HEAP     with alignment = 4, size = _HEAP_SIZE { };
+define block ISTACK   with alignment = 4, size = _ISTACK_SIZE { };
+
+define block PFRAM2  { ro section FRAM2_init };
+define block RPFRAM2 { rw section FRAM2 };
+
+place at address mem:0x00000000      { rw section _FRAME1 };
+place at address mem:0x00100000      { ro section _FIRMWARE_UPDATE_CONTROL_BLOCK };
+place at address mem:0x00100080      { ro section _FIRMWARE_UPDATE_CONTROL_BLOCK_MIRROR };
+place at address mem:0x00800000      { rw section _FRAME2 };
+place at address mem:0xFE7F5D00      { ro section .option_mem };
+
+place at address mem:0xFFFFFFFC      { ro section .resetvect };
+place at address mem:0xFFFFFF80      { ro section .exceptvect };
+
+"SEC_BOOT":place in SECURE_BOOT_region 
+                                     { ro,
+                                       rw section FRAM,
+                                       block PFRAM2 };
+                                       
+"NOT_SEC_BOOT":place in NOT_SECURE_BOOT_region
+                                     {
+                                       ro section .not_secure_boot
+                                     };
+
+"RAM32":place in RAM_region2         { rw,
+                                       block HEAP,
+                                       block RPFRAM2 };                                   
+                                      
+"STACKS":place at start of RAM_region2  { block ISTACK };
+
+                                     
+                                     
+

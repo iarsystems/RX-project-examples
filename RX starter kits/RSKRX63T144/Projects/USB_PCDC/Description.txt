@@ -1,0 +1,75 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only 
+* intended for use with Renesas products. No other uses are authorized. This 
+* software is owned by Renesas Electronics Corporation and is protected under 
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+* AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software 
+* and to discontinue the availability of this software. By using this software, 
+* you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+* Copyright (C) 2013 Renesas Electronics Corporation. All rights reserved.    */ 
+/***********************************************************************************************************************
+* Project      : USB_PCDC
+* Version      : 1.00
+* Device(s)    : R5F563TE
+* Tool-Chain   : RX Family C Compiler 1.2.1.0
+* H/W Platform : RSKRX63T144
+*
+* Description  : This sample demonstrates the use of the RX63T144 as a USB 
+*                peripheral using the CDC Abstract Model for serial port emulation.
+*
+* Operation    : Ensure the RSK is configured as a bus-powered USB Device.
+*                Ensure that J10 pins 2-3 are shorted for slave mode.
+*                Power the RSK from a PC USB type-A to type-B mini cable via the USB0_2 connector.
+*
+* Instructions : 
+*             1. Compile the sample code and download to the RSK. Click the 'Restart' 
+*                button to start program execution. 'USB CDC Appstart' will be displayed on the LCD. 
+*
+*             2. The first time the connection is made a Windows driver must be installed. Open 
+*                Windows Device Manager and locate the device 'CDC USB Demonstration', which should
+*                be marked with an exclamation mark. Right-click and select 'Update Driver Software' and
+*                'Browse my computer for driver software'. Browse to the folder reference\cdc_inf under
+*                this project's root folder and click 'Next'. Select 'Install this driver anyway'.
+*                The driver should install successfully and be shown in Device Manager under
+*                Port (COM & LPT)->CDC USB Demonstration(COMX), where X should be a number in the range 1-99.
+* 
+*             3. Use a terminal emulation program such as Hyperterminal, Teraterm or PuTTY and connect to 
+*                COMX using 19200 baud, 8-bit data, no parity and 1 stop bit.
+*
+*             4. 'Renesas USB CDC Sample, Press Switch SW2', will be repeatedly displayed in the terminal window.
+*                Press SW2 on the RSK.  Some more instructions will be displayed in the terminal window.
+*                Follow the instructions and connect a DB9 serial cable between the RSK SERIAL connector
+*                and a COM port on the PC.  Open another terminal program on the PC with the same settings
+*                i.e. 19200 baud, 8-bit data, no parity and 1 stop bit.  Choose either of the terminal windows
+*                and type some characters into the window.  The same characters will be displayed on the other terminal
+*                window.
+*                
+*             5. Press SW3 on the RSK to start echo mode, then type characters into the USB COM port terminal window.
+*                The characters will be received via the USB COM port and echoed back to the terminal Window. These 
+*                characters will no longer be displayed in the other terminal window.
+* 
+*             6. Press SW3 again to exit echo mode and go back to UART mode.
+*                It is possible to change the baud rate via the terminal windows in the range 1200-115200 bps.  The 
+*                change in baud rate will be requested via USB CDC class device requests and handled by the firmware. 
+*                
+*               
+*
+***********************************************************************************************************************/  
+/***********************************************************************************************************************
+* History      : 21.06.2013 Ver. 1.00 First Release
+***********************************************************************************************************************/

@@ -1,0 +1,2 @@
+Watchdog Timer
+The WDT unit is configured to halt the main program when the timer interval is too long.

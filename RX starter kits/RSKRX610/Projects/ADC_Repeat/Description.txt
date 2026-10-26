@@ -1,0 +1,2 @@
+ADC Repeat
+The ADC is configured to repeatedly take readings.

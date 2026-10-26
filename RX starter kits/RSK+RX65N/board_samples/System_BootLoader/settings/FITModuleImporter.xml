@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<configFITModuleImporter>
+  <fileVersion>1.0</fileVersion>
+  <serie>RX600</serie>
+  <group>RX65N</group>
+  <board>RSKRX65N</board>
+  <installedModules>
+    <module>
+      <name>r_flash_rx</name>
+      <version>1.70</version>
+    </module>
+  </installedModules>
+</configFITModuleImporter>
+
+

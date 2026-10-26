@@ -1,0 +1,2 @@
+Clock Accuracy Circuit
+Demonstrates usage of the Clock Accuracy Circuit by measuring and displaying the IWDTCLK frequency.

@@ -1,0 +1,22 @@
+%!: /header.html
+<h1>Game</h1>
+<center>
+<p>
+  The RPBRX62N VNC server is now configured to run the Game. Use a <b>VNC client</b> and connect over port <b>5900</b> to the RX62N demo board.<br>
+  The Game can be played using the <b>VNC client</b> and the RPBRX62N demo board's joystick (SW2 on the RPBRX62N board). The demo was developed using realVNC (<a href="http://www.realvnc.com" target="_blank">www.realvnc.com</a>).<br>
+    <br>
+    Move the paddles up and down using the RPBRX62N joystick,<br>
+    <br>
+    Click the <b>joystick center</b> to <b>start</b> the game.<br>
+    <br>
+    After a point is scored, click the <b>joystick center</b> to <b>restart</b> the game.<br>
+    <br>
+    The ball starts with a random speed in a random direction.<br>
+    <br>
+    
+    <font color=green><b>Good luck!</b></font><br>
+    <br>
+  
+    <A HREF="democontrol.shtml">Back to Demo Control</A></p>
+</center>
+%!: /footer.html

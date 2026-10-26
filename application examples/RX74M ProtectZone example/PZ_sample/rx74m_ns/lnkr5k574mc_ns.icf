@@ -1,0 +1,67 @@
+//-----------------------------------------------------------------------------
+// Linker configuration file template for the Renesas RX microcontroller R5K574MC
+//-----------------------------------------------------------------------------
+// Compatibility check
+define exported symbol __link_file_version_4 = 1;
+
+define exported symbol _PRE_INT_FUNC_NS = 0x0200F000;
+
+
+define region RAM_region16 = mem:[from 0x02008000 size 0];
+define region RAM_region24 = mem:[from 0x02008000 size 0];
+define region RAM_region32 = mem:[from 0x02008000 size 0x3F00];
+
+
+
+
+
+define region ROM_region16 = mem:[from 0x0200C000 size 0];
+define region ROM_region24 = mem:[from 0x0200C000 size 0];
+define region ROM_region32 = mem:[from 0x0200C000 size 0x4000];
+
+define region DATA_FLASH   = mem:[from 0x86900000 to 0x8690BFFF];
+
+initialize manually { rw section .textrw };
+initialize by copy { rw, ro section D, ro section D_1, ro section D_2 };
+initialize by copy with packing = none { section __DLIB_PERTHREAD };
+do not initialize  { section .*.noinit };
+
+define block HEAP      with alignment = 4, size = _HEAP_SIZE { };
+define block USTACK    with alignment = 4, size = _USTACK_SIZE { };
+define block ISTACK_NS with alignment = 4, size = _ISTACK_SIZE { };
+
+define block STACKS with fixed order { block USTACK,
+                                       block ISTACK_NS };
+
+
+
+place at address mem:0x86C2E850      { ro section .option_mem };
+place at address mem:0x86E00000      { ro section .option_mem2 };
+place at address mem:0x0200FFFC      { ro section .fvectors };
+place at address mem:0x0200FF80      { ro section .exvectors };
+place at address mem:0x0200C000      { symbol __iar_program_start };
+
+"ROM16":place in ROM_region16        { ro section .code16*,
+                                       ro section .data16* };
+"RAM16":place in RAM_region16        { rw section .data16*,
+                                       rw section __DLIB_PERTHREAD };
+"ROM24":place in ROM_region24        { ro section .code24*,
+                                       ro section .data24* };
+"RAM24":place in RAM_region24        { rw section .data24* };
+"ROM32":place in ROM_region32        { ro };
+"RAM32":place in RAM_region32        { rw,
+                                       ro section D,
+                                       ro section D_1,
+                                       ro section D_2,
+                                       block HEAP };
+"STACKS":place at end of RAM_region32 { block STACKS };
+
+// Global Var memory for variables accessed by secure
+place at address mem:0x0200BF00      { rw section .glb_val_ns };
+
+
+place at address mem:0x0200'f000     { ro section .pre_int_func_ns };
+
+"DATAFLASH":place in DATA_FLASH
+                                     { ro section .dataflash* };
+

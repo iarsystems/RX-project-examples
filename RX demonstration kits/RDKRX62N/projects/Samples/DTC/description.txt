@@ -1,0 +1,2 @@
+DTC
+The application demonstrates usage of the DTC unit in normal mode by transferring the result of an AD conversion, triggered from the ADC peripheral.

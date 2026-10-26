@@ -1,0 +1,85 @@
+/*******************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only
+* intended for use with Renesas products. No other uses are authorized. This
+* software is owned by Renesas Electronics Corporation and is protected under
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+* AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software
+* and to discontinue the availability of this software. By using this software,
+* you agree to the additional terms and conditions found by accessing the
+* following link:
+* http://www.renesas.com/disclaimer
+*******************************************************************************/
+/* Copyright (C) 2013 Renesas Electronics Corporation. All rights reserved.   */
+/*******************************************************************************
+* File Name     : Description.txt
+* Version       : 1.00
+* Device        : R5F51115ADFM
+* Tool Chain    : EWRX v2.42
+* H/W Platform  : RPBRX111
+* Description   : This sample demonstrates the use of the RX111 as a USB 
+*                 peripheral using LibUSB.
+*
+* CAUTION       : Driving PA0_LDOEN low will turn off the Power Supply to the
+*                 RX111. Only do this if you intend to supply power externally 
+*                 via VCC_HARVEST on CN7 pin 5.  Refer to the Troubleshooting 
+*                 section in the Design Manual to recover from this state.
+*
+* Operation     :   1. Compile and download the sample code to the target. 
+*                      Terminate the debug session and remove the USB cable.
+*
+*                   2. Connect a mini-USB cable to CN1 and a Windows PC. The
+*                      RPB will be detected however manual driver installation
+*                      will be necessary.
+*
+*                   3. If using Windows XP, select 'Install from a list or
+*                      specific location' when prompted, then browse to the 
+*                      'Host_PC\LibUSB Demo Driver' folder provided with this
+*                      sample. The driver will install.
+*
+*                      If using Windows Vista/7, open 'Devices and Printers'
+*                      (Start -> Devices and Printers), then right-click the
+*                      'Renesas LibUSB Demo' device and choose 'Update Driver
+*                      Software'. Choose 'Browse my computer for driver
+*                      software' and browse to the 'Host_PC\LibUSB_Demo_Driver'
+*                      folder provided with the sample. The driver will install.
+*
+*                   4. To use the demo a Python GUI is provided, which is 
+*                      tested to run on Python 2.7, available from 
+*                      http://www.python.org/getit/. 
+*
+*                   5. Double click the pyusb_install.bat file in the Host_PC
+*                      folder to install pyusb for Python 2.7.
+*
+*                   6. Double-click the 'Renesas_libusb_host_gui.py' file in the 
+*                      Host_PC folder to launch the GUI.
+*
+*                   7. Click 'LibUSB Connect' to connect to the board, and then
+*                      use the 'LED Control' and 'Read ADC' buttons to interact
+*                      with the RPB. Note that the 'Write LCD' feature requires
+*                      and RSK Pmod display (not supplied) to be attached to 
+*                      the RPB Pmod connector.
+*
+*                   8. To demonstrate interrupts on the RPB causing actions on
+*                      the host, click 'Arm interrupt transfer...' to arm an 
+*                      interrupt. The button will appear pressed down. Press
+*                      SW1 on the RPB and and interrupt will take place, 
+*                      causing the button to appear released again.
+*
+*                   9. For full techinical details on the Lib_USB software refer
+*                      to the application note r01an1670ej0100_libusb_rx111.pdf.
+*
+* Note          : Steps 3 & 4 are only needed the first time the demo is used.
+*******************************************************************************/
+/*******************************************************************************
+* History       : 01.07.2013  Ver. 1.00 First Release
+*******************************************************************************/

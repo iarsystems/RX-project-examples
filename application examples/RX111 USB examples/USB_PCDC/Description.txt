@@ -1,0 +1,62 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only 
+* intended for use with Renesas products. No other uses are authorized. This 
+* software is owned by Renesas Electronics Corporation and is protected under 
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+* AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software 
+* and to discontinue the availability of this software. By using this software, 
+* you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+* Copyright (C) 2013 Renesas Electronics Corporation. All rights reserved.    */ 
+/***********************************************************************************************************************
+* Project      : USB_PCDC
+* Version      : 
+* Device(s)    : R5F51115AxFM
+* Tool-Chain   : CCRX
+* H/W Platform : RSKRX111
+*
+* Description  : This sample demonstrates the use of the RX111 as a USB 
+*                peripheral using the CDC Abstract Model for serial port emulation.
+*
+* Operation    : Ensure the RSK is configured as a self-powered USB Device.
+*                Short pins 2-3 of J12 and 2-3 of J9, and power the RSK from a +5V
+*                centre positive PSU via the PWR connector or from the E1.
+* Instructions : 
+*             1. Compile the sample code and download to the RSK. Click the 'Restart' 
+*                button to start program execution.
+*
+*             2. Connect the RSK to a Windows PC USB port using a USB type-A to type-B mini cable. 
+*
+*             3. The first time the connection is made a Windows driver must be installed. Open 
+*                Windows Device Manager and locate the device 'CDC USB Demonstration', which should
+*                be marked with an exclamation mark. Right-click and select 'Update Driver Software' and
+*                'Browse my computer for driver software'. Browse to the folder reference\cdc_inf under
+*                this project's root folder and click 'Next'. Select 'Install this driver anyway'.
+*                The driver should install successfully and be shown in Device Manager under
+*                Port (COM & LPT)->CDC USB Demonstration(COMX), where X should be a number in the range 1-99.
+* 
+*             4. Use a terminal emulation program such as Hyperterminal, Teraterm or PuTTY and connect to 
+*                COMX using 19200 baud, 8-bit data, no parity and 1 stop bit.
+*
+*             5. Press any key to connect to the program, a welcome message will be displayed.
+*                Type anything into the terminal emulation window, the characters will be received
+*                via the USB COM port and echoed back to the terminal Window.
+*
+***********************************************************************************************************************/  
+/***********************************************************************************************************************
+* History      : 21.06.2013 Ver. 1.00 First Release
+***********************************************************************************************************************/

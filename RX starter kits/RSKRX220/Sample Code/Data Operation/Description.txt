@@ -1,0 +1,2 @@
+Data Operation
+The application configures the DOC module in comparison mode & communicates to a PC terminal using asynchronous mode to receive input data.

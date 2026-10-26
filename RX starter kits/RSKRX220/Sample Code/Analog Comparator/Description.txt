@@ -1,0 +1,2 @@
+Analog Comparator
+The comparator module is configured to compare the voltage at CMPA1 input with respect to the reference voltage at CVREFA pin.

@@ -1,0 +1,77 @@
+//-----------------------------------------------------------------------------
+// Linker configuration file template for the Renesas RX microcontroller R5F562N8
+//-----------------------------------------------------------------------------
+// Compatibility check
+define exported symbol __link_file_version_4 = 1;
+
+define memory mem with size = 4G;
+
+define region ROM_region16 = mem:[from 0xFFFF8000 to 0xFFFFFFFF];
+define region RAM_region16 = mem:[from 0x00000004 to 0x00007FFF];
+define region ROM_region24 = mem:[from 0xFFF80000 to 0xFFFFFFFF];
+define region RAM_region24 = mem:[from 0x00000004 to 0x00017FFF];
+define region ROM_region32 = mem:[from 0xFFF80000 to 0xFFFFFFFF];
+define region RAM_region32 = mem:[from 0x00000004 to 0x00017FFF];
+define region DATA_FLASH_region = mem:[from 0x00100000 to 0x00107FFF];
+
+initialize by copy { rw, ro section D, ro section D_1, ro section D_2 };
+do not initialize  { section .*.noinit };
+
+define block HEAP     with alignment = 4, size = _HEAP_SIZE { };
+define block USTACK   with alignment = 4, size = _USTACK_SIZE { };
+define block ISTACK   with alignment = 4, size = _ISTACK_SIZE { };
+
+define block STACKS with fixed order { block ISTACK,
+                                       block USTACK };
+
+place at address mem:0xFFFFFFFC { ro section .resetvect };
+place at address mem:0xFFFFFF80 { ro section .exceptvect };
+
+"ROM16":place in ROM_region16        { ro section .code16*,
+                                       ro section .data16* };
+"RAM16":place in RAM_region16        { rw section .data16*,
+                                       rw section __DLIB_PERTHREAD };
+"ROM24":place in ROM_region24        { ro section .code24*,
+                                       ro section .data24* };
+"RAM24":place in RAM_region24        { rw section .data24* };
+"ROM32":place in ROM_region32        { ro };
+"RAM32":place in RAM_region32        { rw,
+                                       ro section D,
+                                       ro section D_1,
+                                       ro section D_2,
+                                       block HEAP,
+                                       block STACKS };
+
+"DATAFLASH":place in DATA_FLASH_region
+                                     { ro section .dataflash* };
+
+
+define region BDD_RASTERS_region = mem:[from 0x08000000 to 0x080bf3ff];
+"BDD_RASTERS":place in BDD_RASTERS_region { rw section .BDD_RASTERS };
+
+define region BGAPI_POOL_region = mem:[from 0x080bf400 to 0x080bf44f];
+"BGAPI_POOL":place in BGAPI_POOL_region { rw section .BGAPI_POOL };
+
+define region BGAPI_POOL_1_region = mem:[from 0x080bf450 to 0x080c264f];
+"BGAPI_POOL_1":place in BGAPI_POOL_1_region { rw section .BGAPI_POOL_1 };
+
+define region BResources_region = mem:[from 0x080c2650 to 0x08ffffff];
+"BResources":place in BResources_region { ro section .BResources };
+
+define region CDTC_VECT_region = mem:[from 0xfff80000 to 0xfff80003];
+"CDTC_VECT":place in CDTC_VECT_region { ro section .CDTC_VECT };
+
+define region CDTC_VECT_S12AD_region = mem:[from 0xfff80198 to 0xfff8019b];
+"CDTC_VECT_S12AD":place in CDTC_VECT_S12AD_region { ro section .CDTC_VECT_S12AD };
+
+define region C_SCR_HM_region = mem:[from 0xfff8e1dc to 0xfff8e21b];
+"C_SCR_HM":place in C_SCR_HM_region { ro section .C_SCR_HM };
+
+define region C_SCR_HMT_region = mem:[from 0xfff8e21c to 0xfff8e22b];
+"C_SCR_HMT":place in C_SCR_HMT_region { ro section .C_SCR_HMT };
+
+define region C_SCR_HM_CLASSIC_region = mem:[from 0xfff8e22c to 0xfff8e29b];
+"C_SCR_HM_CLASSIC":place in C_SCR_HM_CLASSIC_region { ro section .C_SCR_HM_CLASSIC };
+
+define region C_SCR_HMCT_region = mem:[from 0xfff8e29c to 0xfff8e2ab];
+"C_SCR_HMCT":place in C_SCR_HMCT_region { ro section .C_SCR_HMCT };

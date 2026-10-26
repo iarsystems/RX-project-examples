@@ -1,0 +1,2 @@
+ADC12_Repeat
+Four 12-bit ADC channels are configured in continuous scan mode to take readings repeatedly.

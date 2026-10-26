@@ -1,0 +1,13 @@
+%!: /header.html
+<h1>FPU Bouncing Balls Demo</h1>
+<center>
+<p>
+  The RX62N VNC server is now configured to run the FPU Bouncing Balls demo. Use a <b>VNC client</b> and connect over port <b>5900</b> to the RX62N demo board.<br>
+  The FPU Bouncing Balls demo can be viewed on the <b>VNC client</b>. The demo was developed using realVNC (<a href="http://www.realvnc.com" target="_blank">www.realvnc.com</a>).<br>
+  <br>
+  The <font color=green><b>green</b></font> ball represents the <b>FPU</b> calculated position.<br><br>
+  The <font color=red><b>red</b></font> ball represents the <b>non-FPU</b> calculated position.<br><br>
+  <A HREF="democontrol.shtml">Back to Demo Control</A>
+</p>
+</center>
+%!: /footer.html

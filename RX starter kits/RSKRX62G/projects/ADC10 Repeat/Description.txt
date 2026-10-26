@@ -1,0 +1,2 @@
+ADC10 Repeat
+The 10bit ADC is configured to repeatedly take readings.

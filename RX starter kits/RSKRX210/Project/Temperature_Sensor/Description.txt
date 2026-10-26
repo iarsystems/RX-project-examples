@@ -1,0 +1,2 @@
+Temperature_Sensor
+The application configures the temperature sensor to display ambient temperature.

@@ -1,0 +1,50 @@
+//-----------------------------------------------------------------------------
+// Linker configuration file for the Renesas RX microcontroller R5F56104
+// adapted for ROPI usage
+//-----------------------------------------------------------------------------
+// Compatibility check
+define exported symbol __link_file_version_4 = 1;
+
+define memory mem with size = 4G;
+
+define region ROM_region16 = mem:[from 0xFFFF8000 to 0xFFFFFFFF];
+define region RAM_region16 = mem:[from 0x00000004 to 0x00007FFF];
+define region ROM_region24 = mem:[from 0xFFF40000 to 0xFFFFFFFF];
+define region RAM_region24 = mem:[from 0x00000004 to 0x0001FFFF];
+define region ROM_region32 = mem:[from 0xFFF40000 to 0xFFFFFFFF];
+define region RAM_region32 = mem:[from 0x00000004 to 0x0001FFFF];
+define region DATA_FLASH_region = mem:[from 0x00100000 to 0x00107FFF];
+
+initialize by copy { rw, ro section D, ro section D_1, ro section D_2 };
+do not initialize  { section .*.noinit };
+
+// All code and constant data should placed in a common
+// block tagged as "movable".
+define movable block PIC with static base CB, alignment = 4
+  { first block PIC16 with maximum size = 64k, fixed order { ro code object cstartup.o*, ro section .data16* },
+    ro };
+define movable block SBREL with static base SB, alignment = 4
+  { rw section .sbrel* };
+
+// Put the PID block in ROM at the wished location
+"ROM32":place in ROM_region32        { block PIC };
+
+define block HEAP     with alignment = 4, size = _HEAP_SIZE { };
+define block USTACK   with alignment = 4, size = _USTACK_SIZE { };
+define block ISTACK   with alignment = 4, size = _ISTACK_SIZE { };
+
+define block STACKS with fixed order { block ISTACK,
+                                       block USTACK };
+
+
+"RAM16":place in RAM_region16        { rw section .data16*,
+                                       rw section __DLIB_PERTHREAD };
+"RAM24":place in RAM_region24        { rw section .data24* };
+"RAM32":place in RAM_region32        { block SBREL,
+                                       rw,
+                                       block HEAP,
+                                       block STACKS };
+
+"DATAFLASH":place in DATA_FLASH_region
+                                     { ro section .dataflash* };
+

@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- IAR Project Connection File -->
+<iarProjectConnection version="1.0" name="Renesas_AP" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="IarProjectConnection_1.0.xsd">
+<includePath>
+    <path>$PROJ_DIR$\src\smc_gen\Config_CMT0</path>
+    <path>$PROJ_DIR$\src\smc_gen\Config_CMT2</path>
+    <path>$PROJ_DIR$\src\smc_gen\Config_PORT</path>
+    <path>$PROJ_DIR$\src\smc_gen\Config_SCI6</path>
+    <path>$PROJ_DIR$\src\smc_gen\Config_SCI8</path>
+    <path>$PROJ_DIR$\src\smc_gen\general</path>
+    <path>$PROJ_DIR$\src\smc_gen\r_bsp</path>
+    <path>$PROJ_DIR$\src\smc_gen\r_config</path>
+    <path>$PROJ_DIR$\src\smc_gen\r_pincfg</path>
+</includePath>
+<files>
+<group name="smc_gen">
+    <group name ="">
+        <group name ="Config_CMT0">
+            <path>.\src\smc_gen\Config_CMT0\Config_CMT0.c</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="Config_CMT0">
+            <path>.\src\smc_gen\Config_CMT0\Config_CMT0.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="Config_CMT0">
+            <path>.\src\smc_gen\Config_CMT0\Config_CMT0_user.c</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="Config_CMT2">
+            <path>.\src\smc_gen\Config_CMT2\Config_CMT2.c</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="Config_CMT2">
+            <path>.\src\smc_gen\Config_CMT2\Config_CMT2.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="Config_CMT2">
+            <path>.\src\smc_gen\Config_CMT2\Config_CMT2_user.c</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="Config_PORT">
+            <path>.\src\smc_gen\Config_PORT\Config_PORT.c</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="Config_PORT">
+            <path>.\src\smc_gen\Config_PORT\Config_PORT.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="Config_PORT">
+            <path>.\src\smc_gen\Config_PORT\Config_PORT_user.c</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="Config_SCI6">
+            <path>.\src\smc_gen\Config_SCI6\Config_SCI6.c</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="Config_SCI6">
+            <path>.\src\smc_gen\Config_SCI6\Config_SCI6.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="Config_SCI6">
+            <path>.\src\smc_gen\Config_SCI6\Config_SCI6_user.c</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="Config_SCI8">
+            <path>.\src\smc_gen\Config_SCI8\Config_SCI8.c</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="Config_SCI8">
+            <path>.\src\smc_gen\Config_SCI8\Config_SCI8.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="Config_SCI8">
+            <path>.\src\smc_gen\Config_SCI8\Config_SCI8_user.c</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="general">
+            <path>.\src\smc_gen\general\r_cg_cmt.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="general">
+            <path>.\src\smc_gen\general\r_cg_cmtw.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="general">
+            <path>.\src\smc_gen\general\r_cg_hardware_setup.c</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="general">
+            <path>.\src\smc_gen\general\r_cg_macrodriver.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="general">
+            <path>.\src\smc_gen\general\r_cg_port.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="general">
+            <path>.\src\smc_gen\general\r_cg_rspi.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="general">
+            <path>.\src\smc_gen\general\r_cg_sci.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="general">
+            <path>.\src\smc_gen\general\r_cg_userdefine.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="general">
+            <path>.\src\smc_gen\general\r_smc_cgc.c</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="general">
+            <path>.\src\smc_gen\general\r_smc_cgc.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="general">
+            <path>.\src\smc_gen\general\r_smc_cgc_user.c</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="general">
+            <path>.\src\smc_gen\general\r_smc_entry.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="general">
+            <path>.\src\smc_gen\general\r_smc_interrupt.c</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="general">
+            <path>.\src\smc_gen\general\r_smc_interrupt.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="board">
+                <group name ="generic_rx65n">
+                    <path>.\src\smc_gen\r_bsp\board\generic_rx65n\hwsetup.c</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="board">
+                <group name ="generic_rx65n">
+                    <path>.\src\smc_gen\r_bsp\board\generic_rx65n\hwsetup.h</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="board">
+                <group name ="generic_rx65n">
+                    <path>.\src\smc_gen\r_bsp\board\generic_rx65n\resetprg.c</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="board">
+                <group name ="generic_rx65n">
+                    <path>.\src\smc_gen\r_bsp\board\generic_rx65n\r_bsp.h</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="board">
+                <group name ="generic_rx65n">
+                    <path>.\src\smc_gen\r_bsp\board\generic_rx65n\r_bsp_config_reference.h</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="board">
+                <group name ="generic_rx65n">
+                    <path>.\src\smc_gen\r_bsp\board\generic_rx65n\r_bsp_interrupt_config_reference.h</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="board">
+                <group name ="generic_rx65n">
+                    <path>.\src\smc_gen\r_bsp\board\generic_rx65n\vecttbl.c</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="board">
+                <group name ="generic_rx65n">
+                    <path>.\src\smc_gen\r_bsp\board\generic_rx65n\vecttbl.h</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="all">
+                    <path>.\src\smc_gen\r_bsp\mcu\all\r_bsp_common.c</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="all">
+                    <path>.\src\smc_gen\r_bsp\mcu\all\r_bsp_common.h</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="all">
+                    <path>.\src\smc_gen\r_bsp\mcu\all\r_typedefs.h</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="rx65n">
+                    <path>.\src\smc_gen\r_bsp\mcu\rx65n\cpu.c</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="rx65n">
+                    <path>.\src\smc_gen\r_bsp\mcu\rx65n\cpu.h</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="rx65n">
+                    <path>.\src\smc_gen\r_bsp\mcu\rx65n\locking.c</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="rx65n">
+                    <path>.\src\smc_gen\r_bsp\mcu\rx65n\locking.h</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="rx65n">
+                    <path>.\src\smc_gen\r_bsp\mcu\rx65n\mcu_clocks.c</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="rx65n">
+                    <path>.\src\smc_gen\r_bsp\mcu\rx65n\mcu_info.h</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="rx65n">
+                    <path>.\src\smc_gen\r_bsp\mcu\rx65n\mcu_init.c</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="rx65n">
+                    <path>.\src\smc_gen\r_bsp\mcu\rx65n\mcu_init.h</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="rx65n">
+                    <path>.\src\smc_gen\r_bsp\mcu\rx65n\mcu_interrupts.c</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="rx65n">
+                    <path>.\src\smc_gen\r_bsp\mcu\rx65n\mcu_interrupts.h</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="rx65n">
+                    <path>.\src\smc_gen\r_bsp\mcu\rx65n\mcu_locks.c</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="rx65n">
+                    <path>.\src\smc_gen\r_bsp\mcu\rx65n\mcu_locks.h</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="rx65n">
+                    <path>.\src\smc_gen\r_bsp\mcu\rx65n\mcu_mapped_interrupts.c</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="rx65n">
+                    <path>.\src\smc_gen\r_bsp\mcu\rx65n\mcu_mapped_interrupts.h</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="rx65n">
+                    <path>.\src\smc_gen\r_bsp\mcu\rx65n\mcu_mapped_interrupts_private.h</path>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <group name ="mcu">
+                <group name ="rx65n">
+                    <group name ="register_access">
+                        <path>.\src\smc_gen\r_bsp\mcu\rx65n\register_access\iodefine.h</path>
+                    </group>
+                </group>
+            </group>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <path>.\src\smc_gen\r_bsp\platform.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_bsp">
+            <path>.\src\smc_gen\r_bsp\readme.txt</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_config">
+            <path>.\src\smc_gen\r_config\r_bsp_config.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_config">
+            <path>.\src\smc_gen\r_config\r_bsp_config_readme.txt</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_config">
+            <path>.\src\smc_gen\r_config\r_bsp_interrupt_config.h</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_pincfg">
+            <path>.\src\smc_gen\r_pincfg\Pin.c</path>
+        </group>
+    </group>
+    <group name ="">
+        <group name ="r_pincfg">
+            <path>.\src\smc_gen\r_pincfg\Pin.h</path>
+        </group>
+    </group>
+</group>
+</files>
+</iarProjectConnection>

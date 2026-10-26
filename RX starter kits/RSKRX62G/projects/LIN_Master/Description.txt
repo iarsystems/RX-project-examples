@@ -1,0 +1,2 @@
+LIN_Master
+The LIN module demonstrates the LIN standard in either loopback mode or normal master mode operation.

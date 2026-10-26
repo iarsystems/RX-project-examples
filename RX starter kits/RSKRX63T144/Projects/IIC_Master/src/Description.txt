@@ -1,0 +1,2 @@
+IIC Master
+Demonstrates usage of the IIC unit in master mode, by writing to an R1EX24xxx series EEPROM device (or the IIC Slave sample code)

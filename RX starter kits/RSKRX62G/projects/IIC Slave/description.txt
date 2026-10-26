@@ -1,0 +1,2 @@
+IIC Slave
+The application demonstrates usage of the I2C unit in slave mode, by simulating an EEPROM memory device.

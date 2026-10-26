@@ -1,0 +1,13 @@
+execUserSetup()
+{
+  __message "execUserSetup() called\n";
+  
+  __message "SRAM area partitioning (use Secure or Non-Secure)\n";
+  __message "0x0200_0000 to 0x0200_7FFF Not assigned (unavailable)\n";
+  __message "0x0200_8000 to 0x0200_FFFF (SRAM0 32KB) Non-Secure area\n";
+  __message "0x8200_0000 to 0x8200_7FFF (SRAM0 32KB) Secure area\n";
+  __message "0x8200_8000 to 0x8200_FFFF Not assigned (unavailable)\n";
+  __writeMemory16(0xA510, 0x870193FA, "Memory");
+  __writeMemory32(0x00008000, 0x87018400, "Memory");
+  __writeMemory16(0xA500, 0x870193FA, "Memory");
+}

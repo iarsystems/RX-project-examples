@@ -1,0 +1,2 @@
+Low_Power
+This application demonstrates the low power modes of the MCU.

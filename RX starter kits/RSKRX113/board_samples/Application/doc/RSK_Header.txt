@@ -1,0 +1,120 @@
+***********************************************************************************************************
+DESCRIPTION: RSK RX113 - Board / Connector Cross Reference
+***********************************************************************************************************
+
+/**********************************************************************************************************
+* History: 20.11.2014 Ver. 1.00 First Release
+**********************************************************************************************************/
+
+The Quick Start Guide supplied with the RSK can be referred to for help in connecting to the target.
+
+Some connections listed may be dependant upon option link settings on the board. Please refer to the 
+hardware manual and schematics available in the product or on the web site for details.
+
+www.renesas.com/rsk
+
+Device = R5F51138ADFP
+
+---------------------------------------------------------------------------------------------------------------
+Pin#  Port    PMOD        JA1       JA2       JA4       JA5      JA6      Jx
+---------------------------------------------------------------------------------------------------------------
+1     P04     PMOD1-4     JA1-1                                  JA6-11        
+2     PJ0                 JA1-13                                          J1-2
+3     P02     PMOD1-3                                            JA6-12   J1-3
+4     PJ3     PMOD1-1                                                     J1-4
+5     P25                 JA1-22    JA2-16                                J1-5
+6     P24                 JA1-21    JA2-15                                J1-6
+7     P23                 JA1-20    JA2-14/20                             J1-7
+8     P22                 JA1-19    JA2-13                                J1-8
+9     P21                           JA2-21                                J1-9
+10    P20     PMOD1-10                                                    J1-10
+11    P27                 JA1-8                                           J1-11
+12    P29                                                                 J1-12
+13    P30                                                                 J1-13
+14    P31                                                                 J1-14
+15    MD_FINED                                                            J1-15
+16    RESET                         JA2-1                                 J1-16
+17    XCOUT
+18    XCIN
+19    NMI                           JA2-3                                 J1-19
+20    XTA                           JA2-2                                 J1-20
+21    XTA                                                                 J1-21
+22    VCL
+23    VSS
+24    VDD
+25    P32                           JA2-19                                J1-25
+26    P17                           JA2-10                                J2-1
+27    P16                           JA2-11/6                              J2-2
+28    P15                           JA2-8                                 J2-3
+29    P14                           JA2-12                                J2-4
+30    VCCUSB                                                              J2-5
+31    USB0_DM
+32    USB0_DP
+33    VSS_USB
+34    P13                                     JA4-11                      J2-9
+35    P12                                     JA4-12                      J2-10
+36    P11                                     JA4-13             JA6-14   J2-11
+37    P10                                     JA4-14             JA6-15   J2-12
+38    P56                                     JA4-15             JA6-16   J2-13
+39    P53                                     JA4-16                      J2-14
+40    P52                                     JA4-17                      J2-15
+41    P51                                     JA4-18                      J2-16
+42    P50                                     JA4-19                      J2-17
+43    P55                           JA2-182   JA4-4                       J2-18
+44    P54                           JA2-17    JA4-3                       J2-19
+45    PC7                           JA2-26    JA4-2                       J2-20
+46    PC6                           JA2-25    JA4-1                       J2-21
+47    PC5                                     JA4-7                       J2-22
+48    PC4                                     JA4-8                       J2-23
+49    PC3                                     JA4-9              JA6-8    J2-24
+50    PC2                                     JA4-10             JA6-7    J2-25
+51    PC1                                     JA4-20             JA6-10   J3-1
+52    PC0                                     JA4-21                      J3-2
+53    PB7     PMOD2-2                         JA4-22                      J3-3
+54    PB6     PMOD2-3                         JA4-23                      J3-4
+55    PB5     PMOD2-4                         JA4-24                      J3-5
+56    PB4     PMOD2-1                         JA4-25                      J3-6
+57    PB3                 JA1-16              JA4-26                      J3-7
+58    PB2                 JA1-15              JA4-27                      J3-8
+59    PB1                                     JA4-28                      J3-9
+60    VCC
+61    PB0                 JA1-26                                          J3-11
+62    VSS
+63    PA6                 JA1-25                                          J3-13
+64    PA7     PMOD2-9                         JA4-29                      J3-14
+65    PA5     PMOD2-10                        JA4-30                      J3-15
+66    PA4                                     JA4-31                      J3-16
+67    PA3                           JA2-24    JA4-32                      J3-17
+68    PA2                                     JA4-33                      J3-18
+69    PA1                                     JA4-34                      J3-19
+70    PA0                                     JA4-35                      J3-20
+71    PF7                                     JA4-36             JA6-13   J3-21
+72    PF6                                     JA4-37                      J3-22
+73    PE5                                     JA4-38                      J3-23
+74    PE4                           JA2-23    JA4-39                      J3-24
+75    PE3                                     JA4-40                      J3-25
+76    PE2     PMOD2-8                         JA4-41                      J4-1
+77    PE1                                     JA4-42    JA5-4             J4-2
+78    PE0                                     JA4-43    JA5-3             J4-3
+79    PE7                                     JA4-44                      J4-4
+80    PE6     PMOD2-7     JA1-23              JA4-45                      J4-5
+81    PD4                                     JA4-46                      J4-6
+82    PD3                 JA1-18              JA4-47                      J4-7
+83    PD2                 JA1-17              JA4-48                      J4-8
+84    PD1     PMOD1-8               JA2-9     JA4-49                      J4-9
+85    PD0     PMOD1-7               JA2-7     JA4-50                      J4-10
+86    P92     PMOD1-9                                                     J4-11
+87    P91                                               JA5-2             J4-12
+88    P46                                               JA5-1             J4-13
+89    P90                 JA1-12                                          J4-14
+90    P44                 JA1-11                                          J4-15
+91    P43                 JA1-10                                          J4-16
+92    VREFL                                                               J4-17
+93    VREFH                                                               J4-18
+94    VREFL0                                                              J4-19
+95    P40                 JA1-9                                           J4-20
+96    AVREF               JA1-7                                           J4-21
+97    AVSS                JA1-6                                           J4-22
+98    AVCC                JA1-5                                           J4-23
+99    P07     PMOD1-2                                            JA6-9    J4-24
+100   PJ2                 JA1-14                                          J4-25

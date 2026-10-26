@@ -1,0 +1,90 @@
+;;-------------------------------------------------------------------------
+;;
+;;      Definitions of Peripheral I/O registers, I/O register bits,
+;;      Interrupt/Exception vectors for Renesas RX R5F56108.
+;;
+;;      Copyright (C) 2009 IAR Systems AB.
+;;
+;;-------------------------------------------------------------------------
+
+;; Memory information ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 
+;; Used to define address zones within the RX address space. 
+;;
+;;   Name      may be almost anything
+;;   Type      must be Data, Sfr or Code
+;;   StartAdr  start of memory block
+;;   EndAdr    end of memory block
+;;   AccType   type of access, read-only (R) or read-write (RW)
+
+[Memory]
+;;         Name           Type          StartAdr    EndAdr      AccType
+Memory0  = RAM            Data           0x00000000  0x0001FFFF  RW
+Memory1  = IO             Sfr            0x00080000  0x000FFFFF  RW
+Memory2  = IO1            Sfr            0x007FC000  0x007FC4FF  RW
+Memory3  = IO2            Sfr            0x007FFC00  0x007FFFFF  RW
+Memory4  = DATA_FLASH     Code           0x00100000  0x00107FFF  RW
+Memory5  = USER_BOOT      Code           0xFF7FC000  0xFF7FFFFF  R
+Memory6  = ROM            Code           0xFFE00000  0xFFFFFFFF  R
+
+;; Emulators: E20, JLink ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[CPU]
+Derivative = R5F56108
+McuFileE20 = RX610Gr\R5F56108.MCU
+McuFileJLink = RX610Gr\R5F56108.MCU
+
+;; I/O Register description file ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[SfrInclude]
+File = iorx610.sfr
+
+;; Interrupt definitions ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; RX has a fixed sub-priority where the interrupt with the smallest
+;; vector number has the highest priority. Following formats are available:
+;;
+;;    0: Non-Maskable interrupt
+;;    1: Maskable interrupt
+;;
+;; They have slightly different definition formats.
+;;
+;; Format 0: Id  Type  Enable  Status  Clear
+;;
+;;    Id          = Interupt 'name'
+;;    Type        = 0
+;;    Enable      = Where to find the interrupt enable bit  (SFR)
+;;    Status      = Where to find the interrupt status bit  (SFR)
+;;    Clear       = Where to find the interrupt clear  bit  (SFR)
+;;
+;; Format 1: Id  Type  Vector  Prio  Request [Destination]
+;;
+;;    Id          = Interupt 'name'
+;;    Type        = 1
+;;    Vector      = Interrupt vector number (dec)
+;;    Prio        = Where to find the interrupt priority    bits  (SFR)
+;;    Enable      = Where to find the interrupt enable      bit   (SFR)
+;;    Request     = Where to find the interrupt request     bit   (SFR)
+;;    Destination = Where to find the interrupt destination bits  (SFR)  (optional)
+;;
+;; The SFR register and bit description follows the standard syntax for bits,
+;; that is SFRNAME.BITNAME as defined in the SFR file (*.sfr). During the
+;; interrupt description syntax check the system will verify that the given
+;; SFRNAME.BITNAME exists, which means that the *.sfr file must be loaded
+;; without syntax errors into the debugger.
+[FastInterrupt]
+FastIntReg = ICU.FIR.FIEN   ICU.FIR.FVCT
+
+[InterruptList]
+    
+;; This is an example how interrupt definitions are defined. 
+;; You must add your own definitions here in the same way for the interrupts you 
+;; want to simulate. Keep in mind that the register name must be written exactly 
+;; as in the .sfr file you are using (see under [SfrInclude] in this file).
+;; Format 0:   <id>         <type>    <enable>           <status>           <clear>
+Interrupt0   = NMI            0      ICU.NMIER.NMIEN ICU.NMISR.NMIST ICU.NMICLR.NMICLR
+
+;; Format 1: <id> <type> <vector> <prio> <enable> <request> <destination>
+Interrupt1   = IRQ12          1        76     ICU.IPR[44](ICU,IRQ12).IPR ICU.IER[9].IEN4(ICU,IRQ12) ICU.IR[76](ICU,IRQ12).IR ICU.ISELR[76](ICU,IRQ12).ISEL
+
+;; End of file
+

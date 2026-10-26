@@ -1,0 +1,129 @@
+*******************************************************************************
+DESCRIPTION		Renesas Starter Kit Project Readme File
+*******************************************************************************
+
+/******************************************************************************
+* History 		: 23.01.2012 Ver. 1.00 First Release
+/******************************************************************************
+
+An E1 debugger is required to debug this project.
+
+The Quick Start Guide supplied with the RSK can be referred to for help in
+connecting to the target. 
+
+Details of the sample project can be found at the top of the C file which
+contains the project's main() function.
+
+Support:
+    Online technical support and information is available at: 
+	www.renesas.com/renesas_starter_kits
+	www.renesas.com/rskrx63n
+
+	For support contact details please refer to the Quick Start Guide.
+
+/*	RSKRX63N - Board Connector Cross-Reference	*/
+Device = R5F563NB
+
+*************************************************************************************************************************	
+PIN             PORT                  PIN                                     RSK 				BUS	
+NUMBER          NUMBER                FUNCTION                                Hardware                          Hardware
+*************************************************************************************************************************	
+1               -                     AVSS0                                   -                                 -
+2               P05                   DA1                                     LED1				-
+3               -                     VREFH                                   -					-
+4               P03                   DLCDRS                                  LED0				-					
+5               -                     VCL                                     -					-
+6               P02                   SCK6/IRQ10                              SW1                               -
+7               P01                   RXD6/IRQ9                               -					-
+8               P00                   TXD6/IRQ8                               SW2				-	
+9               -                     XCOUT                                   -					-
+10              -                     RESn                                    Reset Switch		        -
+11              -                     XTAL                                    -					-
+12              -                     VSS                                     -					-
+13              -                     EXTAL                                   -					-
+14              -                     VCC                                     -					-
+15              P35                   NMIn                                    -					-
+16              P34                   TRSTn                                   -					-
+17              P33                   DLCDE                                   LCD				-
+18              P32                   IRQ2/MTIOC0C                            SW1				-
+19              P31                   TMS                                     -					-
+20              P30                   TDI/RXD1                                -					-
+21              P27                   TCK/FINEC/SCK1                          -					-
+22              P26                   TDO/TXD1                                -					-
+23              P25                   CS5n/MTIOC4C                            -					-
+24              P24                   CS4n/MTIOC4A                            LED1				-
+25              P23                   CTS0RTS0                                -					-
+26              P35                   NMI                                     -   				-
+27              P34                   MTIOC0A/IRQ4                            -   				-
+28              P33                   MTIOC0D/POE3#                           -   				-
+29              P32                   MTIOC0C/RTCIC2/IRQ2                     -					-
+30              P16                   USB0VBUS/TMR0                           USB				-
+31              P15                   TRIGb/MTCLKB                            -					-
+32              P31                   SSLB0                                   -					-
+33              P30                   MISOB                                   -					-
+34              P12                   SCL0                                    -					-
+35              -                     VCC_USB                                 -					-
+36              P27                   RSPCKB                                  -					-
+37              P26                   MOSIB                                   SPI				-
+38              P25                   MTIOC4C/USB0_DPRPD                      USB				-
+39              P55                   WAITn/CRX1                              CAN				-			
+40              P24                   MTIOC4A/USB0_VBUSEN                     USB				-
+41              P53                   BCLK                                    -					-
+42              P23                   CTS0#/RTS0#/USB0_DPUPE                  -					-
+43              P22                   MTIOC3B/TIOCC3/TMO0/PO2/SCK0/USB0_DRPD  -                                 -
+44              P21                   MTIOC1B/TIOCA3/TMCI0/RXD0/USB0_EXICEN   -                                 -
+45              P20                   MTIOC1A/TIOCB3/TMRI0/TXD0/USB0_ID       -                                 -
+46              P17                   MTIOC3A/USB1_VBUS                       -					-
+47              P16                   USB0_VBUSEN                             LED0				A21
+48              16                    A20/MTIOC3D                             -					A20
+49              PC3                   A19/MTIOC4D                             -					A19
+50              P15                   MTCLKB/USB1_DPUPE                       -				        -
+51              P14                   USB0_DPUPE/USB0_OVRCURA                 -					-
+52              P13                   MTIOC0B/IRQ3/SDA0                       IIC                               -
+54              P12                   SCL0                                    -					-
+55              P11                   MTIC5V                                  LED3				-
+56              P10                   MTIC5W                                  LED2			        -
+57              PB3                   A11/MTIOC0A                             -					A11
+58              PB2                   A10                                     -					A10
+59              PB1                   A9                                      -					A9
+60              -                     VCC                                     -					-
+61              PB0                   A8                                      -					A8
+62              -                     VSS                                     -					-
+63              PA7                   A7                                      -					A7
+64              PA6                   A6/MTIC5V                               -					A6
+65              PA5                   A5                                      -					A5
+66              PA4                   A4/MTIC5U                               -					A4
+67              PA3                   A3                                      -					A3
+68              PA2                   A2                                      -					A2
+69              PA1                   A1                                      -					A1
+70              PA0                   A0                                      -					A0
+71              PE7                   D15/DLCDD7                              LCD				D15
+72              PE6                   D14/DLCDD6                              LCD				D14		
+73              PE5                   D13/DLCDD5                              LCD				D13
+74              PE4                   D12/DLCDD4                              LCD				D12
+75              PE3                   D11                                     -					D11
+76              PE2                   D10                                     -					D10
+77              PE1                   D9                                      -					D9
+78              PE0                   D8                                      -					D8
+79              PD7                   D7/IO7/POE0n                            -					D7/IO7
+80              PD6                   D6/IO6                                  -					D6/IO6
+81              PD5                   D5/IO5                                  -					D5/IO5
+82              PD4                   D4/IO4                                  -					D4/IO4
+83              PD3                   D3/IO3                                  -					D3/IO3
+84              PD2                   D2/IO2                                  -					D2/IO2
+85              PD1                   D1/IO1                                  -					D1/IO1
+86              PD0                   D0/IO0                                  -					D0/IO0
+87              P47                   AN007/CANSTBn                           CAN				-	
+88              P46                   AN006/CANERRn                           CAN				-
+89              P45                   AN005/CANEN                             CAN				-
+90              P44                   AN004/IRQ12                             SW2				-	
+91              P43                   AN003                                   -					-
+92              P42                   AN002                                   -					-
+93              P41                   AN001                                   -					-
+94              -                     VREFL0                                  -					-
+95              P40                   AN000                                   -					-
+96              -                     VREFH0                                  -					-
+97              -                     AVCC0                                   -					-
+98              P07                   ADTRG0n                                 SW3				-
+99              -                     AVSS0                                   -					-
+100             P05                   DA1                                     -					-

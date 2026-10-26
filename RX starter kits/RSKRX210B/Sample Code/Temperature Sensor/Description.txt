@@ -1,0 +1,2 @@
+Temperature Sensor
+The temperature sensor is configured to display ambient temperature.

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\ADC_One_Shot\ADC_One_Shot.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\ADC_Repeat\ADC_Repeat.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\ADC_Single_DTC_MTU\ADC_Single_DTC_MTU.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\CMT_Compare\CMT_Compare.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\CRC\CRC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Dhrystone\Dhrystone.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\DMAC\DMAC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\DTC\DTC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\GPIO_IRQ\GPIO_IRQ.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\MTU_One_Shot\MTU_One_Shot.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\MTU_PWM\MTU_PWM.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Power_Modes\Power_Modes.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\RSPI_Memory\RSPI_Memory.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Sample\Sample.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\SCI_Async\SCI_Async.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\SCI_Async_ADC_DTC\SCI_Async_ADC_DTC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\SCI_Async_DTC\SCI_Async_DTC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\TMR_One_Shot\TMR_One_Shot.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\WDT\WDT.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\WDT_Auto_Reg\WDT_Auto_Reg.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+

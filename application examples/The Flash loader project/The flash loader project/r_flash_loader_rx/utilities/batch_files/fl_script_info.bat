@@ -1,0 +1,10 @@
+@echo OFF
+CLS
+SET PY=C:\Python27\python.exe
+SET WS=..\python
+
+%PY% -u "%WS%\r_fl_serial_flash_loader.py" -p0 -cinfo
+
+
+ECHO DONE
+pause

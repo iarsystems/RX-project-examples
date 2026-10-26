@@ -1,0 +1,13 @@
+%!: /header.html
+<h1>Mandelbrot Demo</h1>
+<center>
+<p>
+  The RPBRX62N VNC server is now configured to run the Mandelbrot demo. Use a <b>VNC client</b> and connect over port <b>5900</b> to the RX62N demo board.<br>
+  The Mandelbrot demo can be viewed on the <b>VNC client</b>. The demo was developed using realVNC (<a href="http://www.realvnc.com" target="_blank">www.realvnc.com</a>).<br>
+  <br>
+  Use the RPBRX62N <font color=green>joystick</font> to move the <font color=green>crosshairs</font> to a position to zoom into.<br><br>
+  Click the RPBRX62N <font color=red>joystick center</font> to <font color=red>zoom in</font>.<br><br>
+  Click the RPBRX62N <font color=blue>SW1</font> to <font color=blue>zoom out</font>.<br><br>
+  <A HREF="democontrol.shtml">Back to Demo Control </A></p>
+</center>
+%!: /footer.html

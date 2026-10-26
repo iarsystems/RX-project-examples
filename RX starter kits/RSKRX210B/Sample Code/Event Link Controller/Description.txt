@@ -1,0 +1,2 @@
+Event Link Controller
+The application links the event of ADC conversion end to an event of toggling the port pin.

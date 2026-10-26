@@ -1,0 +1,2 @@
+PWM
+Demonstrates usage of the MTU unit by generating a PWM (Pulse Width Modulation) output signal.

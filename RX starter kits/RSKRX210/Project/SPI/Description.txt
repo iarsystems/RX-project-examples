@@ -1,0 +1,2 @@
+SPI
+The SPI unit is configured for loopback mode transfers.

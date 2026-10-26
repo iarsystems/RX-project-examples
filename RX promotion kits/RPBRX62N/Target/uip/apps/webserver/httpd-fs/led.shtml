@@ -1,0 +1,36 @@
+%!: /header.html
+<h1>On this page you can control the LEDs on RPBRX62N</h1>
+<center>
+<p>
+  <FORM ACTION="led.shtml" METHOD="GET">
+    LED0
+    %! led0-status-on
+    On
+    %! led0-status-off
+    Off <BR>
+   (Green)<BR>
+    <BR>
+    LED1
+    %! led1-status-on
+    On
+    %! led1-status-off
+    Off <BR>
+      (Orange)<BR>
+    <BR>
+    LED2
+    %! led2-status-on
+    On
+    %! led2-status-off
+    Off<BR>
+	(Red)<BR>
+    <BR>
+    <INPUT TYPE="SUBMIT" VALUE="Send">
+    </FORM>
+
+<br> Please press "Send" to update LEDs
+<br>
+<br><A HREF="democontrol.shtml">Back to Demo Control</A> 
+</p>
+</center>
+%!: /footer.html
+
