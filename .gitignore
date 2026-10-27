@@ -5,3 +5,12 @@
 
 **/ExampleInfo.ENU.xml
 **/ExampleInfo.JPN.xml
+
+# OS-specific binaries
+*.exe
+*.dll
+*.sys
+*.cat
+*.inf
+*.ico
+Thumbs.db
