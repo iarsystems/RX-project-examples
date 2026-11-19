@@ -33,7 +33,7 @@ Memory = ROM_SECURE     Code           0xFFFF0000  0xFFFFFFFF  R
 ;; Emulators: E20, JLink ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [CPU]
 Derivative = R5F565NE_DUAL
-McuFileE20 = RX65NGr\R5F565NE_DUAL.MCU
+McuFileE20 = RX65NGr/R5F565NE_DUAL.MCU
 McuFileJLink = 
 
 ;; I/O Register description file ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

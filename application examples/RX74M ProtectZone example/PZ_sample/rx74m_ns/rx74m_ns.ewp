@@ -9,9 +9,9 @@
         <debug>1</debug>
         <settings>
             <name>General</name>
-            <archiveVersion>9</archiveVersion>
+            <archiveVersion>10</archiveVersion>
             <data>
-                <version>8</version>
+                <version>9</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -66,7 +66,7 @@
                 </option>
                 <option>
                     <name>GenRTConfigPath</name>
-                    <state>$TOOLKIT_DIR$\lib\dlrxflln.h</state>
+                    <state>$TOOLKIT_DIR$/lib/dlrxflln.h</state>
                 </option>
                 <option>
                     <name>GenLibInFormatterDescription</name>
@@ -154,13 +154,17 @@
                     <name>BrowseInfoPath</name>
                     <state>Debug/</state>
                 </option>
+                <option>
+                    <name>GRuntimeLibUnsafeIO</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ICCRX</name>
             <archiveVersion>13</archiveVersion>
             <data>
-                <version>24</version>
+                <version>25</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -320,7 +324,7 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\generate</state>
+                    <state>$PROJ_DIR$/generate</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -341,10 +345,6 @@
                 <option>
                     <name>IccLang</name>
                     <state>0</state>
-                </option>
-                <option>
-                    <name>IccCDialect</name>
-                    <state>1</state>
                 </option>
                 <option>
                     <name>IccAllowVLA</name>
@@ -443,6 +443,10 @@
                 <option>
                     <name>CompilerProtectZone</name>
                     <state>0</state>
+                </option>
+                <option>
+                    <name>DeprecatedIccCDialect</name>
+                    <state>1</state>
                 </option>
             </data>
         </settings>
@@ -744,7 +748,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$PROJ_DIR$\lnkr5k574mc_ns.icf</state>
+                    <state>$PROJ_DIR$/lnkr5k574mc_ns.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>

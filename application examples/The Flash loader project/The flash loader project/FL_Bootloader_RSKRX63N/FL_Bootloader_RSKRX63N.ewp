@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-    <fileVersion>4</fileVersion>
+    <fileVersion>6</fileVersion>
     <configuration>
         <name>Release</name>
         <toolchain>
@@ -9,14 +9,14 @@
         <debug>0</debug>
         <settings>
             <name>General</name>
-            <archiveVersion>9</archiveVersion>
+            <archiveVersion>10</archiveVersion>
             <data>
-                <version>8</version>
+                <version>9</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>0</debug>
                 <option>
                     <name>BrowseInfoPath</name>
-                    <state>Release\BrowseInfo</state>
+                    <state>Release/BrowseInfo</state>
                 </option>
                 <option>
                     <name>OGChipSelectMenu</name>
@@ -44,15 +44,15 @@
                 </option>
                 <option>
                     <name>ExePath</name>
-                    <state>Release\Exe</state>
+                    <state>Release/Exe</state>
                 </option>
                 <option>
                     <name>ObjPath</name>
-                    <state>Release\Obj</state>
+                    <state>Release/Obj</state>
                 </option>
                 <option>
                     <name>ListPath</name>
-                    <state>Release\List</state>
+                    <state>Release/List</state>
                 </option>
                 <option>
                     <name>GenRuntimeLibSelect</name>
@@ -70,7 +70,7 @@
                 </option>
                 <option>
                     <name>GenRTConfigPath</name>
-                    <state>$TOOLKIT_DIR$\lib\dlrxflln.h</state>
+                    <state>$TOOLKIT_DIR$/lib/dlrxflln.h</state>
                 </option>
                 <option>
                     <name>GenLibInFormatterDescription</name>
@@ -154,13 +154,17 @@
                     <name>BuildFilesPath</name>
                     <state>Release</state>
                 </option>
+                <option>
+                    <name>GRuntimeLibUnsafeIO</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ICCRX</name>
-            <archiveVersion>12</archiveVersion>
+            <archiveVersion>13</archiveVersion>
             <data>
-                <version>23</version>
+                <version>25</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>0</debug>
                 <option>
@@ -320,23 +324,23 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\..\r_bsp</state>
-                    <state>$PROJ_DIR$\..\r_flash_loader_rx</state>
-                    <state>$PROJ_DIR$\..\r_flash_loader_rx\src</state>
-                    <state>$PROJ_DIR$\..\r_flash_api_rx</state>
-                    <state>$PROJ_DIR$\..\r_flash_api_rx\src</state>
-                    <state>$PROJ_DIR$\..\r_sci_async_1ch_rx</state>
-                    <state>$PROJ_DIR$\..\r_sci_async_1ch_rx\src</state>
-                    <state>$PROJ_DIR$\..\r_rspi_rx</state>
-                    <state>$PROJ_DIR$\..\r_rspi_rx\src</state>
-                    <state>$PROJ_DIR$\..\r_spi_flash</state>
-                    <state>$PROJ_DIR$\..\r_spi_flash\src</state>
-                    <state>$PROJ_DIR$\..\r_crc_rx</state>
-                    <state>$PROJ_DIR$\..\r_crc_rx\src</state>
-                    <state>$PROJ_DIR$\..\r_cmt_rx</state>
-                    <state>$PROJ_DIR$\..\r_cmt_rx\src</state>
+                    <state>$PROJ_DIR$/../r_bsp</state>
+                    <state>$PROJ_DIR$/../r_flash_loader_rx</state>
+                    <state>$PROJ_DIR$/../r_flash_loader_rx/src</state>
+                    <state>$PROJ_DIR$/../r_flash_api_rx</state>
+                    <state>$PROJ_DIR$/../r_flash_api_rx/src</state>
+                    <state>$PROJ_DIR$/../r_sci_async_1ch_rx</state>
+                    <state>$PROJ_DIR$/../r_sci_async_1ch_rx/src</state>
+                    <state>$PROJ_DIR$/../r_rspi_rx</state>
+                    <state>$PROJ_DIR$/../r_rspi_rx/src</state>
+                    <state>$PROJ_DIR$/../r_spi_flash</state>
+                    <state>$PROJ_DIR$/../r_spi_flash/src</state>
+                    <state>$PROJ_DIR$/../r_crc_rx</state>
+                    <state>$PROJ_DIR$/../r_crc_rx/src</state>
+                    <state>$PROJ_DIR$/../r_cmt_rx</state>
+                    <state>$PROJ_DIR$/../r_cmt_rx/src</state>
                     <state>$PROJ_DIR$</state>
-                    <state>$PROJ_DIR$\r_config</state>
+                    <state>$PROJ_DIR$/r_config</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -357,10 +361,6 @@
                 <option>
                     <name>IccLang</name>
                     <state>0</state>
-                </option>
-                <option>
-                    <name>IccCDialect</name>
-                    <state>1</state>
                 </option>
                 <option>
                     <name>IccAllowVLA</name>
@@ -456,13 +456,21 @@
                     <name>CCUseGnuExtensions</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>CompilerProtectZone</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>DeprecatedIccCDialect</name>
+                    <state>1</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ARX</name>
-            <archiveVersion>6</archiveVersion>
+            <archiveVersion>7</archiveVersion>
             <data>
-                <version>10</version>
+                <version>11</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>0</debug>
                 <option>
@@ -630,6 +638,10 @@
                     <name>AsmListIncludeHeaderSource</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>AsmProtectZone</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
@@ -752,7 +764,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$PROJ_DIR$\lnkr5f563nb_Flash_API_User_Boot.icf</state>
+                    <state>$PROJ_DIR$/lnkr5f563nb_Flash_API_User_Boot.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -1068,14 +1080,14 @@
         <debug>1</debug>
         <settings>
             <name>General</name>
-            <archiveVersion>9</archiveVersion>
+            <archiveVersion>10</archiveVersion>
             <data>
-                <version>8</version>
+                <version>9</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
                     <name>BrowseInfoPath</name>
-                    <state>Debug\BrowseInfo</state>
+                    <state>Debug/BrowseInfo</state>
                 </option>
                 <option>
                     <name>OGChipSelectMenu</name>
@@ -1103,15 +1115,15 @@
                 </option>
                 <option>
                     <name>ExePath</name>
-                    <state>Debug\Exe</state>
+                    <state>Debug/Exe</state>
                 </option>
                 <option>
                     <name>ObjPath</name>
-                    <state>Debug\Obj</state>
+                    <state>Debug/Obj</state>
                 </option>
                 <option>
                     <name>ListPath</name>
-                    <state>Debug\List</state>
+                    <state>Debug/List</state>
                 </option>
                 <option>
                     <name>GenRuntimeLibSelect</name>
@@ -1129,7 +1141,7 @@
                 </option>
                 <option>
                     <name>GenRTConfigPath</name>
-                    <state>$TOOLKIT_DIR$\lib\dlrxflln.h</state>
+                    <state>$TOOLKIT_DIR$/lib/dlrxflln.h</state>
                 </option>
                 <option>
                     <name>GenLibInFormatterDescription</name>
@@ -1213,13 +1225,17 @@
                     <name>BuildFilesPath</name>
                     <state>Debug</state>
                 </option>
+                <option>
+                    <name>GRuntimeLibUnsafeIO</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ICCRX</name>
-            <archiveVersion>12</archiveVersion>
+            <archiveVersion>13</archiveVersion>
             <data>
-                <version>23</version>
+                <version>25</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -1378,23 +1394,23 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\..\r_bsp</state>
-                    <state>$PROJ_DIR$\..\r_flash_loader_rx</state>
-                    <state>$PROJ_DIR$\..\r_flash_loader_rx\src</state>
-                    <state>$PROJ_DIR$\..\r_flash_api_rx</state>
-                    <state>$PROJ_DIR$\..\r_flash_api_rx\src</state>
-                    <state>$PROJ_DIR$\..\r_sci_async_1ch_rx</state>
-                    <state>$PROJ_DIR$\..\r_sci_async_1ch_rx\src</state>
-                    <state>$PROJ_DIR$\..\r_rspi_rx</state>
-                    <state>$PROJ_DIR$\..\r_rspi_rx\src</state>
-                    <state>$PROJ_DIR$\..\r_spi_flash</state>
-                    <state>$PROJ_DIR$\..\r_spi_flash\src</state>
-                    <state>$PROJ_DIR$\..\r_crc_rx</state>
-                    <state>$PROJ_DIR$\..\r_crc_rx\src</state>
-                    <state>$PROJ_DIR$\..\r_cmt_rx</state>
-                    <state>$PROJ_DIR$\..\r_cmt_rx\src</state>
+                    <state>$PROJ_DIR$/../r_bsp</state>
+                    <state>$PROJ_DIR$/../r_flash_loader_rx</state>
+                    <state>$PROJ_DIR$/../r_flash_loader_rx/src</state>
+                    <state>$PROJ_DIR$/../r_flash_api_rx</state>
+                    <state>$PROJ_DIR$/../r_flash_api_rx/src</state>
+                    <state>$PROJ_DIR$/../r_sci_async_1ch_rx</state>
+                    <state>$PROJ_DIR$/../r_sci_async_1ch_rx/src</state>
+                    <state>$PROJ_DIR$/../r_rspi_rx</state>
+                    <state>$PROJ_DIR$/../r_rspi_rx/src</state>
+                    <state>$PROJ_DIR$/../r_spi_flash</state>
+                    <state>$PROJ_DIR$/../r_spi_flash/src</state>
+                    <state>$PROJ_DIR$/../r_crc_rx</state>
+                    <state>$PROJ_DIR$/../r_crc_rx/src</state>
+                    <state>$PROJ_DIR$/../r_cmt_rx</state>
+                    <state>$PROJ_DIR$/../r_cmt_rx/src</state>
                     <state>$PROJ_DIR$</state>
-                    <state>$PROJ_DIR$\r_config</state>
+                    <state>$PROJ_DIR$/r_config</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1415,10 +1431,6 @@
                 <option>
                     <name>IccLang</name>
                     <state>0</state>
-                </option>
-                <option>
-                    <name>IccCDialect</name>
-                    <state>1</state>
                 </option>
                 <option>
                     <name>IccAllowVLA</name>
@@ -1514,13 +1526,21 @@
                     <name>CCUseGnuExtensions</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>CompilerProtectZone</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>DeprecatedIccCDialect</name>
+                    <state>1</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ARX</name>
-            <archiveVersion>6</archiveVersion>
+            <archiveVersion>7</archiveVersion>
             <data>
-                <version>10</version>
+                <version>11</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -1688,6 +1708,10 @@
                     <name>AsmListIncludeHeaderSource</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>AsmProtectZone</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
@@ -1810,7 +1834,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$PROJ_DIR$\lnkr5f563nb_Flash_API_User_Boot.icf</state>
+                    <state>$PROJ_DIR$/lnkr5f563nb_Flash_API_User_Boot.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -2201,8 +2225,9 @@
         </file>
     </group>
     <projectSettings>
-        <general>
+        <generalProjectSettings>
+            <environmentVariables>null</environmentVariables>
             <resolveSourceForBinaries>true</resolveSourceForBinaries>
-        </general>
+        </generalProjectSettings>
     </projectSettings>
 </project>

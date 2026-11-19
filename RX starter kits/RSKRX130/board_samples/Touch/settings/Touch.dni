@@ -225,10 +225,10 @@ Category=_ 0
 LoggingEnabled=_ 0
 LogFile=_ ""
 [Breakpoints]
-Bp0=_ "STD_CODE" "{$PROJ_DIR$\src\HwResource\r_cg_intprg.c}.62.1" 0 0 0 0 "" 0 ""
-Bp1=_ "STD_CODE" "{$PROJ_DIR$\src\HwResource\r_cg_intprg.c}.69.1" 0 0 0 0 "" 0 ""
-Bp2=_ "STD_CODE" "{$PROJ_DIR$\src\HwResource\r_cg_intprg.c}.80.1" 0 0 0 0 "" 0 ""
-Bp3=_ "STD_CODE" "{$PROJ_DIR$\src\interrupt_table.c}.16.3" 1 0 0 0 "" 0 ""
+Bp0=_ "STD_CODE" "{$PROJ_DIR$/src/HwResource/r_cg_intprg.c}.62.1" 0 0 0 0 "" 0 ""
+Bp1=_ "STD_CODE" "{$PROJ_DIR$/src/HwResource/r_cg_intprg.c}.69.1" 0 0 0 0 "" 0 ""
+Bp2=_ "STD_CODE" "{$PROJ_DIR$/src/HwResource/r_cg_intprg.c}.80.1" 0 0 0 0 "" 0 ""
+Bp3=_ "STD_CODE" "{$PROJ_DIR$/src/interrupt_table.c}.16.3" 1 0 0 0 "" 0 ""
 Count=4
 [Monitor Execution]
 Leave target running=0

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-    <fileVersion>4</fileVersion>
+    <fileVersion>6</fileVersion>
     <configuration>
         <name>Debug_little</name>
         <toolchain>
@@ -9,14 +9,14 @@
         <debug>1</debug>
         <settings>
             <name>General</name>
-            <archiveVersion>9</archiveVersion>
+            <archiveVersion>10</archiveVersion>
             <data>
-                <version>8</version>
+                <version>9</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
                     <name>BrowseInfoPath</name>
-                    <state>Debug_little\BrowseInfo</state>
+                    <state>Debug_little/BrowseInfo</state>
                 </option>
                 <option>
                     <name>OGChipSelectMenu</name>
@@ -44,15 +44,15 @@
                 </option>
                 <option>
                     <name>ExePath</name>
-                    <state>Debug_little\Exe</state>
+                    <state>Debug_little/Exe</state>
                 </option>
                 <option>
                     <name>ObjPath</name>
-                    <state>Debug_little\Obj</state>
+                    <state>Debug_little/Obj</state>
                 </option>
                 <option>
                     <name>ListPath</name>
-                    <state>Debug_little\List</state>
+                    <state>Debug_little/List</state>
                 </option>
                 <option>
                     <name>GenRuntimeLibSelect</name>
@@ -70,7 +70,7 @@
                 </option>
                 <option>
                     <name>GenRTConfigPath</name>
-                    <state>$TOOLKIT_DIR$\LIB\dlrxfllsn.h</state>
+                    <state>$TOOLKIT_DIR$/lib/dlrxfllsn.h</state>
                 </option>
                 <option>
                     <name>GenLibInFormatterDescription</name>
@@ -154,13 +154,17 @@
                     <name>BuildFilesPath</name>
                     <state>Debug_little</state>
                 </option>
+                <option>
+                    <name>GRuntimeLibUnsafeIO</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ICCRX</name>
-            <archiveVersion>12</archiveVersion>
+            <archiveVersion>13</archiveVersion>
             <data>
-                <version>23</version>
+                <version>25</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -319,7 +323,7 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\inc</state>
+                    <state>$PROJ_DIR$/inc</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -340,10 +344,6 @@
                 <option>
                     <name>IccLang</name>
                     <state>0</state>
-                </option>
-                <option>
-                    <name>IccCDialect</name>
-                    <state>1</state>
                 </option>
                 <option>
                     <name>IccAllowVLA</name>
@@ -439,13 +439,21 @@
                     <name>CCUseGnuExtensions</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>CompilerProtectZone</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>DeprecatedIccCDialect</name>
+                    <state>1</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ARX</name>
-            <archiveVersion>6</archiveVersion>
+            <archiveVersion>7</archiveVersion>
             <data>
-                <version>10</version>
+                <version>11</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -613,6 +621,10 @@
                     <name>AsmListIncludeHeaderSource</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>AsmProtectZone</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
@@ -735,7 +747,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$TOOLKIT_DIR$\CONFIG\lnkr5f51114.icf</state>
+                    <state>$TOOLKIT_DIR$/config/lnkr5f51114.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -1051,14 +1063,14 @@
         <debug>1</debug>
         <settings>
             <name>General</name>
-            <archiveVersion>9</archiveVersion>
+            <archiveVersion>10</archiveVersion>
             <data>
-                <version>8</version>
+                <version>9</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
                     <name>BrowseInfoPath</name>
-                    <state>Debug_big\BrowseInfo</state>
+                    <state>Debug_big/BrowseInfo</state>
                 </option>
                 <option>
                     <name>OGChipSelectMenu</name>
@@ -1086,15 +1098,15 @@
                 </option>
                 <option>
                     <name>ExePath</name>
-                    <state>Debug_big\Exe</state>
+                    <state>Debug_big/Exe</state>
                 </option>
                 <option>
                     <name>ObjPath</name>
-                    <state>Debug_big\Obj</state>
+                    <state>Debug_big/Obj</state>
                 </option>
                 <option>
                     <name>ListPath</name>
-                    <state>Debug_big\List</state>
+                    <state>Debug_big/List</state>
                 </option>
                 <option>
                     <name>GenRuntimeLibSelect</name>
@@ -1112,7 +1124,7 @@
                 </option>
                 <option>
                     <name>GenRTConfigPath</name>
-                    <state>$TOOLKIT_DIR$\LIB\dlrxflbsn.h</state>
+                    <state>$TOOLKIT_DIR$/lib/dlrxflbsn.h</state>
                 </option>
                 <option>
                     <name>GenLibInFormatterDescription</name>
@@ -1196,13 +1208,17 @@
                     <name>BuildFilesPath</name>
                     <state>Debug_big</state>
                 </option>
+                <option>
+                    <name>GRuntimeLibUnsafeIO</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ICCRX</name>
-            <archiveVersion>12</archiveVersion>
+            <archiveVersion>13</archiveVersion>
             <data>
-                <version>23</version>
+                <version>25</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -1361,7 +1377,7 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\inc</state>
+                    <state>$PROJ_DIR$/inc</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1382,10 +1398,6 @@
                 <option>
                     <name>IccLang</name>
                     <state>0</state>
-                </option>
-                <option>
-                    <name>IccCDialect</name>
-                    <state>1</state>
                 </option>
                 <option>
                     <name>IccAllowVLA</name>
@@ -1481,13 +1493,21 @@
                     <name>CCUseGnuExtensions</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>CompilerProtectZone</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>DeprecatedIccCDialect</name>
+                    <state>1</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ARX</name>
-            <archiveVersion>6</archiveVersion>
+            <archiveVersion>7</archiveVersion>
             <data>
-                <version>10</version>
+                <version>11</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -1655,6 +1675,10 @@
                     <name>AsmListIncludeHeaderSource</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>AsmProtectZone</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
@@ -1777,7 +1801,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$TOOLKIT_DIR$\CONFIG\lnkr5f51115.icf</state>
+                    <state>$TOOLKIT_DIR$/config/lnkr5f51115.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -2107,8 +2131,9 @@
         </file>
     </group>
     <projectSettings>
-        <general>
+        <generalProjectSettings>
+            <environmentVariables>null</environmentVariables>
             <resolveSourceForBinaries>true</resolveSourceForBinaries>
-        </general>
+        </generalProjectSettings>
     </projectSettings>
 </project>

@@ -30,8 +30,8 @@ Memory6  = ROM            Code           0xFFE00000  0xFFFFFFFF  R
 ;; Emulators: E20, JLink ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [CPU]
 Derivative = R5F5630E
-McuFileE20 = RX630Gr\R5F5630E.MCU
-McuFileJLink = RX630Gr\R5F5630E.MCU
+McuFileE20 = RX630Gr/R5F5630E.MCU
+McuFileJLink = RX630Gr/R5F5630E.MCU
 
 ;; I/O Register description file ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

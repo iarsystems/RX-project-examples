@@ -229,7 +229,7 @@ Release target=0
 Enabled=0
 ShowSource=1
 [Aliases]
-A0=_ "C:\ew\rx-270-beta\rx\examples\RX starter kits\RSKRX113\board_samples\Tutorial\src\cg_src\r_cg_main.c" ""
-A1=_ "C:\ew\rx-270-beta\rx\examples\RX starter kits\RSKRX113\board_samples\Tutorial\src\cg_src\r_cg_sci_user.c" ""
+A0=_ "C:/ew/rx-270-beta/rx/examples/RX starter kits/RSKRX113/board_samples/Tutorial/src/cg_src/r_cg_main.c" ""
+A1=_ "C:/ew/rx-270-beta/rx/examples/RX starter kits/RSKRX113/board_samples/Tutorial/src/cg_src/r_cg_sci_user.c" ""
 Count=2
 SuppressDialog=0

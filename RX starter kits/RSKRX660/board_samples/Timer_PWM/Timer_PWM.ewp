@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-    <fileVersion>4</fileVersion>
+    <fileVersion>6</fileVersion>
     <configuration>
         <name>Debug</name>
         <toolchain>
@@ -9,9 +9,9 @@
         <debug>1</debug>
         <settings>
             <name>General</name>
-            <archiveVersion>9</archiveVersion>
+            <archiveVersion>10</archiveVersion>
             <data>
-                <version>8</version>
+                <version>9</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -40,15 +40,15 @@
                 </option>
                 <option>
                     <name>ExePath</name>
-                    <state>Debug\Exe</state>
+                    <state>Debug/Exe</state>
                 </option>
                 <option>
                     <name>ObjPath</name>
-                    <state>Debug\Obj</state>
+                    <state>Debug/Obj</state>
                 </option>
                 <option>
                     <name>ListPath</name>
-                    <state>Debug\List</state>
+                    <state>Debug/List</state>
                 </option>
                 <option>
                     <name>GenRuntimeLibSelect</name>
@@ -66,7 +66,7 @@
                 </option>
                 <option>
                     <name>GenRTConfigPath</name>
-                    <state>$TOOLKIT_DIR$\lib\dlrxflln.h</state>
+                    <state>$TOOLKIT_DIR$/lib/dlrxflln.h</state>
                 </option>
                 <option>
                     <name>GenLibInFormatterDescription</name>
@@ -148,19 +148,23 @@
                 </option>
                 <option>
                     <name>BuildFilesPath</name>
-                    <state>Debug\</state>
+                    <state>Debug/</state>
                 </option>
                 <option>
                     <name>BrowseInfoPath</name>
-                    <state>Debug\</state>
+                    <state>Debug/</state>
+                </option>
+                <option>
+                    <name>GRuntimeLibUnsafeIO</name>
+                    <state>0</state>
                 </option>
             </data>
         </settings>
         <settings>
             <name>ICCRX</name>
-            <archiveVersion>12</archiveVersion>
+            <archiveVersion>13</archiveVersion>
             <data>
-                <version>23</version>
+                <version>25</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -319,18 +323,18 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\src</state>
-                    <state>$PROJ_DIR$\src\smc_gen\Config_CMT0</state>
-                    <state>$PROJ_DIR$\src\smc_gen\Config_CMT1</state>
-                    <state>$PROJ_DIR$\src\smc_gen\Config_CMT2</state>
-                    <state>$PROJ_DIR$\src\smc_gen\Config_ICU</state>
-                    <state>$PROJ_DIR$\src\smc_gen\Config_MTU3</state>
-                    <state>$PROJ_DIR$\src\smc_gen\Config_PORT</state>
-                    <state>$PROJ_DIR$\src\smc_gen\Config_SCI6</state>
-                    <state>$PROJ_DIR$\src\smc_gen\general</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_bsp</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_config</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_pincfg</state>
+                    <state>$PROJ_DIR$/src</state>
+                    <state>$PROJ_DIR$/src/smc_gen/Config_CMT0</state>
+                    <state>$PROJ_DIR$/src/smc_gen/Config_CMT1</state>
+                    <state>$PROJ_DIR$/src/smc_gen/Config_CMT2</state>
+                    <state>$PROJ_DIR$/src/smc_gen/Config_ICU</state>
+                    <state>$PROJ_DIR$/src/smc_gen/Config_MTU3</state>
+                    <state>$PROJ_DIR$/src/smc_gen/Config_PORT</state>
+                    <state>$PROJ_DIR$/src/smc_gen/Config_SCI6</state>
+                    <state>$PROJ_DIR$/src/smc_gen/general</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_bsp</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_config</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_pincfg</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -351,10 +355,6 @@
                 <option>
                     <name>IccLang</name>
                     <state>0</state>
-                </option>
-                <option>
-                    <name>IccCDialect</name>
-                    <state>1</state>
                 </option>
                 <option>
                     <name>IccAllowVLA</name>
@@ -450,13 +450,21 @@
                     <name>CCUseGnuExtensions</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>CompilerProtectZone</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>DeprecatedIccCDialect</name>
+                    <state>1</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ARX</name>
-            <archiveVersion>6</archiveVersion>
+            <archiveVersion>7</archiveVersion>
             <data>
-                <version>10</version>
+                <version>11</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -624,6 +632,10 @@
                     <name>AsmListIncludeHeaderSource</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>AsmProtectZone</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
@@ -746,7 +758,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$TOOLKIT_DIR$\config\lnkr5f56609h.icf</state>
+                    <state>$TOOLKIT_DIR$/config/lnkr5f56609h.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -1416,8 +1428,9 @@
         <name>$PROJ_DIR$\src\r_rsk_utility.c</name>
     </file>
     <projectSettings>
-        <general>
+        <generalProjectSettings>
+            <environmentVariables>null</environmentVariables>
             <resolveSourceForBinaries>true</resolveSourceForBinaries>
-        </general>
+        </generalProjectSettings>
     </projectSettings>
 </project>

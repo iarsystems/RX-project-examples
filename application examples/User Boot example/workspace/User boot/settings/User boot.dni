@@ -297,9 +297,9 @@ Release target=0
 Enabled=0
 ShowSource=1
 [Aliases]
-A0=_ "C:\Users\heerdt\Documents\IAR Embedded Workbench\rx\RSK+RX63N User Boot\User Boot Mode\cgc.c" ""
-A1=_ "C:\Users\heerdt\Documents\IAR Embedded Workbench\rx\RSK+RX63N User Boot\User Boot Mode\cstartup_ub.s" ""
-A2=_ "C:\Users\heerdt\Documents\IAR Embedded Workbench\rx\RSK+RX63N User Boot\User Boot Mode\low_level_init.c" ""
-A3=_ "C:\Users\heerdt\Documents\IAR Embedded Workbench\rx\RSK+RX63N User Boot\User Boot Mode\user_boot_main.c" ""
+A0=_ "C:/Users/heerdt/Documents/IAR Embedded Workbench/rx/RSK+RX63N User Boot/User Boot Mode/cgc.c" ""
+A1=_ "C:/Users/heerdt/Documents/IAR Embedded Workbench/rx/RSK+RX63N User Boot/User Boot Mode/cstartup_ub.s" ""
+A2=_ "C:/Users/heerdt/Documents/IAR Embedded Workbench/rx/RSK+RX63N User Boot/User Boot Mode/low_level_init.c" ""
+A3=_ "C:/Users/heerdt/Documents/IAR Embedded Workbench/rx/RSK+RX63N User Boot/User Boot Mode/user_boot_main.c" ""
 Count=4
 SuppressDialog=0

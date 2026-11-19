@@ -196,7 +196,7 @@ Graph=0
 Symbiont=0
 Exclusions=
 [Breakpoints]
-Bp0=_ "STD_CODE" "{$PROJ_DIR$\src\cg_src\r_cg_main.c}.136.13" 1 0 0 0 "" 0 ""
+Bp0=_ "STD_CODE" "{$PROJ_DIR$/src/cg_src/r_cg_main.c}.136.13" 1 0 0 0 "" 0 ""
 Count=1
 [Monitor Execution]
 Leave target running=0

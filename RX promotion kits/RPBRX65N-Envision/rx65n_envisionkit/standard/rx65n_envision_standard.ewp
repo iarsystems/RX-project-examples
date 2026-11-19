@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-    <fileVersion>4</fileVersion>
+    <fileVersion>6</fileVersion>
     <configuration>
         <name>Debug</name>
         <toolchain>
@@ -9,14 +9,14 @@
         <debug>1</debug>
         <settings>
             <name>General</name>
-            <archiveVersion>9</archiveVersion>
+            <archiveVersion>10</archiveVersion>
             <data>
-                <version>8</version>
+                <version>9</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
                     <name>BrowseInfoPath</name>
-                    <state>Debug\BrowseInfo</state>
+                    <state>Debug/BrowseInfo</state>
                 </option>
                 <option>
                     <name>OGChipSelectMenu</name>
@@ -44,15 +44,15 @@
                 </option>
                 <option>
                     <name>ExePath</name>
-                    <state>Debug\Exe</state>
+                    <state>Debug/Exe</state>
                 </option>
                 <option>
                     <name>ObjPath</name>
-                    <state>Debug\Obj</state>
+                    <state>Debug/Obj</state>
                 </option>
                 <option>
                     <name>ListPath</name>
-                    <state>Debug\List</state>
+                    <state>Debug/List</state>
                 </option>
                 <option>
                     <name>GenRuntimeLibSelect</name>
@@ -70,7 +70,7 @@
                 </option>
                 <option>
                     <name>GenRTConfigPath</name>
-                    <state>$TOOLKIT_DIR$\LIB\dlrxfllf.h</state>
+                    <state>$TOOLKIT_DIR$/lib/dlrxfllf.h</state>
                 </option>
                 <option>
                     <name>GenLibInFormatterDescription</name>
@@ -154,13 +154,17 @@
                     <name>BuildFilesPath</name>
                     <state>Debug</state>
                 </option>
+                <option>
+                    <name>GRuntimeLibUnsafeIO</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ICCRX</name>
-            <archiveVersion>12</archiveVersion>
+            <archiveVersion>13</archiveVersion>
             <data>
-                <version>23</version>
+                <version>25</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -319,47 +323,47 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\src\src</state>
-                    <state>$PROJ_DIR$\src\src\Application</state>
-                    <state>$PROJ_DIR$\src\src\Config</state>
-                    <state>$PROJ_DIR$\src\src\Application\Resource</state>
-                    <state>$PROJ_DIR$\src\src\GUI</state>
-                    <state>$PROJ_DIR$\src\src\sha1\include</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_bsp</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_config</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_cmt_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_cmt_rx\src</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_flash_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_flash_rx\src</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_flash_rx\src\flash_type_1</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_flash_rx\src\flash_type_2</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_flash_rx\src\flash_type_3</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_flash_rx\src\flash_type_4</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_flash_rx\src\targets</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_gpio_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_gpio_rx\src</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_sci_iic_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_sci_iic_rx\src</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_tfat_driver_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_tfat_driver_rx\src</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_tfat_driver_rx\src\device\sdhi</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_tfat_driver_rx\src\device\usb</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_tfat_driver_rx\src\device\usb_mini</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_tfat_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_tfat_rx\lib</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_usb_basic</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_usb_basic\src\driver\inc</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_usb_basic\src\hw\inc</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_usb_hmsc</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_usb_hmsc\src\inc</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_irq_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_irq_rx\src</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_glcdc_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_dmaca_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\general</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_pincfg</state>
-                    <state>$PROJ_DIR$\src\src\drw_2d\inc\tes</state>
-                    <state>$PROJ_DIR$\src\</state>
+                    <state>$PROJ_DIR$/src/src</state>
+                    <state>$PROJ_DIR$/src/src/Application</state>
+                    <state>$PROJ_DIR$/src/src/Config</state>
+                    <state>$PROJ_DIR$/src/src/Application/Resource</state>
+                    <state>$PROJ_DIR$/src/src/GUI</state>
+                    <state>$PROJ_DIR$/src/src/sha1/include</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_bsp</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_config</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_cmt_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_cmt_rx/src</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_flash_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_flash_rx/src</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_flash_rx/src/flash_type_1</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_flash_rx/src/flash_type_2</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_flash_rx/src/flash_type_3</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_flash_rx/src/flash_type_4</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_flash_rx/src/targets</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_gpio_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_gpio_rx/src</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_sci_iic_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_sci_iic_rx/src</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_tfat_driver_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_tfat_driver_rx/src</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_tfat_driver_rx/src/device/sdhi</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_tfat_driver_rx/src/device/usb</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_tfat_driver_rx/src/device/usb_mini</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_tfat_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_tfat_rx/lib</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_usb_basic</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_usb_basic/src/driver/inc</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_usb_basic/src/hw/inc</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_usb_hmsc</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_usb_hmsc/src/inc</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_irq_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_irq_rx/src</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_glcdc_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_dmaca_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/general</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_pincfg</state>
+                    <state>$PROJ_DIR$/src/src/drw_2d/inc/tes</state>
+                    <state>$PROJ_DIR$/src/</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -380,10 +384,6 @@
                 <option>
                     <name>IccLang</name>
                     <state>0</state>
-                </option>
-                <option>
-                    <name>IccCDialect</name>
-                    <state>1</state>
                 </option>
                 <option>
                     <name>IccAllowVLA</name>
@@ -479,13 +479,21 @@
                     <name>CCUseGnuExtensions</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>CompilerProtectZone</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>DeprecatedIccCDialect</name>
+                    <state>1</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ARX</name>
-            <archiveVersion>6</archiveVersion>
+            <archiveVersion>7</archiveVersion>
             <data>
-                <version>10</version>
+                <version>11</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -653,6 +661,10 @@
                     <name>AsmListIncludeHeaderSource</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>AsmProtectZone</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
@@ -775,7 +787,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$PROJ_DIR$\standard_debug.icf</state>
+                    <state>$PROJ_DIR$/standard_debug.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -1091,14 +1103,14 @@
         <debug>1</debug>
         <settings>
             <name>General</name>
-            <archiveVersion>9</archiveVersion>
+            <archiveVersion>10</archiveVersion>
             <data>
-                <version>8</version>
+                <version>9</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
                     <name>BrowseInfoPath</name>
-                    <state>Motorola output\BrowseInfo</state>
+                    <state>Motorola output/BrowseInfo</state>
                 </option>
                 <option>
                     <name>OGChipSelectMenu</name>
@@ -1126,15 +1138,15 @@
                 </option>
                 <option>
                     <name>ExePath</name>
-                    <state>Motorola output\Exe</state>
+                    <state>Motorola output/Exe</state>
                 </option>
                 <option>
                     <name>ObjPath</name>
-                    <state>Motorola output\Obj</state>
+                    <state>Motorola output/Obj</state>
                 </option>
                 <option>
                     <name>ListPath</name>
-                    <state>Motorola output\List</state>
+                    <state>Motorola output/List</state>
                 </option>
                 <option>
                     <name>GenRuntimeLibSelect</name>
@@ -1152,7 +1164,7 @@
                 </option>
                 <option>
                     <name>GenRTConfigPath</name>
-                    <state>$TOOLKIT_DIR$\LIB\dlrxfllf.h</state>
+                    <state>$TOOLKIT_DIR$/lib/dlrxfllf.h</state>
                 </option>
                 <option>
                     <name>GenLibInFormatterDescription</name>
@@ -1236,13 +1248,17 @@
                     <name>BuildFilesPath</name>
                     <state>Motorola output</state>
                 </option>
+                <option>
+                    <name>GRuntimeLibUnsafeIO</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ICCRX</name>
-            <archiveVersion>12</archiveVersion>
+            <archiveVersion>13</archiveVersion>
             <data>
-                <version>23</version>
+                <version>25</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -1401,47 +1417,47 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\src\src</state>
-                    <state>$PROJ_DIR$\src\src\Application</state>
-                    <state>$PROJ_DIR$\src\src\Config</state>
-                    <state>$PROJ_DIR$\src\src\Application\Resource</state>
-                    <state>$PROJ_DIR$\src\src\GUI</state>
-                    <state>$PROJ_DIR$\src\src\sha1\include</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_bsp</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_config</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_cmt_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_cmt_rx\src</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_flash_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_flash_rx\src</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_flash_rx\src\flash_type_1</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_flash_rx\src\flash_type_2</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_flash_rx\src\flash_type_3</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_flash_rx\src\flash_type_4</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_flash_rx\src\targets</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_gpio_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_gpio_rx\src</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_sci_iic_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_sci_iic_rx\src</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_tfat_driver_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_tfat_driver_rx\src</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_tfat_driver_rx\src\device\sdhi</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_tfat_driver_rx\src\device\usb</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_tfat_driver_rx\src\device\usb_mini</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_tfat_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_tfat_rx\lib</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_usb_basic</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_usb_basic\src\driver\inc</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_usb_basic\src\hw\inc</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_usb_hmsc</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_usb_hmsc\src\inc</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_irq_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_irq_rx\src</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_glcdc_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_dmaca_rx</state>
-                    <state>$PROJ_DIR$\src\smc_gen\general</state>
-                    <state>$PROJ_DIR$\src\smc_gen\r_pincfg</state>
-                    <state>$PROJ_DIR$\src\src\drw_2d\inc\tes</state>
-                    <state>$PROJ_DIR$\src\</state>
+                    <state>$PROJ_DIR$/src/src</state>
+                    <state>$PROJ_DIR$/src/src/Application</state>
+                    <state>$PROJ_DIR$/src/src/Config</state>
+                    <state>$PROJ_DIR$/src/src/Application/Resource</state>
+                    <state>$PROJ_DIR$/src/src/GUI</state>
+                    <state>$PROJ_DIR$/src/src/sha1/include</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_bsp</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_config</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_cmt_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_cmt_rx/src</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_flash_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_flash_rx/src</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_flash_rx/src/flash_type_1</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_flash_rx/src/flash_type_2</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_flash_rx/src/flash_type_3</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_flash_rx/src/flash_type_4</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_flash_rx/src/targets</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_gpio_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_gpio_rx/src</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_sci_iic_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_sci_iic_rx/src</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_tfat_driver_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_tfat_driver_rx/src</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_tfat_driver_rx/src/device/sdhi</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_tfat_driver_rx/src/device/usb</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_tfat_driver_rx/src/device/usb_mini</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_tfat_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_tfat_rx/lib</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_usb_basic</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_usb_basic/src/driver/inc</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_usb_basic/src/hw/inc</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_usb_hmsc</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_usb_hmsc/src/inc</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_irq_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_irq_rx/src</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_glcdc_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_dmaca_rx</state>
+                    <state>$PROJ_DIR$/src/smc_gen/general</state>
+                    <state>$PROJ_DIR$/src/smc_gen/r_pincfg</state>
+                    <state>$PROJ_DIR$/src/src/drw_2d/inc/tes</state>
+                    <state>$PROJ_DIR$/src/</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1462,10 +1478,6 @@
                 <option>
                     <name>IccLang</name>
                     <state>0</state>
-                </option>
-                <option>
-                    <name>IccCDialect</name>
-                    <state>1</state>
                 </option>
                 <option>
                     <name>IccAllowVLA</name>
@@ -1561,13 +1573,21 @@
                     <name>CCUseGnuExtensions</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>CompilerProtectZone</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>DeprecatedIccCDialect</name>
+                    <state>1</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ARX</name>
-            <archiveVersion>6</archiveVersion>
+            <archiveVersion>7</archiveVersion>
             <data>
-                <version>10</version>
+                <version>11</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -1735,6 +1755,10 @@
                     <name>AsmListIncludeHeaderSource</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>AsmProtectZone</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
@@ -1857,7 +1881,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$PROJ_DIR$\standard.icf</state>
+                    <state>$PROJ_DIR$/standard.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -3942,8 +3966,9 @@
         <name>$PROJ_DIR$\standard_debug.icf</name>
     </file>
     <projectSettings>
-        <general>
+        <generalProjectSettings>
+            <environmentVariables>null</environmentVariables>
             <resolveSourceForBinaries>true</resolveSourceForBinaries>
-        </general>
+        </generalProjectSettings>
     </projectSettings>
 </project>

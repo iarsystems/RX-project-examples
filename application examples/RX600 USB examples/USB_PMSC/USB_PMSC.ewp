@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-    <fileVersion>4</fileVersion>
+    <fileVersion>6</fileVersion>
     <configuration>
         <name>RX62N</name>
         <toolchain>
@@ -9,14 +9,14 @@
         <debug>1</debug>
         <settings>
             <name>General</name>
-            <archiveVersion>9</archiveVersion>
+            <archiveVersion>10</archiveVersion>
             <data>
-                <version>8</version>
+                <version>9</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
                     <name>BrowseInfoPath</name>
-                    <state>RX62N\BrowseInfo</state>
+                    <state>RX62N/BrowseInfo</state>
                 </option>
                 <option>
                     <name>OGChipSelectMenu</name>
@@ -44,15 +44,15 @@
                 </option>
                 <option>
                     <name>ExePath</name>
-                    <state>RX62N\Exe</state>
+                    <state>RX62N/Exe</state>
                 </option>
                 <option>
                     <name>ObjPath</name>
-                    <state>RX62N\Obj</state>
+                    <state>RX62N/Obj</state>
                 </option>
                 <option>
                     <name>ListPath</name>
-                    <state>RX62N\List</state>
+                    <state>RX62N/List</state>
                 </option>
                 <option>
                     <name>GenRuntimeLibSelect</name>
@@ -70,7 +70,7 @@
                 </option>
                 <option>
                     <name>GenRTConfigPath</name>
-                    <state>$TOOLKIT_DIR$\LIB\dlrxflln.h</state>
+                    <state>$TOOLKIT_DIR$/lib/dlrxflln.h</state>
                 </option>
                 <option>
                     <name>GenLibInFormatterDescription</name>
@@ -154,13 +154,17 @@
                     <name>BuildFilesPath</name>
                     <state>RX62N</state>
                 </option>
+                <option>
+                    <name>GRuntimeLibUnsafeIO</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ICCRX</name>
-            <archiveVersion>12</archiveVersion>
+            <archiveVersion>13</archiveVersion>
             <data>
-                <version>23</version>
+                <version>25</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -348,10 +352,6 @@
                     <state>0</state>
                 </option>
                 <option>
-                    <name>IccCDialect</name>
-                    <state>1</state>
-                </option>
-                <option>
                     <name>IccAllowVLA</name>
                     <state>0</state>
                 </option>
@@ -445,13 +445,21 @@
                     <name>CCUseGnuExtensions</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>CompilerProtectZone</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>DeprecatedIccCDialect</name>
+                    <state>1</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ARX</name>
-            <archiveVersion>6</archiveVersion>
+            <archiveVersion>7</archiveVersion>
             <data>
-                <version>10</version>
+                <version>11</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -619,6 +627,10 @@
                     <name>AsmListIncludeHeaderSource</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>AsmProtectZone</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
@@ -741,7 +753,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$PROJ_DIR$\lnkr5f562n8_sdram.icf</state>
+                    <state>$PROJ_DIR$/lnkr5f562n8_sdram.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -1057,14 +1069,14 @@
         <debug>1</debug>
         <settings>
             <name>General</name>
-            <archiveVersion>9</archiveVersion>
+            <archiveVersion>10</archiveVersion>
             <data>
-                <version>8</version>
+                <version>9</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
                     <name>BrowseInfoPath</name>
-                    <state>RX63N\BrowseInfo</state>
+                    <state>RX63N/BrowseInfo</state>
                 </option>
                 <option>
                     <name>OGChipSelectMenu</name>
@@ -1092,15 +1104,15 @@
                 </option>
                 <option>
                     <name>ExePath</name>
-                    <state>RX63N\Exe</state>
+                    <state>RX63N/Exe</state>
                 </option>
                 <option>
                     <name>ObjPath</name>
-                    <state>RX63N\Obj</state>
+                    <state>RX63N/Obj</state>
                 </option>
                 <option>
                     <name>ListPath</name>
-                    <state>RX63N\List</state>
+                    <state>RX63N/List</state>
                 </option>
                 <option>
                     <name>GenRuntimeLibSelect</name>
@@ -1118,7 +1130,7 @@
                 </option>
                 <option>
                     <name>GenRTConfigPath</name>
-                    <state>$TOOLKIT_DIR$\LIB\dlrxflln.h</state>
+                    <state>$TOOLKIT_DIR$/lib/dlrxflln.h</state>
                 </option>
                 <option>
                     <name>GenLibInFormatterDescription</name>
@@ -1202,13 +1214,17 @@
                     <name>BuildFilesPath</name>
                     <state>RX63N</state>
                 </option>
+                <option>
+                    <name>GRuntimeLibUnsafeIO</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ICCRX</name>
-            <archiveVersion>12</archiveVersion>
+            <archiveVersion>13</archiveVersion>
             <data>
-                <version>23</version>
+                <version>25</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -1396,10 +1412,6 @@
                     <state>0</state>
                 </option>
                 <option>
-                    <name>IccCDialect</name>
-                    <state>1</state>
-                </option>
-                <option>
                     <name>IccAllowVLA</name>
                     <state>0</state>
                 </option>
@@ -1493,13 +1505,21 @@
                     <name>CCUseGnuExtensions</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>CompilerProtectZone</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>DeprecatedIccCDialect</name>
+                    <state>1</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ARX</name>
-            <archiveVersion>6</archiveVersion>
+            <archiveVersion>7</archiveVersion>
             <data>
-                <version>10</version>
+                <version>11</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -1667,6 +1687,10 @@
                     <name>AsmListIncludeHeaderSource</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>AsmProtectZone</name>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
@@ -1789,7 +1813,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$PROJ_DIR$\lnkr5f562n8_sdram.icf</state>
+                    <state>$PROJ_DIR$/lnkr5f562n8_sdram.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -2320,8 +2344,9 @@
         </group>
     </group>
     <projectSettings>
-        <general>
+        <generalProjectSettings>
+            <environmentVariables>null</environmentVariables>
             <resolveSourceForBinaries>true</resolveSourceForBinaries>
-        </general>
+        </generalProjectSettings>
     </projectSettings>
 </project>
