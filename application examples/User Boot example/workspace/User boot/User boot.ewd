@@ -53,7 +53,7 @@
                 </option>
                 <option>
                     <name>DynDriver</name>
-                    <state>SIMRX</state>
+                    <state>RXE2LITE</state>
                 </option>
                 <option>
                     <name>DDFOverride</name>
