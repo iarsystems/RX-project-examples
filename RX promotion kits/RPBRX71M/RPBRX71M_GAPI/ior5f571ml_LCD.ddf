@@ -34,8 +34,8 @@ Memory = ROM            Code           0xFFC00000  0xFFFFFFFF  R
 ;; Emulators: E20, JLink ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [CPU]
 Derivative = R5F571ML
-McuFileE20 = RX71MGr/R5F571ML.MCU
-McuFileJLink = RX71MGr/R5F571ML.MCU
+McuFileE2E2L = RX71MGr/R5F571ML.mcu
+McuFileJLink = RX71MGr/R5F571ML.mcu
 
 ;; I/O Register description file ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

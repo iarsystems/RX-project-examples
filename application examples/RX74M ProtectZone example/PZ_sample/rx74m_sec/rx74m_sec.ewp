@@ -646,7 +646,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state></state>
+                    <state>rx74m_sec.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -1038,7 +1038,7 @@
                 </option>
                 <option>
                     <name>IarchiveOutput</name>
-                    <state>###Unitialized###</state>
+                    <state>$EXE_DIR$\$PROJ_FNAME$.a</state>
                 </option>
                 <option>
                     <name>IarchiveUseExtraOptions</name>

@@ -10,6 +10,7 @@
 __var _value;
 __var _value1;
 __var _value2;
+__var _timeout;
 
 //=======================================================
 // C-SPY setup macros
@@ -57,8 +58,16 @@ boardInit()
   //SDICR
   __writeMemory8(0x01, 0x00083C20, "Memory");
   
-  //Wait for SDSR -> INIST bit == 1 (b3 0x08) 
-  while ( __readMemory8(0x00083C50, "Memory") & 0x08 == 0x08 ) { }
+  //Wait until SDSR.INIST (b3, 0x08) == 0, i.e. initialization sequence finished
+  _timeout = 0;
+  while ( ( (__readMemory8(0x00083C50, "Memory") & 0x08) == 0x08 ) && ( _timeout < 1000 ) )
+  {
+    _timeout++;
+  }
+  if ( _timeout >= 1000 )
+  {
+    __message "Timeout waiting for SDSR.INIST\n";
+  }
   //_value = __readMemory8(0x00083C50, "Memory");
   
   //SDCMOD 0x00083C01

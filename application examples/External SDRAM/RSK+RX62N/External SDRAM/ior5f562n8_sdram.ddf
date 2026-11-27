@@ -30,7 +30,7 @@ Memory6  = ROM            Code           0xFFF80000  0xFFFFFFFF  R
 ;; Emulator E20 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [CPU]
 Derivative = R5F562N8
-McuFileE20 = RX62NGr/R5F562N8.MCU
+McuFileE2E2L = RX62NGr/R5F562N8.mcu
 
 ;; I/O Register description file ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

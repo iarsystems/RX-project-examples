@@ -30,8 +30,8 @@ Memory6  = ROM            Code           0xFFF00000  0xFFFFFFFF  R
 ;; Emulators: E20, JLink ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [CPU]
 Derivative = R5F563NB
-McuFileE20 = RX63NGr/R5F563NB.MCU
-McuFileJLink = RX63NGr/R5F563NB.MCU
+McuFileE2E2L = RX63NGr/R5F563NB.mcu
+McuFileJLink = RX63NGr/R5F563NB.mcu
 
 ;; I/O Register description file ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

@@ -222,7 +222,7 @@
                 </option>
                 <option>
                     <name>HwExtal</name>
-                    <state></state>
+                    <state>27.0000</state>
                 </option>
                 <option>
                     <name>HwAllowClockSourceChange</name>
@@ -234,7 +234,7 @@
                 </option>
                 <option>
                     <name>HwWorkRamStart</name>
-                    <state></state>
+                    <state>0x82000000</state>
                 </option>
                 <option>
                     <name>HwInterface</name>
@@ -363,7 +363,7 @@
                 </option>
                 <option>
                     <name>HwIclk</name>
-                    <state></state>
+                    <state>200.0000</state>
                 </option>
                 <option>
                     <name>HwIdCode</name>
@@ -449,7 +449,7 @@
                 </option>
                 <option>
                     <name>E2LiteDownloadVerifyAll</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>E2LiteDownloadOnlyChangedBlocks</name>
@@ -489,15 +489,15 @@
                 </option>
                 <option>
                     <name>HwUseExtal</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>HwExtalOverride</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>HwExtal</name>
-                    <state></state>
+                    <state>24.0000</state>
                 </option>
                 <option>
                     <name>HwAllowClockSourceChange</name>
@@ -509,7 +509,7 @@
                 </option>
                 <option>
                     <name>HwWorkRamStart</name>
-                    <state></state>
+                    <state>0x82000000</state>
                 </option>
                 <option>
                     <name>HwInterface</name>
@@ -638,7 +638,7 @@
                 </option>
                 <option>
                     <name>HwIclk</name>
-                    <state></state>
+                    <state>200.0000</state>
                 </option>
                 <option>
                     <name>HwIdCode</name>
@@ -647,7 +647,7 @@
                 <option>
                     <name>HwPowerSupply</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>2</state>
                 </option>
                 <option>
                     <name>HwExtFlash0Use</name>

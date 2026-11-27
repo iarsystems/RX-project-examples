@@ -31,7 +31,7 @@ Memory = ROM_BANK1      Code           0xFFF00000  0xFFFFFFFF  R
 ;; Emulators: E20, JLink ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [CPU]
 Derivative = R5F565NE_DUAL
-McuFileE20 = RX65NGr/R5F565NE_DUAL.MCU
+McuFileE2E2L = RX65NGr/R5F565NE_DUAL.mcu
 McuFileJLink = 
 
 ;; I/O Register description file ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
